@@ -1,18 +1,65 @@
+@use '../abstracts/variables' as *;
 
 
 .gly-campaign-1 {
+
+    &-area {
+        position: relative;
+        z-index: 1;
+    }
+
+    &-bg-color {
+        position: absolute;
+        right: 0;
+        width: 65%;
+        height: 100%;
+        background: #f9f7eb;
+        top: 0;
+        z-index: -1;
+
+        @media #{$xl,$lg} {
+            width: 75%;
+        }
+
+        @media #{$md,$xs} {
+            width: 100%;
+        }
+    }
+
     &-img {
         &-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr;
             padding-right: 40px;
+
+            @media #{$xl} {
+                padding-right: 10px;
+            }
+            @media #{$lg} {
+                padding-right: 0px;
+            }
+            @media #{$md} {
+                padding-right: 0px;
+                height: 600px;
+                margin-bottom: 50px;
+            }
+            @media #{$xs} {
+                padding-right: 0px;
+                height: 500px;
+                margin-bottom: 50px;
+            }
+            @media #{$sm} {
+                padding-right: 0px;
+                height: 600px;
+                margin-bottom: 50px;
+            }
         }
     }
     &-img-1 {
         grid-column: 1 / 4;
         grid-row-start: 1;
-        grid-row-end: 5;
+        grid-row-end: 4;
         overflow: hidden;
         border-radius: 0 120px 0 0;
     }
@@ -26,54 +73,67 @@
 
     &-content {
         margin-right: -30px;
-    }
-}
 
-
-.gly-campaign-1-feature {
-    &-wrap {
-        max-width: 570px;
-    }
-}
-
-.gly-campaign-1-feature {
-
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    &:not(:last-child) {
-        margin-bottom: 35px;
-    }
-
-    &-icon {
-        display: flex;
-        flex: 0 0 auto;
-        width: 96px;
-        height: 96px;
-        background: #ddd;
-        border-radius: 50%;
-        justify-content: center;
-        line-height: 1;
-        align-items: center;
-        font-size: 40px;
-        color: var(--gly-heading-1);
-
-        i {
-            display: inline-block;
-            margin-top: 9px;
+        @media #{$lg,$md,$xs} {
+            margin-right: 0px;
         }
     }
+}
 
-    &-title {
-        font-size: 27px;
-        margin-bottom: 10px;
+
+.gly-campaign-1 {
+
+    &-wrap {
+        max-width: 480px;
     }
 
-    &-disc {
-        font-size: 16px;
-        line-height: 28px;
-        color: #363539;
+    &-feature {
+
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    
+        &-icon {
+            display: flex;
+            flex: 0 0 auto;
+            width: 96px;
+            height: 96px;
+            background: #ddd;
+            border-radius: 50%;
+            justify-content: center;
+            line-height: 1;
+            align-items: center;
+            font-size: 40px;
+            color: var(--gly-heading-1);
+    
+            i {
+                display: inline-block;
+                margin-top: 9px;
+            }
+        }
+    
+        &-title {
+            font-size: 27px;
+            margin-bottom: 10px;
+
+            @media #{$xs} {
+                font-size: 20px;
+            }
+
+            @media #{$sm} {
+                font-size: 24px;
+            }
+        }
+    
+        &-disc {
+            font-size: 16px;
+            line-height: 28px;
+            color: #363539;
+        }
     }
 }
 
