@@ -1,0 +1,173 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    all-button-css-start
+*/
+
+/* chat-btn-1-start */
+.gly-chat-btn-1 {
+    display: inline-block;
+    flex:  0 0 auto;
+    font-family: var(--gly-sd-font);
+    font-size: 20px;
+    background: var(--gly-gd-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 400ms var(--cube-2);
+    position: relative;
+    z-index: 2;
+
+    i {
+        display: inline-block;
+        margin-right: 1px;
+        transition: 400ms var(--cube-2);
+    }
+
+    &:hover {
+
+    }
+
+}
+/* chat-btn-1-end */
+
+/* search-btn-1-start */
+.gly-search-btn-1 {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    line-height: 1;
+    font-size: 24px;
+    flex: 0 0 auto;
+    transition: 400ms var(--cube-1);
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+        color: var(--gly-pr-1);
+    }
+}
+/* search-btn-1-end */
+
+
+/* mobile-menu-btn-1-start */
+.gly-mobile-menu-btn-1 {
+    border: none;
+    outline: none;
+    padding: 0;
+    background: transparent;
+    flex: 0 0 auto;
+    width: 28px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 500ms var(--cube-1);
+    position: relative;
+    z-index: 1;
+    
+    span {
+        display: block;
+        background: #fff;
+        width: 100%;
+        height: 3px;
+        transition: 500ms var(--cube-1);
+    }
+    &:focus {
+
+        span {
+            &:nth-child(2) {
+                transform: translateY(-4px) rotate(308deg);
+            }   
+            &:nth-child(1) {
+                transform: translateY(3px) rotate(45deg);
+
+            }   
+        }
+    }
+    &:hover {
+        span {
+            &:nth-child(2) {
+                transform: translateY(-4px) rotate(308deg);
+            }   
+            &:nth-child(1) {
+                transform: translateY(3px) rotate(45deg);
+
+            }   
+        }
+    }
+}
+/* mobile-menu-btn-1-start */
+
+/* pr-btn-1-start */
+.gly-pr-btn-1 {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-family: var(--gly-pr-font);
+    text-transform: capitalize;
+    font-weight: 600;
+    background: var(--gly-gd-1);
+    color: #fff;
+    line-height: 1;
+    padding: 22px 44px;
+    border-radius: 40px;
+}
+/* pr-btn-1-end */
+
+/* pr-btn-2-start */
+.gly-pr-btn-2 {
+    display: inline-block;
+    font-family: var(--gly-pr-font);
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--gly-heading-1);
+    position: relative;
+    z-index: 1;
+    padding: 17px 30px;
+    border-radius: 52px;
+    line-height: 1;
+    transition: 400ms var(--cube-1);
+
+
+    &::after {
+        content: "";
+        width: 52px;
+        height: 100%;
+        background: var(--gly-gd-1);
+        position: absolute;
+        top: 0;
+        right: -10px;
+        border-radius: 50px;
+        z-index: -1;
+        transition: 400ms var(--cube-1);
+    }
+
+    i {
+        font-size: 14px;
+        transform: translateX(20px);
+        display: inline-block;
+        line-height: 1;
+        color: #fff;
+        transition: 400ms var(--cube-1);
+        margin-left: 5px;
+    }
+
+    &:hover {
+        color: #fff;
+        i {
+            transform: translateX(0px);
+        }
+        &::after {
+            width: 100%;
+            right: 0;
+        }
+    }
+}
+
+/* pr-btn-2-end */
+
+
+
+// all-button-css-end
+
