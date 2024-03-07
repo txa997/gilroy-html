@@ -10,6 +10,14 @@ Version: 1.0
 (function ($) {
 "use strict";
 
+// smoooth scroll activation start
+const lenis = new Lenis()
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
+
 
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -200,6 +208,64 @@ let glyp1 = new Swiper('.gly-p1-slider-active', {
 	clickable: true,
 	},
 	
+});
+
+// testimonial-1-slider
+let glyt1 = new Swiper('.gly-t1-active', {
+	loop: true,
+	speed: 1000,
+	autoplay: {
+	  delay: 5000,
+	},
+	// effect: 'fade',
+	// fadeEffect: {
+	// 	crossFade: true
+	// },
+
+	navigation: {
+		nextEl: ".gly_t1_next",
+		prevEl: ".gly_t1_prev",
+	},
+
+	pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+	
+});
+
+  
+
+
+
+// testimonial-1-slider
+let glysp1 = new Swiper('.gly-sponser-1-active', {
+	loop: true,
+	speed: 5000,
+	autoplay: {
+	  delay: 0,
+	},
+
+	breakpoints: {
+		0: {
+		  slidesPerView: 1,
+		},
+		480: {
+		slidesPerView: 2,
+		},
+		576: {
+		  slidesPerView: 2,
+		},
+		768: {
+		  slidesPerView: 3,
+		},
+		992: {
+		  slidesPerView: 4,
+		},
+		1200: {
+		  slidesPerView: 5,
+		},
+	  },
 });
 
   

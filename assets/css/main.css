@@ -3407,4 +3407,380 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 1;
 }
 
+.gly-testimonial-1-section-title {
+  max-width: 900px;
+}
+.gly-testimonial-1-img {
+  width: 172px;
+  height: 165px;
+  border-radius: 150px 0 0 0;
+}
+.gly-testimonial-1-img-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: end;
+  gap: 25px;
+}
+.gly-testimonial-1-item {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 65px;
+  align-items: center;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-testimonial-1-item {
+    gap: 35px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-1-item {
+    gap: 35px;
+    grid-template-columns: 1fr;
+  }
+}
+.gly-testimonial-1-item-left {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+}
+.gly-testimonial-1-item-img-1 {
+  width: 172px;
+  height: 165px;
+  border-radius: 150px 0 0 0;
+  overflow: hidden;
+  transform-origin: right bottom;
+  transform: rotate(270deg);
+  transition: 1s var(--cube-2);
+  transition-delay: 0;
+}
+.gly-testimonial-1-item-img-2 {
+  border-radius: 0 190px 0 0;
+  overflow: hidden;
+}
+.gly-testimonial-1-item-content {
+  margin-top: -30px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 1s var(--cube-2);
+  transition-delay: 0s;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-1-item-content {
+    margin-top: 0px;
+  }
+}
+.gly-testimonial-1-item-content .icon {
+  font-size: 100px;
+  line-height: 1;
+  display: inline-block;
+  color: #2196F3;
+}
+.gly-testimonial-1-item-content-comment {
+  font-size: 18px;
+  line-height: 32px;
+  color: #363539;
+  margin-bottom: 20px;
+  max-width: 664px;
+}
+.gly-testimonial-1-item-author-name {
+  font-size: 21px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+.gly-testimonial-1-item-author-bio {
+  font-size: 17px;
+  font-weight: 500;
+  color: #363539;
+  line-height: 32px;
+}
+
+.gly-testimonial-1-slider {
+  margin-top: -100px;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-testimonial-1-slider {
+    margin-top: -70px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-testimonial-1-slider {
+    margin-top: -30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-1-slider {
+    margin-top: 30px;
+  }
+}
+.gly-testimonial-1-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .gly-testimonial-1-item-img-1 {
+  transform: rotate(360deg);
+  transition-delay: 0.5s;
+}
+.gly-testimonial-1-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .gly-testimonial-1-item-content {
+  transform: translateX(0px);
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+.gly-testimonial-1-slider-btn {
+  position: absolute;
+  bottom: 0;
+  width: 54%;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-testimonial-1-slider-btn {
+    position: unset;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-testimonial-1-slider-btn {
+    position: unset;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+}
+.gly-testimonial-1-slider-btn .swiper-pagination {
+  font-size: 20px;
+  font-weight: 800;
+  color: #363539;
+  display: inline-block;
+  position: unset;
+  text-align: left;
+  margin-top: 7px;
+}
+
+.gly-slider-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gly-slider-btn-arrow {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background: #dfe0e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-size: 22px;
+  flex: 0 0 auto;
+  color: var(--gly-heading-1);
+  transition: 400ms var(--cube-2);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.gly-slider-btn-arrow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--gly-gd-1);
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 400ms var(--cube-2);
+}
+.gly-slider-btn-arrow i {
+  display: inline-block;
+  margin-top: 4px;
+}
+.gly-slider-btn-arrow:hover {
+  color: #fff;
+  transform: scale(102%);
+}
+.gly-slider-btn-arrow:hover::after {
+  transform: scale(1);
+}
+
+.gly-portfolio-1-area {
+  background: #f8f9fd;
+}
+.gly-portfolio-1-section-title .gly-section-title-1 {
+  line-height: 1.5;
+}
+.gly-portfolio-1-section-title .gly-section-title-1:hover .gly-portfolio-1-title-btn {
+  color: #fff;
+}
+.gly-portfolio-1-section-title .gly-section-title-1:hover .gly-portfolio-1-title-btn::after {
+  left: 43%;
+}
+.gly-portfolio-1-title-btn {
+  display: inline-block;
+  width: 132px;
+  height: 68px;
+  border-radius: 34px;
+  background: #dfe0e5;
+  font-size: 26px;
+  padding: 20px 30px;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+  margin-left: 50px;
+  transform: translateY(-10px);
+  transition: 400ms var(--cube-1);
+}
+@media (max-width: 767px) {
+  .gly-portfolio-1-title-btn {
+    transform: translateY(0px);
+    margin-bottom: 20px;
+  }
+}
+.gly-portfolio-1-title-btn::after {
+  content: "";
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--gly-gd-1);
+  position: absolute;
+  left: -9%;
+  top: -5%;
+  z-index: -1;
+  transition: 0.8s var(--cube-2);
+}
+.gly-portfolio-1-title-img {
+  display: inline-block;
+  margin-top: -12px;
+  margin-right: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-portfolio-1-title-img {
+    margin-top: 0px;
+  }
+}
+.gly-portfolio-1-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1.4fr;
+  gap: 15px 55px;
+  align-items: center;
+  justify-items: self-start;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-portfolio-1-content {
+    grid-template-columns: 1fr auto 1.1fr;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-portfolio-1-content {
+    grid-template-columns: 1.4fr auto 1fr;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-portfolio-1-content {
+    grid-template-columns: 1fr;
+  }
+}
+.gly-portfolio-1-content .title {
+  font-size: 32px;
+  color: #363539;
+  position: relative;
+  z-index: 1;
+}
+.gly-portfolio-1-content .title::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #363539;
+  left: 0;
+  bottom: 4px;
+}
+.gly-portfolio-1-content i {
+  font-size: 45px;
+  line-height: 1;
+  display: inline-block;
+  margin-top: 5px;
+}
+.gly-portfolio-1-content .disc {
+  font-size: 18px;
+  line-height: 32px;
+  color: #363539;
+}
+.gly-portfolio-1-item {
+  overflow: hidden;
+  border-radius: 40px 40px 0 0;
+  height: 366px;
+}
+.gly-portfolio-1-item-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 25px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-portfolio-1-item-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .gly-portfolio-1-item-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gly-sponser-1-item {
+  transition: 500ms var(--cube-1);
+}
+.gly-sponser-1-item-slider .swiper-container .swiper-wrapper .swiper-slide {
+  align-items: center;
+}
+.gly-sponser-1-item:hover {
+  filter: blur(2px);
+}
+
+/* 
+    experience-1-css-start
+*/
+.gly-experience-1-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px 65px;
+  margin-left: -65px;
+  margin-right: -65px;
+}
+.gly-experience-1-left {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 25px;
+}
+
+.gly-experience-1-img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.gly-experience-1-counter {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.gly-experience-1-slider {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+/* 
+    experience-1-css-end
+*/
+
 /*# sourceMappingURL=main.css.map */
