@@ -87,7 +87,7 @@
 
         .title {
             font-size: 32px;
-            color: #363539;
+            color: var(--gly-heading-2);
             position: relative;
             z-index: 1;
 
@@ -96,7 +96,7 @@
                 content: "";
                 width: 100%;
                 height: 1px;
-                background: #363539;
+                background: var(--gly-heading-2);
                 left: 0;
                 bottom: 4px;
             }

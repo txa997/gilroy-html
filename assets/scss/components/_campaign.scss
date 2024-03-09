@@ -83,7 +83,7 @@
 
 .gly-campaign-1 {
 
-    &-wrap {
+    &-feature-wrap {
         max-width: 480px;
     }
 
@@ -108,7 +108,7 @@
             line-height: 1;
             align-items: center;
             font-size: 40px;
-            color: var(--gly-heading-1);
+            color: var(--gly-heading-2);
     
             i {
                 display: inline-block;
@@ -119,6 +119,7 @@
         &-title {
             font-size: 27px;
             margin-bottom: 10px;
+            color: var(--gly-heading-2);
 
             @media #{$xs} {
                 font-size: 20px;
@@ -132,7 +133,7 @@
         &-disc {
             font-size: 16px;
             line-height: 28px;
-            color: #363539;
+            color: var(--gly-para-2);
         }
     }
 }

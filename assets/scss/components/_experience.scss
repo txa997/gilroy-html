@@ -5,12 +5,37 @@
 */
 
 .gly-experience-1 {
+
     &-wrap {
         display: grid;
         grid-template-columns: 1fr 1.1fr;
         gap: 50px 65px;
         margin-left: -65px;
         margin-right: -65px;
+        align-items: center;
+
+        @media #{$xxl} {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        @media #{$xl} {
+            margin-left: 0px;
+            margin-right: 0px;
+            gap: 50px 30px;
+            grid-template-columns: 1fr 1.3fr;
+        }
+        @media #{$lg,$md,$xs} {
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-section-title {
+        .gly-para-2 {
+            max-width: 610px;
+        }
     }
 
     &-left {
@@ -18,28 +43,258 @@
         grid-template-rows: auto 1fr;
         grid-template-columns: 1.2fr 1fr;
         gap: 25px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-img-wrap {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        @media #{$xs} {
+            grid-row-start: unset;
+            grid-row-end: unset;
+            grid-column-start: unset;
+            grid-column-end: unset;
+        }
+    }
+
+    &-counter {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        @media #{$xs} {
+            grid-row-start: unset;
+            grid-row-end: unset;
+            grid-column-start: unset;
+            grid-column-end: unset;
+        }
+    }
+
+    &-slider {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        @media #{$xs} {
+            grid-row-start: unset;
+            grid-row-end: unset;
+            grid-column-start: unset;
+            grid-column-end: unset;
+        }
+    }
+
+    &-img {
+        border-radius: 166px;
+        overflow: hidden;
+        height: 660px;
+
+        @media #{$xs} {
+            height: 500px;
+        }
+
+        @media #{$sm} {
+            height: 660px;
+        }
+    }
+    
+}
+
+
+.gly-experience-1-img {
+    &-content {
+        border-radius: 103px;
+        max-width: 286px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -160px;
+        background: #fff;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 52px 40px;
+
+        &.number {
+            font-size: 85px;
+            line-height: 1;
+        }
+        .disc {
+            font-size: 19px;
+            text-transform: capitalize;
+        }
+        
+    }
+    
+}
+
+
+.gly-experience-1 {
+    &-counter {
+        border-radius: 90px;
+        width: 100%;
+        background: #d3f277;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        padding: 50px 50px;
+
+        .number {
+            font-size: 87px;
+            line-height: 1;
+
+            @media #{$xs} {
+                font-size: 50px;
+            }
+        }
+
+        .disc {
+            font-size: 19px;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    }
+    
+}
+
+
+.gly-experience-1 {
+    &-slider {
+        border-radius: 90px;
+        background-color: #2632eb;
+        width: 100%;
+        height: 397px;
+        padding: 25px  55px;
+        
+        &-item {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .swiper-container {
+            .swiper-wrapper {
+                height: 350px;
+            }
+        }
     }
 }
 
-.gly-experience-1-img {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
+
+
+.gly-experience-1 {
+
+    &-feature-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 80px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-feature {
+        .title {
+            font-size: 25px;
+            margin-bottom: 3px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 22px;
+            }
+        }
+        .disc {
+            font-size: 15px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+
+        .item-btn {
+            font-size: 15px;
+            color: #010101;
+            line-height: 1;
+            display: inline-block;
+            transition: 300ms var(--cube-2);
+
+
+            i {
+                font-size: 11px;
+                display: inline-block;
+                margin-left: 3px;
+                transition: 300ms var(--cube-2);
+            }
+
+            &:hover {
+                color: var(--gly-pr-1);
+                transform: translateX(5px);
+                i {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &:is(.has-border) {
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 1px;
+                height: 92%;
+                background: #f7f7f7;
+                position: absolute;
+                left: 107%;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media #{$xs} {
+                    display: none;
+                }
+
+                @media #{$sm} {
+                    display: block;
+                }
+            }
+        }
+
+    }
 }
 
-.gly-experience-1-counter {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
 
-.gly-experience-1-slider {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+.gly-experience-1-list {
+    background: var(--gly-gd-1);
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    border-radius: 0px 30px 30px 30px;
+    max-width: 570px;
+    gap: 10px;
+    flex-wrap: wrap;
+
+
+    .list-item {
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: 500;
+        line-height: 30px;
+
+        i {
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 5px;
+            position: relative;
+            top: -1px;
+        }
+    }
 }
 
 /* 

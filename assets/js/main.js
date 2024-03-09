@@ -268,6 +268,21 @@ let glysp1 = new Swiper('.gly-sponser-1-active', {
 	  },
 });
 
+
+// experience-1-slider
+let glyexp1 = new Swiper('.gly-ex1-active', {
+	loop: true,
+	speed: 2000,
+
+	direction: "vertical",
+    mousewheel: true,
+
+	autoplay: {
+	  delay: 2000,
+	},
+
+});
+
   
 
 

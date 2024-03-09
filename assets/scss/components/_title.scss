@@ -14,6 +14,9 @@
     &:is(.has-white) {
         color: #fff;
     }
+    &:is(.has-color-2) {
+        color: var(--gly-heading-2);
+    }
 }
 
 
@@ -46,6 +49,19 @@
     &:is(.has-white) {
         color: #fff;
     }
+
+}
+
+.gly-para-2 {
+    font-family: var(--gly-pr-font);
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 18px;
+    color: var(--gly-para-2);
+    margin-bottom: 0px;
+    &:is(.has-white) {
+        color: #fff;
+    }
 }
 
 .gly-section-title-1 {
@@ -53,8 +69,9 @@
     font-size: 65px;
     font-weight: 900;
     line-height: 1.15;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
     text-transform: capitalize;
+    color: var(--gly-heading-1);
 
     @media #{$xxl} {
         font-size: 60px;
@@ -80,9 +97,13 @@
         color: #fff;
     }
 
+    &:is(.has-color-2) {
+        color: var(--gly-heading-2);
+    }
+
     .has-stoke {
         font-family: var(--archivo);
-        display: inline-block;
+        margin-left: 5px;
         -webkit-text-stroke: 2px var(--gly-heading-1);
         -webkit-text-fill-color: transparent;
 
