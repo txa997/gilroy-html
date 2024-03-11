@@ -133,6 +133,13 @@ txaaddclass.forEach(img => {
 	});
 });
 
+const h1tl = gsap.timeline();
+
+h1tl.from(".h1-fade-up" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:2 });
+h1tl.fromTo(".gly-hero-1-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" , duration:2 }, 
+			{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }
+);
+
 // services-scetion
 var gtbp1 = gsap.timeline({
 

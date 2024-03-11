@@ -1598,6 +1598,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   bottom: 3px;
 }
 
+.gsap-trn {
+  transition: var(--cube-2);
+}
+
 /* 
     all-common-class-end
 */
@@ -2692,10 +2696,16 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   top: 5%;
   left: 4%;
+  height: 100%;
   width: 92%;
   border-radius: 6px;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 1px);
+}
+.gly-hero-1-laptop .gly-hero-1-laptop-mockup .video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .gly-hero-1-laptop .gly-hero-1-laptop-mockup .part.top {
   transform: translate3d(0, 0, 0) rotateX(-90deg);

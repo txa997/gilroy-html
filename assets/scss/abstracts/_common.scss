@@ -278,6 +278,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 }
 
+.gsap-trn {
+    transition: var(--cube-2);
+}
+
 /* 
     all-common-class-end
 */
