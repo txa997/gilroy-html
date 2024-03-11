@@ -104,9 +104,14 @@
         .link-item {
             font-size: 27px;
             line-height: 1.29;
+            transition: 400ms var(--cube-1);
 
             @media #{$xs} {
                 font-size: 20px;
+            }
+
+            &:hover {
+                color: var(--gly-pr-1);
             }
         }
 
