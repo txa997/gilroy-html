@@ -1582,9 +1582,20 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .gly-gd-color-1 {
+  position: relative;
+  z-index: 1;
   background: var(--gly-gd-1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.gly-gd-color-1:is(.has-gd-underline)::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--gly-gd-1);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
 }
 
 /* 
@@ -1631,8 +1642,51 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-search-btn-1:hover {
   color: var(--gly-pr-1);
 }
+.gly-search-btn-1:is(.has-black) {
+  color: #121111;
+}
+.gly-search-btn-1:is(.has-black):hover {
+  color: var(--gly-pr-1);
+}
 
 /* search-btn-1-end */
+/* cart-btn-1-start */
+.gly-cart-btn-1 {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  line-height: 1;
+  font-size: 24px;
+  flex: 0 0 auto;
+  transition: 400ms var(--cube-1);
+  position: relative;
+  z-index: 2;
+}
+.gly-cart-btn-1 .count {
+  font-size: 10px;
+  font-weight: 600;
+  font-family: var(--gly-pr-font);
+  color: #121111;
+  position: absolute;
+  left: -5px;
+  top: -12px;
+  transition: 400ms var(--cube-1);
+}
+.gly-cart-btn-1:hover {
+  color: var(--gly-pr-1);
+}
+.gly-cart-btn-1:hover .count {
+  color: var(--gly-pr-1);
+}
+.gly-cart-btn-1:is(.has-black) {
+  color: #121111;
+}
+.gly-cart-btn-1:is(.has-black):hover {
+  color: var(--gly-pr-1);
+}
+
+/* cart-btn-1-end */
 /* mobile-menu-btn-1-start */
 .gly-mobile-menu-btn-1 {
   border: none;
@@ -1670,7 +1724,54 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: translateY(3px) rotate(45deg);
 }
 
-/* mobile-menu-btn-1-start */
+/* mobile-menu-btn-1-end */
+/* mobile-menu-btn-2-start */
+.gly-mobile-menu-btn-2 {
+  overflow: hidden;
+  border: none;
+  outline: none;
+  padding: 18px 15px;
+  background: var(--gly-gd-1);
+  flex: 0 0 auto;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 500ms var(--cube-1);
+  position: relative;
+  z-index: 1;
+}
+.gly-mobile-menu-btn-2 span {
+  display: block;
+  background: #fff;
+  width: 100%;
+  height: 4.5px;
+  transition: 500ms var(--cube-1);
+  border-radius: 5px;
+}
+.gly-mobile-menu-btn-2:focus span:nth-child(2) {
+  transform: translateX(50px) rotate(0deg);
+}
+.gly-mobile-menu-btn-2:focus span:nth-child(3) {
+  transform: translateY(-6px) rotate(308deg);
+}
+.gly-mobile-menu-btn-2:focus span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.gly-mobile-menu-btn-2:hover span:nth-child(2) {
+  transform: translateX(50px) rotate(0deg);
+}
+.gly-mobile-menu-btn-2:hover span:nth-child(3) {
+  transform: translateY(-6px) rotate(308deg);
+}
+.gly-mobile-menu-btn-2:hover span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+/* mobile-menu-btn-2-end */
 /* pr-btn-1-start */
 .gly-pr-btn-1 {
   display: inline-block;
@@ -1734,7 +1835,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* pr-btn-2-end */
 /* 
-    all-heading-and-paragraph-css-start
+    home-1-heading-paragraph-css-start
 */
 .gly-heading-1 {
   font-family: var(--gly-pr-font);
@@ -1857,7 +1958,27 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 /* 
-    all-heading-and-paragraph-css-end
+    home-1-heading-paragraph-css-end
+*/
+/* 
+    home-2-heading-paragraph-css-start
+*/
+.gly-heading-2 {
+  font-family: var(--gly-sd-font);
+  line-height: 1.33;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+}
+.gly-heading-2:is(.has-black) {
+  color: #0A0D14;
+}
+.gly-heading-2:is(.has-color-2) {
+  color: var(--gly-heading-2);
+}
+
+/* 
+    home-2-heading-paragraph-css-end
 */
 /* 
   header-1-css-start
@@ -2066,6 +2187,36 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
   header-1-css-end
+*/
+/* 
+  header-2-css-start
+*/
+.gly-header-1-area:is(.has-header-2) {
+  top: 35px;
+}
+@media (max-width: 767px) {
+  .gly-header-1-area:is(.has-header-2) {
+    top: 0px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-header-1-area:is(.has-header-2) .gly-cart-btn-1 {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .gly-header-1-area:is(.has-header-2) .gly-cart-btn-1 {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-header-1-area:is(.has-header-2) .gly-cart-btn-1 {
+    display: block;
+  }
+}
+
+/* 
+  header-2-css-end
 */
 .mobile-menu {
   position: fixed;
@@ -2350,7 +2501,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: var(--gly-pr-1);
 }
 
-/* hero-1-css-start */
+/* 
+    hero-1-css-start 
+*/
 .gly-hero-1-area {
   background: #131518;
   padding-top: 430px;
@@ -2579,7 +2732,152 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: translate3d(0, 0, -11px) rotateX(90deg) scale(1, 1);
 }
 
-/* hero-1-css-end */
+/* 
+    hero-1-css-end 
+*/
+/* 
+    hero-2-css-start
+*/
+.gly-hero-2-area {
+  position: relative;
+  z-index: 1;
+  background: #030303;
+}
+.gly-hero-2-il-1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 32%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-hero-2-il-1 {
+    width: 45%;
+  }
+}
+@media (max-width: 767px) {
+  .gly-hero-2-il-1 {
+    width: 65%;
+  }
+}
+.gly-hero-2-il-2 {
+  position: absolute;
+  left: 0;
+  bottom: -260px;
+  z-index: -1;
+  width: 20%;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .gly-hero-2-il-2 {
+    bottom: -200px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-hero-2-il-2 {
+    bottom: -160px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-hero-2-il-2 {
+    bottom: -100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-hero-2-il-2 {
+    bottom: -100px;
+    width: 30%;
+  }
+}
+@media (max-width: 767px) {
+  .gly-hero-2-il-2 {
+    bottom: -70px;
+    width: 58%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-hero-2-il-2 {
+    bottom: -70px;
+    width: 34%;
+  }
+}
+.gly-hero-2-il-3 {
+  position: absolute;
+  top: 10%;
+  z-index: -2;
+  left: 6%;
+}
+.gly-hero-2-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gly-hero-2-wrap {
+  position: relative;
+}
+.gly-hero-2-wrap .gly-hero-1-social {
+  left: unset;
+  right: 1%;
+  gap: 45px;
+  transform: translateY(-36%);
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-hero-2-wrap .gly-hero-1-social {
+    display: flex;
+  }
+}
+.gly-hero-2-wrap .gly-chat-btn-1 {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  z-index: 1;
+  -webkit-text-fill-color: #121111;
+}
+.gly-hero-2-wrap .gly-chat-btn-1:hover {
+  -webkit-text-fill-color: transparent;
+}
+.gly-hero-2-content {
+  padding-top: 260px;
+  padding-bottom: 150px;
+}
+.gly-hero-2-title {
+  font-family: var(--gly-sd-font);
+  font-size: 60px;
+  line-height: 1.41;
+  color: #fff;
+  font-weight: 600;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-hero-2-title {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-hero-2-title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-hero-2-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-hero-2-title {
+    font-size: 38px;
+  }
+}
+
+/* 
+    hero-2-css-end
+*/
+/* 
+    services-1-css-start
+*/
 .gly-services-1-area {
   background: #edf1f3;
 }
@@ -2849,7 +3147,106 @@ input:focus::placeholder, textarea:focus::placeholder {
   -webkit-text-fill-color: transparent;
 }
 
-/* project-1-css-start */
+/* 
+    services-1-css-end
+*/
+/* 
+    services-2-css-start
+*/
+.gly-services-2-area {
+  background: #030406;
+}
+.gly-services-2-item .subtitle {
+  font-size: 19px;
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 36px;
+}
+.gly-services-2-item .subtitle::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #0bb79e;
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+}
+.gly-services-2-item .item-icon {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 92px;
+  background: var(--gly-gd-1);
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  font-size: 40px;
+}
+.gly-services-2-item .item-icon i {
+  display: inline-block;
+  line-height: 1;
+  margin-top: 10px;
+}
+.gly-services-2-item .title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 294px;
+  margin-bottom: 25px;
+}
+.gly-services-2-item .item-title {
+  font-size: 30px;
+  line-height: 1.33;
+}
+.gly-services-2-item .item-disc {
+  max-width: 410px;
+  margin-bottom: 25px;
+}
+.gly-services-2-item-btn {
+  background: var(--gly-gd-1);
+  display: inline-block;
+  border-radius: 50px;
+}
+.gly-services-2-item-btn .gd-border {
+  display: inline-block;
+  font-family: var(--gly-pr-font);
+  font-weight: 600;
+  background-clip: padding-box;
+  text-transform: capitalize;
+  color: #fff;
+  line-height: 1;
+  border: 1px solid transparent;
+  font-size: 16px;
+  padding: 16px 37px;
+  border-radius: 50px;
+  background-color: #000;
+  transition: 400ms var(--cube-1);
+}
+.gly-services-2-item-btn .gd-border i {
+  margin-left: 3px;
+  font-size: 10px;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  transition: 400ms var(--cube-2);
+}
+.gly-services-2-item-btn:hover .gd-border {
+  background-color: transparent;
+}
+.gly-services-2-item-btn:hover .gd-border i {
+  transform: rotate(360deg);
+}
+
+/* 
+    services-2-css-end
+*/
+/* 
+    project-1-css-start 
+*/
 .gly-project-1-area {
   background: #050505;
   position: relative;
@@ -3066,7 +3463,218 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 
-/* project-1-css-start */
+/* 
+    project-1-css-end  
+*/
+/* 
+    project-2-css-start
+*/
+.gly-project-2-area {
+  margin-top: -10px;
+  background-color: #030406;
+}
+.gly-project-2-item {
+  height: 670px;
+  border-radius: 45px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding: 10px 0;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-2-item {
+    height: 500px;
+  }
+}
+.gly-project-2-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--gly-gd-1);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: 1000ms var(--cube-2);
+  transform: scaleY(0);
+}
+.gly-project-2-item img {
+  border-radius: 45px;
+}
+.gly-project-2-item-content {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  width: 90%;
+  background: var(--gly-gd-1);
+  transform: translateX(-50%);
+  padding: 15px 55px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  transition: 1000ms var(--cube-2);
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-2-item-content {
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-2-item-content {
+    padding: 30px 25px;
+    flex-wrap: wrap;
+  }
+}
+.gly-project-2-item-content .title {
+  font-size: 24px;
+  transition: 400ms var(--cube-1);
+}
+.gly-project-2-item-content .title:hover {
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+@media (max-width: 767px) {
+  .gly-project-2-item-content .title {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-project-2-item-content .title {
+    font-size: 24px;
+  }
+}
+.gly-project-2-item-content .subtitle {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.gly-project-2-item-btn {
+  width: 68px;
+  height: 68px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-size: 20px;
+  color: #000;
+  transition: 400ms var(--cube-2);
+}
+.gly-project-2-item-btn i {
+  display: inline-block;
+  line-height: 1;
+  margin-top: 5px;
+}
+.gly-project-2-item-btn:hover {
+  color: #fff;
+  background-color: var(--gly-heading-1);
+  transform: rotate(45deg);
+}
+
+.gly-project-2-slider {
+  position: relative;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+@media (max-width: 767px) {
+  .gly-project-2-slider {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.gly-project-2-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .gly-project-2-item::after {
+  transform: scaleY(1);
+}
+.gly-project-2-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .gly-project-2-item-content {
+  bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .gly-project-2-slider-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+}
+.gly-project-2-slider-btn .gly_p2_prev {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .gly-project-2-slider-btn .gly_p2_prev {
+    position: unset;
+    transform: unset;
+    position: relative;
+  }
+}
+.gly-project-2-slider-btn .gly_p2_next {
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .gly-project-2-slider-btn .gly_p2_next {
+    position: unset;
+    transform: unset;
+    position: relative;
+  }
+}
+.gly-project-2-slider-btn .gly-slider-btn-1 {
+  width: 89px;
+  height: 89px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: center;
+  line-height: 1;
+  font-size: 20px;
+  bottom: 0;
+  z-index: 1;
+  transition: 400ms var(--cube-1);
+}
+@media (max-width: 767px) {
+  .gly-project-2-slider-btn .gly-slider-btn-1 {
+    width: 50px;
+    height: 50px;
+  }
+}
+.gly-project-2-slider-btn .gly-slider-btn-1::after {
+  background: var(--gly-gd-1);
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: scale(0);
+  opacity: 0;
+  transition: 400ms var(--cube-2);
+}
+.gly-project-2-slider-btn .gly-slider-btn-1:hover {
+  color: #fff;
+  border: none;
+}
+.gly-project-2-slider-btn .gly-slider-btn-1:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 
+    project-2-css-end
+*/
 .gly-campaign-1-area {
   position: relative;
   z-index: 1;

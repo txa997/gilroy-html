@@ -258,9 +258,24 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .gly-gd-color-1 {
+    position: relative;
+    z-index: 1;
     background: var(--gly-gd-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    &:is(.has-gd-underline) {
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: var(--gly-gd-1);
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+        }
+    }
+
 }
 
 /* 

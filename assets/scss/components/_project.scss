@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
 
-/* project-1-css-start */
+/* 
+    project-1-css-start 
+*/
 
 .gly-project-1 {
     &-area {
@@ -246,4 +248,246 @@
 }
 
 
-/* project-1-css-start */
+/* 
+    project-1-css-end  
+*/
+
+/* 
+    project-2-css-start
+*/
+
+.gly-project-2 {
+
+    &-area {
+        margin-top: -10px;
+        background-color: #030406;
+    }
+
+    &-item {
+        height: 670px;
+        border-radius: 45px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        padding: 10px 0;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            height: 500px;
+        }
+
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: var(--gly-gd-1);
+            position: absolute;
+            top: 0px;
+            left: 0;
+            z-index: -1;
+            transition: 1000ms var(--cube-2);
+            transform: scaleY(0);        
+
+        }
+        
+
+        img {
+            border-radius: 45px;
+        }
+
+        &-content {
+            position: absolute;
+            bottom: -30%;
+            left: 50%;
+            width: 90%;
+            background: var(--gly-gd-1);
+            transform: translateX(-50%);
+            padding: 15px 55px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            transition: 1000ms var(--cube-2);
+
+            @media #{$xxl,$xl,$lg,$md} {
+                padding: 15px 25px;
+            }
+
+            @media #{$xs} {
+                padding: 30px 25px;
+                flex-wrap: wrap;
+            }
+
+            .title {
+                font-size: 24px;
+                transition: 400ms var(--cube-1);
+                &:hover {
+                    letter-spacing: .5px;
+                    opacity: .8;
+                }
+
+                @media #{$xs} {
+                    font-size: 22px;
+                }
+
+                @media #{$sm} {
+                    font-size: 24px;
+                }
+            }
+
+            .subtitle {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            
+        }
+
+        &-btn {
+            width: 68px;
+            height: 68px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+            font-size: 20px;
+            color: #000;
+            transition: 400ms var(--cube-2);
+
+            i {
+                display: inline-block;
+                line-height: 1;
+                margin-top: 5px;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: var(--gly-heading-1);
+                transform: rotate(45deg);
+            }
+            
+        }
+    }
+    
+}
+
+.gly-project-2-slider {
+    position: relative;
+    margin-left: -40px;
+    margin-right: -40px;
+
+    @media #{$xs} {
+        margin-left: 0px;
+        margin-right: 0px; 
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .swiper-container {
+        .swiper-wrapper {
+            .swiper-slide {
+                &:is(.swiper-slide-active) {
+                    .gly-project-2-item::after {
+                        transform: scaleY(1);
+                    }
+                    .gly-project-2-item-content {
+                        bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gly-project-2-slider-btn {
+
+    @media #{$xs} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .gly_p2_prev {
+        position: absolute;
+        top: 50%;
+        left: 70px;
+        transform: translateY(-50%);
+
+        
+        @media #{$xs} {
+            position: unset;
+            transform: unset;
+            position: relative;
+        }
+    }
+
+    .gly_p2_next {
+        position: absolute;
+        top: 50%;
+        right: 70px;
+        transform: translateY(-50%);
+
+        @media #{$xs} {
+            position: unset;
+            transform: unset;
+            position: relative;
+        }
+    }
+
+    .gly-slider-btn-1 {
+        width: 89px;
+        height: 89px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        justify-content: center;
+        line-height: 1;
+        font-size: 20px;
+        bottom: 0;
+        z-index: 1;
+        transition: 400ms var(--cube-1);
+
+        @media #{$xs} {
+            width: 50px;
+            height: 50px;
+        }
+
+        &::after {
+            background: var(--gly-gd-1);
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transform: scale(0);
+            opacity: 0;
+            transition: 400ms var(--cube-2);
+        }
+
+        &:hover {
+            color: #fff;
+            border: none;
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+
+
+
+/* 
+    project-2-css-end
+*/
+

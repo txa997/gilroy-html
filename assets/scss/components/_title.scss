@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 
 /* 
-    all-heading-and-paragraph-css-start
+    home-1-heading-paragraph-css-start
 */
 
 .gly-heading-1 {
@@ -123,6 +123,30 @@
     }
 }
 
+
 /* 
-    all-heading-and-paragraph-css-end
+    home-1-heading-paragraph-css-end
+*/
+
+/* 
+    home-2-heading-paragraph-css-start
+*/
+
+.gly-heading-2 {
+    font-family: var(--gly-sd-font);
+    line-height: 1.33;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+
+    &:is(.has-black) {
+        color: #0A0D14;
+    }
+
+    &:is(.has-color-2) {
+        color: var(--gly-heading-2);
+    }
+}
+/* 
+    home-2-heading-paragraph-css-end
 */

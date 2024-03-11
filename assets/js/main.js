@@ -283,6 +283,43 @@ let glyexp1 = new Swiper('.gly-ex1-active', {
 
 });
 
+
+
+
+// testimonial-1-slider
+let glyp2 = new Swiper('.gly-p2-active', {
+	loop: true,
+	spaceBetween: 25,
+	speed: 2000,
+	centeredSlides: true,
+	autoplay: {
+	  delay: 5000,
+	},
+
+	navigation: {
+		nextEl: ".gly_p2_next",
+		prevEl: ".gly_p2_prev",
+	},
+
+	breakpoints: {
+		0: {
+		  slidesPerView: 1,
+		},
+		576: {
+		  slidesPerView: 1,
+		},
+		768: {
+		  slidesPerView: 2,
+		},
+		992: {
+		  slidesPerView: 2,
+		},
+		1200: {
+		  slidesPerView: 3,
+		},
+	  },
+});
+
   
 
 

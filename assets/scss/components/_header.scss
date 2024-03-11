@@ -243,3 +243,32 @@
 /* 
   header-1-css-end
 */
+
+/* 
+  header-2-css-start
+*/
+.gly-header-1-area {
+  &:is(.has-header-2) {
+    top: 35px;
+
+    @media #{$xs} {
+      top: 0px;
+    }
+    
+    .gly-cart-btn-1 {
+      @media #{$lg} {
+        display: none;
+      }
+      @media #{$xs} {
+        display: none;
+        
+      }
+      @media #{$sm} {
+        display: block;
+      }
+    }
+  }
+}
+/* 
+  header-2-css-end
+*/

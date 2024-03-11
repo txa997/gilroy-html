@@ -1,5 +1,7 @@
 @use '../abstracts/variables' as *;
-/* hero-1-css-start */
+/* 
+    hero-1-css-start 
+*/
 .gly-hero-1 {
     &-area {
         background: #131518;
@@ -263,4 +265,146 @@
 
  
 
-/* hero-1-css-end */
+/* 
+    hero-1-css-end 
+*/
+
+/* 
+    hero-2-css-start
+*/
+.gly-hero-2 {
+    &-area {
+        position: relative;
+        z-index: 1;
+        background: #030303;
+
+
+    }
+
+    &-il-1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        width: 32%;
+
+        @media #{$md} {
+            width: 45%;
+        }
+
+        @media #{$xs} {
+            width: 65%;
+        }
+    }
+    
+    &-il-2 {
+        position: absolute;
+        left: 0;
+        bottom: -260px;
+        z-index: -1;
+        width: 20%;
+
+        @media #{$xxxl} {
+            bottom: -200px;
+        }
+
+        @media #{$xxl,$xl} {
+            bottom: -160px;
+        }
+
+        @media #{$lg} {
+            bottom: -100px;
+        }
+
+        @media #{$md} {
+            bottom: -100px;
+            width: 30%;
+        }
+
+        @media #{$xs} {
+            bottom: -70px;
+            width: 58%;
+        }
+
+        @media #{$sm} {
+            bottom: -70px;
+            width: 34%;
+        }
+    }
+    
+    &-il-3 {
+        position: absolute;
+        top: 10%;
+        z-index: -2;
+        left: 6%;
+    }
+
+
+    &-container {
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &-wrap {
+        position: relative;
+
+        .gly-hero-1-social {
+            left: unset;
+            right: 1%;
+            gap: 45px;
+            transform: translateY(-36%);
+
+            @media #{$xxl,$xl} {
+                display: flex;
+            }
+        }
+
+        .gly-chat-btn-1 {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            z-index: 1;
+            -webkit-text-fill-color: #121111;
+
+            &:hover {
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    &-content {
+        padding-top: 260px;
+        padding-bottom: 150px;
+    }
+
+    &-title {
+        font-family: var(--gly-sd-font);
+        font-size: 60px;
+        line-height: 1.41;
+        color: #fff;
+        font-weight: 600;
+        max-width: 1020px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media #{$lg} {
+            font-size: 55px;
+        }
+        @media #{$md} {
+            font-size: 44px;
+        }
+        @media #{$xs} {
+            font-size: 30px;
+        }
+        @media #{$sm} {
+            font-size: 38px;
+        }
+
+    }
+}
+/* 
+    hero-2-css-end
+*/

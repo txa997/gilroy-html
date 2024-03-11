@@ -1,5 +1,8 @@
 @use '../abstracts/variables' as *;
 
+/* 
+    services-1-css-start
+*/
 
 .gly-services-1 {
     &-area {
@@ -267,5 +270,130 @@
         }
     }
 }
+
+
+/* 
+    services-1-css-end
+*/
+
+
+/* 
+    services-2-css-start
+*/
+.gly-services-2 {
+    &-area {
+        background: #030406;
+    }
+
+    &-item {
+        .subtitle {
+            font-size: 19px;
+            line-height: 1;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 36px;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: #0bb79e;
+                position: absolute;
+                left: 0;
+                bottom: -11px;
+            }
+        }
+
+        .item-icon {
+            flex: 0 0 auto;
+            width: 56px;
+            height: 92px;
+            background: var(--gly-gd-1);
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+            color: #fff;
+            font-size: 40px;
+
+            i {
+                display: inline-block;
+                line-height: 1;
+                margin-top: 10px;
+            }
+        }
+
+        .title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 294px;
+            margin-bottom: 25px;
+        }
+
+        .item-title {
+            font-size: 30px;
+            line-height: 1.33;
+        }
+
+        .item-disc {
+            max-width: 410px;
+            margin-bottom: 25px;
+        }
+        
+        &-btn {
+            background: var(--gly-gd-1);
+            display: inline-block;
+            border-radius: 50px;
+
+            .gd-border {
+                display: inline-block;
+                font-family: var(--gly-pr-font);
+                font-weight: 600;
+                background-clip: padding-box;
+                text-transform: capitalize;
+                color: #fff;
+                line-height: 1;
+                border: 1px solid transparent;
+                font-size: 16px;
+                padding: 16px 37px;
+                border-radius: 50px;
+                background-color: #000;
+                transition: 400ms var(--cube-1);
+    
+                i {
+                    margin-left: 3px;
+                    font-size: 10px;
+                    display: inline-block;
+                    position: relative;
+                    top: -1px;
+                    transition: 400ms var(--cube-2);
+                }
+            }
+
+            &:hover {
+                .gd-border {
+                    background-color: transparent;
+                    i {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+
+            
+        }
+        
+        
+    }
+    
+}
+
+
+
+/* 
+    services-2-css-end
+*/
 
 
