@@ -245,7 +245,7 @@ let glyt1 = new Swiper('.gly-t1-active', {
 
 
 
-// testimonial-1-slider
+// sponser-1-slider
 let glysp1 = new Swiper('.gly-sponser-1-active', {
 	loop: true,
 	speed: 5000,
@@ -293,7 +293,7 @@ let glyexp1 = new Swiper('.gly-ex1-active', {
 
 
 
-// testimonial-1-slider
+// project-2-slider
 let glyp2 = new Swiper('.gly-p2-active', {
 	loop: true,
 	spaceBetween: 25,
@@ -335,7 +335,7 @@ let glyp2 = new Swiper('.gly-p2-active', {
 faq-active-class
 ====start====
 */
-$(document).on('click', '.accordion-item', function(){
+$(document).on('click', '.gly-accordion-item', function(){
 	$(this).addClass('faq_bg').siblings().removeClass('faq_bg')
 })
 /*

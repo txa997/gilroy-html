@@ -147,6 +147,61 @@
         color: var(--gly-heading-2);
     }
 }
+
+
+
+
+.gly-subtitle-2 {
+    font-family: var(--gly-sd-font);
+    text-transform: uppercase;
+    display: inline-block;
+    background: var(--gly-gd-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+
+.gly-section-title-2 {
+    font-family: var(--gly-sd-font);
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #fff;
+
+    @media #{$xxxl} {
+        font-size: 65px;
+    }
+
+    @media #{$xxl} {
+        font-size: 60px;
+    }
+
+    @media #{$xl} {
+        font-size: 55px;
+    }
+    @media #{$lg} {
+        font-size: 45px;
+    }
+    @media #{$md} {
+        font-size: 40px;
+    }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 35px;
+    }
+
+}
+
+
+
 /* 
     home-2-heading-paragraph-css-end
 */

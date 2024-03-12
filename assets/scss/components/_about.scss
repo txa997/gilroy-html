@@ -1,0 +1,278 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    about-1-css-start
+*/
+
+.gly-about-2 {
+    &-area {
+        background: #030406;
+    }
+
+    &-section {
+        &-title {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 0 20px;
+            align-items: center;
+
+            @media #{$md} {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media #{$xs} {
+                grid-template-columns:  1fr;
+            }
+
+            .il-1 {
+                position: absolute;
+                left: 45%;
+                transform: translateX(-50%);
+                
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 40px;
+
+        @media #{$xl,$lg} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-img {
+        background: #efe6d9;
+        border-radius: 10px;
+        width: 100%;
+        height: 548px;
+        position: relative;
+        text-align: center;
+
+        @media #{$lg,$md,$xs} {
+            height: auto;
+        }
+
+        .main-img {
+            margin-top: -38px;
+        }
+    }
+    
+}
+
+.gly-accordion-item {
+    background-color: #111520;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+
+    
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--gly-gd-1);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: 500ms var(--cube-1);
+    }
+
+    &:is(.faq_bg) {
+        &::after {
+            opacity: 1;  
+        }
+    }
+
+    .item-header {
+        .item-button {
+            text-align: left;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            line-height: 1.75;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            color: #f9f9f9;
+            gap: 25px;
+            padding: 35px 60px;
+
+            @media #{$xl} {
+                padding: 35px 30px;
+            }
+
+            @media #{$lg} {
+                padding: 35px 30px;
+                font-size: 16px;
+            }
+
+            @media #{$md} {
+                padding: 35px 30px;
+                font-size: 20px;
+            }
+
+            @media #{$xs} {
+                padding: 35px 20px;
+                font-size: 20px;
+            }
+
+            @media #{$sm} {
+                padding: 35px 30px;
+                font-size: 20px;
+            }
+
+            .number {
+                font-size: 33px;
+                @media #{$lg} {
+                    font-size: 26px;
+                }
+                @media #{$xs} {
+                    font-size: 20px;
+                }
+                @media #{$sm} {
+                    font-size: 33px;
+                }
+            }
+
+            .img-icon {
+                @media #{$xs} {
+                    display: none;
+                }
+    
+                @media #{$sm} {
+                    display: inline-block;
+                }
+            }
+
+
+            .icon {
+                margin-left: auto;
+                display: inline-block;
+                flex: 0 0 auto;
+                line-height: 1;
+                font-size: 18px;
+                transition: 500ms var(--cube-2);
+            }
+
+
+            &:is(:not(.collapsed)) {
+                .icon {
+                    transform: rotate(90deg);
+                }
+            }
+
+            
+        }
+    }
+
+    .item-body {
+        padding: 35px 60px;
+        padding-top: 0px;
+
+        @media #{$xl,$lg} {
+            padding: 35px 30px;
+            padding-top: 0px;
+        }
+
+        @media #{$xs} {
+            padding: 35px 20px;
+            padding-top: 0px;
+        }
+
+        @media #{$sm} {
+            padding: 35px 60px;
+            padding-top: 0px;
+        }
+    }
+}
+
+
+.txa-faqs-page-accordion {
+    .accordion-item {
+        position: relative;
+        background-color: #111520;
+        border-radius: 10px;
+        border: none;
+
+        .accordion-header {
+            background: transparent;
+            border: none;
+            outline: none;
+            .accordion-button {
+                border: none;
+                outline: none;
+                background: transparent;
+                padding: 25px 15px;
+                justify-content: space-between;
+                gap: 15px;
+                align-items: center;
+                transition: 400ms var(--cube-1);
+                .title {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.3;
+                    transition: 400ms var(--cube-1);
+                    margin-right: auto;
+                }
+                .icon-2 {
+                    font-size: 20px;
+                    transform: translateY(3px);
+                    transition: 400ms var(--cube-1);
+                }
+                .icon {
+                    font-size: 16px;
+                    transform: translateY(3px);
+                    transition: 400ms var(--cube-1);
+                }
+                &::after {
+                    display: none;
+                }
+
+                &:is(:not(.collapsed)) {
+                    background: var(--txa-gd-1);
+                    border-radius: 10px 10px 0px 0px  ;
+                    border: 1px solid transparent;
+                    .title {
+                        color: #fff;
+                    }
+                    .icon-2 {
+                        color: #fff;
+                    }
+                    .icon {
+                        transform: translateY(3px) rotate(90deg);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .accordion-body  {
+            padding: 20px 20px;
+            background: transparent;
+            border-radius:  0px 0px 10px 10px ;
+            .disc {
+                line-height: 30px;
+                color: #595959;
+            }
+        }
+    }   
+}
+/* 
+    about-1-css-end
+*/

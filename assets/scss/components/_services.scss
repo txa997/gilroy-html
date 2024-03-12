@@ -286,6 +286,9 @@
     }
 
     &-item {
+
+        margin-bottom: 30px;
+
         .subtitle {
             font-size: 19px;
             line-height: 1;
@@ -329,62 +332,40 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            max-width: 294px;
+            max-width: 325px;
             margin-bottom: 25px;
         }
 
         .item-title {
             font-size: 30px;
             line-height: 1.33;
+
+            @media #{$xl} {
+                font-size: 26px;
+            }
+
+            @media #{$lg,$md,$xs} {
+                font-size: 24px;
+            }
+
         }
 
         .item-disc {
             max-width: 410px;
             margin-bottom: 25px;
         }
+
         
-        &-btn {
-            background: var(--gly-gd-1);
-            display: inline-block;
-            border-radius: 50px;
-
-            .gd-border {
-                display: inline-block;
-                font-family: var(--gly-pr-font);
-                font-weight: 600;
-                background-clip: padding-box;
-                text-transform: capitalize;
-                color: #fff;
-                line-height: 1;
-                border: 1px solid transparent;
-                font-size: 16px;
-                padding: 16px 37px;
-                border-radius: 50px;
-                background-color: #000;
-                transition: 400ms var(--cube-1);
-    
-                i {
-                    margin-left: 3px;
-                    font-size: 10px;
-                    display: inline-block;
-                    position: relative;
-                    top: -1px;
-                    transition: 400ms var(--cube-2);
+        &:is(.has-style-2) {
+            .subtitle {
+                &::after {
+                    background: #5454c5;
                 }
             }
-
-            &:hover {
-                .gd-border {
-                    background-color: transparent;
-                    i {
-                        transform: rotate(360deg);
-                    }
-                }
+            .gly-services-2-item-btn {
+                background: linear-gradient(90deg, rgba(169,14,109,1) 0%, rgba(12,61,207,1) 50%, rgba(59,63,199,1) 100%);
             }
-
-            
         }
-        
         
     }
     

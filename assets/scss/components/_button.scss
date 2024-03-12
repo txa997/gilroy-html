@@ -278,6 +278,110 @@
 
 /* pr-btn-2-end */
 
+/* gd-border-btn-1-start */
+.gd-border-btn-1 {
+    background: var(--gly-gd-1);
+    display: inline-block;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    flex: 0 0 auto;
+
+    .gd-border {
+        display: inline-block;
+        font-family: var(--gly-pr-font);
+        font-weight: 600;
+        background-clip: padding-box;
+        text-transform: capitalize;
+        color: #fff;
+        line-height: 1;
+        border: 1px solid transparent;
+        font-size: 16px;
+        padding: 16px 37px;
+        border-radius: 50px;
+        background-color: #000;
+        transition: 400ms var(--cube-1);
+
+        i {
+            margin-left: 3px;
+            font-size: 10px;
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            transition: 400ms var(--cube-2);
+        }
+    }
+
+    &:is(.has-color-2) {
+        background: linear-gradient(90deg, rgba(10,172,144,1) 0%, rgba(12,61,207,1) 50%, rgba(11,189,156,1) 100%);
+    }
+
+    &:is(.has-color-3) {
+        background: linear-gradient(90deg, rgba(169,14,109,1) 0%, rgba(12,61,207,1) 50%, rgba(59,63,199,1) 100%);
+    }
+
+    &:hover {
+        .gd-border {
+            background-color: transparent;
+            i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    
+}
+/* gd-border-btn-1-end */
+
+
+/* arrow-btn-1-css-start */
+.gly-arrow-btn-1 {
+    width: 68px;
+    height: 68px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 20px;
+    color: #000;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: 400ms var(--cube-2);
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: var(--gly-gd-1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: 400ms var(--cube-1);
+    }
+
+    i {
+        display: inline-block;
+        line-height: 1;
+        margin-top: 6px;
+    }
+
+    &:hover {
+        transform: rotate(45deg);
+        color: #fff;
+        background: transparent;
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+/* arrow-btn-1-css-end */
+
+
 
 
 // all-button-css-end
