@@ -1,0 +1,107 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    digital-product-1-css-start
+*/
+
+
+.gly-digital-product-1 {
+
+    &-area {
+        background: #f4f3ee;
+    }
+
+    &-section-title {
+        max-width: 930px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+
+        @media #{$xl,$lg,$md,$xs} {
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &-item {
+        border-radius: 50%;
+        border: 2px solid #222222;
+        transition: 400ms var(--cube-1);
+        background: transparent;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,207,127,1) 0%, rgba(182,89,255,1) 25%, rgba(255,77,18,1) 75%, rgba(0,188,255,1) 100%);
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            transition: 400ms var(--cube-1);
+            opacity: 0;
+        }
+
+
+        &-border {
+            position: relative;
+            z-index: 1;
+            max-width: 245px;
+            height: 245px;
+            border-radius: 50%;
+            background-color: #F4F3EE;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: auto;
+            gap: 15px;
+            border: 12px solid transparent;
+            background-clip: padding-box;
+            transition: 400ms var(--cube-1);
+
+            .icon {
+                transform: translateY(30px);
+                transition: 400ms var(--cube-2);
+            }
+            
+            .title {
+                font-size: 16px;
+                text-align: center;
+                color: #0a0d14;
+                transition: 400ms var(--cube-1);
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+
+        &:hover {
+            border-color: transparent;
+            &::after {
+                opacity: 1;
+            }
+
+            .gly-digital-product-1-item-border {
+                .icon {
+                    transform: translateY(0px);
+                }
+                .title {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+        }
+
+    }
+}
+
+/* 
+    digital-product-1-css-end
+*/

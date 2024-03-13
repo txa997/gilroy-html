@@ -1,5 +1,7 @@
 @use '../abstracts/variables' as *;
-
+/* 
+    blog-1-css-start
+*/
 .gly-blog-1 {
     &-area {
         background: #000;
@@ -141,5 +143,77 @@
     }
 }
 
+/* 
+    blog-1-css-end
+*/
 
+/* 
+    blog-2-css-start
+*/
+
+.gly-blog-2 {
+    &-area {
+        background: #f4f3ee;
+    }
+}
+
+.gly-blog-2-item {
+    border-radius: 30px;
+    border: 2px solid #222222;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+
+    @media #{$xl,$lg,$md,$xs} {
+        padding: 30px 20px;
+    }
+
+    &-meta  {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        .title , i {
+            color: #0a0d14;
+            font-size: 14px;
+            display: inline-block;
+        }
+    }
+
+    .main-img {
+        height: 285px;
+        overflow: hidden;
+        border-radius: 30px;
+        margin-bottom: 23px;
+    }
+
+    .blog-title {
+        font-size: 23px;
+        line-height: 1.39;
+        transition: 400ms var(--cube-1);
+        background: var(--gly-gd-1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #0a0d14;
+        color: transparent;
+
+        @media #{$xl,$lg,$md,$xs} {
+            font-size: 20px;
+        }
+
+        &:hover {
+            -webkit-text-fill-color: transparent;
+            transform: skewX(5deg);
+        }
+    }
+    
+}
+
+
+
+
+
+/* 
+    blog-2-css-end
+*/
 

@@ -198,6 +198,29 @@
         font-size: 35px;
     }
 
+    &:is(.has-font-55) {
+        font-size: 55px;
+
+        @media #{$lg} {
+            font-size: 45px;
+        }
+        @media #{$md} {
+            font-size: 40px;
+        }
+        @media #{$xs} {
+            font-size: 30px;
+        }
+        @media #{$sm} {
+            font-size: 35px;
+        }
+           
+    }
+
+    
+    &:is(.has-black) {
+        color: #0a0d14;
+    }
+
 }
 
 

@@ -175,6 +175,10 @@
         align-items: center;
         gap: 15px;
 
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
         .gd-border-btn-1 {
             background: transparent;
 
@@ -197,12 +201,28 @@
         display: grid;
         grid-template-columns: 1fr 1fr ;
         gap: 20px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-item {
         position: relative;
         z-index: 1;
         height: 645px;
+
+        @media #{$lg} {
+            height: 500px;
+        }
+
+        @media #{$md} {
+            height: 535px;
+        }
+
+        @media #{$xs} {
+            height: 500px;
+        }
 
         &:nth-child(2) {
             .main-img {
@@ -223,6 +243,7 @@
         }
 
         .main-img {
+            overflow: hidden;
             width: 100%;
             height: 100%;
             background-color: #b8cedb;
@@ -249,6 +270,10 @@
             gap: 15px;
             flex-wrap: wrap;
             padding: 25px;
+
+            @media #{$md,$xs} {
+                padding: 25px 15px;
+            }
         }
         
         .subtitle {
@@ -262,6 +287,10 @@
             line-height: 1.66;
             color: #f9f9f9;
             transition: 400ms var(--cube-1);
+
+            @media #{$md,$xs} {
+                font-size: 22px;
+            }
             
             &:hover {
                 transform: skewX(8deg);
@@ -270,19 +299,33 @@
             
         }
 
-        &-content {
-            .disc {
-                max-width: 670px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 30px;
-            }
-        }
+
 
         &:hover {
             .main-img {
                 height: 81%;
+
+                @media #{$lg,$md} {
+                    height: 61%;
+                }
+
+                @media #{$xs} {
+                    height: 55%;
+                }
+
+                @media #{$sm} {
+                    height: 71%;
+                }
             }
+        }
+    }
+
+    &-content {
+        .disc {
+            max-width: 670px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
         }
     }
 }

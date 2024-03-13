@@ -241,8 +241,6 @@ let glyt1 = new Swiper('.gly-t1-active', {
 	
 });
 
-  
-
 
 
 // sponser-1-slider
@@ -325,6 +323,26 @@ let glyp2 = new Swiper('.gly-p2-active', {
 		  slidesPerView: 3,
 		},
 	  },
+});
+
+  
+
+// testimonial-2-slider
+let glyt2 = new Swiper('.gly-t2-active', {
+	loop: true,
+	spaceBetween: 25,
+	speed: 2000,
+	centeredSlides: true,
+	autoplay: {
+	  delay: 5000,
+	},
+
+	navigation: {
+		nextEl: ".gly_t2_next",
+		prevEl: ".gly_t2_prev",
+	},
+
+
 });
 
   

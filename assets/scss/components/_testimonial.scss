@@ -1,4 +1,7 @@
 @use '../abstracts/variables' as *;
+/* 
+    testimonial-1-css-start
+*/
 
 .gly-testimonial-1 {
 
@@ -228,3 +231,206 @@
         }
     }
 }
+
+/* 
+    testimonial-1-css-end
+*/
+
+
+/* 
+    testimonial-2-css-start
+*/
+
+.gly-testimonial-2 {
+
+    &-area  {
+        background-color: #030406;
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 30px;
+        position: relative;
+        z-index: 1;
+        padding: 90px 110px;
+        padding-left: 270px;
+
+        @media #{$xl} {
+            padding-left: 170px;
+        }
+
+        @media #{$lg,$md} {
+            padding: 0px 0px;
+            padding-left: 0px;
+        }
+
+        @media #{$xs} {
+            padding: 0px 0px;
+            padding-left: 0px;
+            grid-template-columns: auto;
+        }
+
+        @media #{$sm} {
+            padding: 0px 0px;
+            padding-left: 0px;
+            grid-template-columns: auto 1fr;
+        }
+
+        &::after {
+            content: "";
+            width: 575px;
+            height: 575px;
+            border-radius: 50%;
+            background: var(--gly-gd-1);
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 30%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: 1s var(--cube-2);
+            transition-delay: 0s;
+
+            @media #{$lg} {
+                width: 375px;
+                height: 375px;
+            }
+
+            @media #{$md} {
+                width: 333px;
+                height: 333px;
+            }
+
+            @media #{$xs} {
+                width: 250px;
+                height: 250px;
+            }
+
+            @media #{$sm} {
+                width: 333px;
+                height: 333px;
+            }
+        }
+
+        .subtitle {
+            font-size: 17px;
+            font-weight: 200;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .comment {
+            font-size: 30px;
+            line-height: 1.66;
+            margin-bottom: 80px;
+
+            @media #{$md} {
+                font-size: 25px;
+            }
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+        }
+
+        .person-wrap {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            .person-img {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .name {
+                font-size: 23px;
+                margin-bottom: 12px;
+            }
+
+            .reating {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 19px;
+                color: #ea9034;
+            }
+            
+            
+        }
+        
+    }
+}
+
+.gly-testimonial-2-slider {
+    position: relative;
+    z-index: 1;
+
+    .swiper-container {
+        .swiper-wrapper {
+            .swiper-slide {
+                &:is(.swiper-slide-active) {
+                    .gly-testimonial-2-item::after {
+                        left: 10%;
+                        opacity: 1;
+                        transition-delay: 1s;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .gly_t2_prev {
+        position: absolute;
+        top: 50%;
+        left: -45px;
+        transform: translateY(-50%);
+        
+        @media #{$lg,$md,$xs} {
+            position: unset;
+            transform: unset;
+            left: unset;
+        }
+    }
+
+    .gly_t2_next {
+        position: absolute;
+        top: 50%;
+        right: -45px;
+        transform: translateY(-50%);
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+            transform: unset;
+            right: unset;
+        }
+    }
+
+    &-btn {
+        @media #{$lg,$md,$xs} {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+
+            .gly-slider-btn-1 {
+                position: relative;
+            }
+        }
+    }
+}
+
+
+
+
+/* 
+    testimonial-2-css-end
+*/

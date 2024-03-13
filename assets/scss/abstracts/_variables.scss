@@ -1,4 +1,6 @@
-// Font Family 
+/* 
+    all-variables-start
+*/
 :root {
     --gly-pr-font: "Epilogue", sans-serif;
     --gly-sd-font: "Unbounded", sans-serif;
@@ -24,7 +26,9 @@
 
 }
 
-// Responsive Variables
+/* 
+    Responsive-Variables-start
+*/
 $over:'(min-width: 1800px)';
 $xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
 $xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
@@ -33,3 +37,10 @@ $lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
 $md:'only screen and (min-width: 768px) and (max-width: 991px)';
 $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
 $xs:'(max-width: 767px)';
+/* 
+    Responsive-Variables-end
+*/
+
+/* 
+    all-variables-start
+*/
