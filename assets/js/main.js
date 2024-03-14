@@ -20,16 +20,52 @@ requestAnimationFrame(raf)
 
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-// 	let preloader = document.querySelector("#preloader");
-// 	window.addEventListener('load', function(){
-// 	  preloader.classList.add("preloaded");
-// 	  setTimeout(function () {
-// 			preloader.remove();
+document.addEventListener("DOMContentLoaded", function () {
 
-// 		});
-// 	})
-// });
+	let preloader = document.querySelector("#preloader");
+
+	window.addEventListener('load', function(){
+	  preloader.classList.add("preloaded");
+	  setTimeout(function () {
+			preloader.remove();
+
+			const h2tl = gsap.timeline();
+
+			h2tl.from(".h2-fade-up" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:2 });
+			h2tl.fromTo(".gly-hero-2-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
+						{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" } , "<.5"
+			);
+			
+			// class-add
+			const txaaddclass = gsap.utils.toArray('.add-class');
+			txaaddclass.forEach(img => {
+				gsap.to(img, {
+					scrollTrigger: {
+						trigger: img,
+						scrub: 1,
+						start: "top 70%",
+						toggleClass: "active",
+						toggleActions: "play reverse play reverse",
+					}
+				});
+			});
+
+
+
+		}, 1000 ) ;
+
+
+		// home-1-hero-1-animation
+		const h1tl = gsap.timeline();
+
+		h1tl.from(".h1-fade-up" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:2 });
+		h1tl.fromTo(".gly-hero-1-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
+					{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }, "<1.5"
+		);
+
+	})
+
+});
   
 
 // mobile-menu-start
@@ -44,6 +80,15 @@ $(".dropdown-btn").on("click", function () {
 	$(this).toggleClass("toggle-open");
 });
 
+
+// search-popup-start
+$('.search_btn_toggle').on('click', function() {
+	$('.overlay, .search_1_popup_active').addClass('active');
+});
+$('.overlay, .search_1_popup_close').on('click', function() {
+	$('.search_1_popup_active').removeClass('active');
+	$('.overlay').removeClass('active');
+})
 
 
 
@@ -119,26 +164,7 @@ if (menuToggle2) {
 	
 }
 
-// class-add
-const txaaddclass = gsap.utils.toArray('.add-class');
-txaaddclass.forEach(img => {
-	gsap.to(img, {
-		scrollTrigger: {
-			trigger: img,
-			scrub: 1,
-			start: "top 70%",
-			toggleClass: "active",
-			toggleActions: "play reverse play reverse",
-		}
-	});
-});
 
-const h1tl = gsap.timeline();
-
-h1tl.from(".h1-fade-up" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:2 });
-h1tl.fromTo(".gly-hero-1-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" , duration:2 }, 
-			{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }
-);
 
 // services-scetion
 var gtbp1 = gsap.timeline({
@@ -196,6 +222,52 @@ var glypr1 = gsap.timeline({
 
 glypr1.from( ".gly-project-1-curlc-icon svg" , { rotateZ: 360,  duration:1 })
 glypr1.from( ".gly-project-1-curlc-icon i" , { yPercent: 100, xPercent: -100,  duration:1 }, "<")
+
+
+
+// testimonial-2
+var glyt2g = gsap.timeline({
+		
+	scrollTrigger: {
+		animation: glyt2g,
+		trigger: '.gly-testimonial-2-area',
+		start: "top 130%",
+		end: "bottom 0%",
+		scrub: 2,
+		// pin: true,
+		// pinSpacing: true,
+		markers: false
+	}
+});
+
+glyt2g.from( ".gly-earth" , { rotateZ: 360,  duration:1 })
+glyt2g.from( ".gly-earth" , { yPercent: 100,   duration:1 }, "<")
+glyt2g.fromTo( ".gly-earth img" , { filter: "drop-shadow(0px 0px  0px #1667A9)" ,   duration:1 }, {
+	filter: "drop-shadow(0px -40px  50px #1667A9)"
+}, "<.5" )
+
+
+// footer-2
+var glyf2g = gsap.timeline({
+		
+	scrollTrigger: {
+		animation: glyf2g,
+		trigger: '.gly-footer-2-area',
+		start: "top 100%",
+		end: "bottom 90%",
+		scrub: 1,
+		// pin: true,
+		// pinSpacing: true,
+		markers: false
+	}
+});
+
+glyf2g.from( ".gly-footer-2-area" , { yPercent: 20,  duration:1 })
+.from( ".gly-footer-2-il-1" , { yPercent: -20, xPercent: 20,  duration:1 }, "<.3")
+.from( ".gly-footer-2-il-2" , { yPercent: 20, xPercent: -20,  duration:1 }, "<.3")
+.from( ".gly-footer-2-top-line" , { scaleX: .5 ,  duration:1 }, "<")
+
+
 
 
 // project-1-slider

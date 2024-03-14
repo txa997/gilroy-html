@@ -1,5 +1,9 @@
 @use '../abstracts/variables' as *;
 
+/* 
+    footer-1-css-start
+*/
+
 .gly-footer-1 {
     &-widget {
         .footer-title {
@@ -249,3 +253,254 @@
         z-index: 1;
     }
 }
+
+/* 
+    footer-1-css-end
+*/
+
+/* 
+    footer-2-css-start
+*/
+.gly-footer-2 {
+    &-area {
+        background: #030305;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 90px;
+        position: relative;
+        z-index: 1;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            max-width: 98%;
+        }
+    }
+    
+    &-il-1 {
+        position: absolute;
+        right: 0;
+        top: -240px;
+        z-index: -1;
+    }
+    
+    &-il-2 {
+        position: absolute;
+        left: -190px;
+        bottom: -330px;
+        z-index: -1;
+    }
+
+
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
+
+        .top-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            max-width: 550px;
+
+            .top-title {
+                font-size: 45px;
+                line-height: 1.11;
+                @media #{$lg,$md} {
+                    font-size: 35px;
+                }
+                @media #{$xs} {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        &-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #2e2d2d;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.gly-footer-2-widget {
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    background: #222222;
+    border-radius: 60px;
+    padding: 45px 60px;
+
+    @media #{$xl,$lg,$md,$xs} {
+        padding: 45px 30px;
+    }
+    
+    &:is(.has-bg-1) {
+        background: var(--gly-gd-1);
+    }
+}
+
+.gly-footer-2 {
+    &-menu {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 18px 0;
+    
+        li {
+            a {
+                display: inline-block;
+                font-size: 21px;
+                font-weight: 400;
+                color: #cecece;
+                font-family: var(--gly-pr-font);
+                transition: 400ms var(--cube-1);
+                
+                &:hover {
+                    color: var(--gly-pr-1);
+                    transform: skewX(7deg);
+                }
+            }
+        }
+    }
+    
+    &-contact-item {
+
+        &:not(:last-child) {
+            padding-bottom: 25px;
+            border-bottom: 2px solid #393939;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 27px;
+            margin-bottom: 6px;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 22px;
+            }
+        }
+        .item-link {
+            display: inline-block;
+            color: #cecece;
+            font-size: 21px;
+            transition: 400ms var(--cube-1);
+                
+            &:hover {
+                color: var(--gly-pr-1);
+                transform: skewX(7deg);
+            }
+        }
+        
+    }
+
+    &-location {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        justify-content: center;
+        height: 100%;
+    
+        .title {
+            font-size: 27px;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 22px;
+            }
+        }
+    
+        .disc {
+            font-size: 27px;
+            color: #cecece;
+            line-height: 42px;
+            @media #{$lg,$md,$xs} {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.gly-footer-2-copyright {
+    &-link {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+
+        li {
+            a {
+                font-family: var(--gly-pr-font);
+                color: #1c1c1c;
+                display: inline-block;
+                font-size: 18px;
+                text-transform: capitalize;
+                transition: 400ms var(--cube-1);
+            
+                &:hover {
+                    color: var(--gly-pr-1);
+                    transform: skewX(7deg);
+                }
+            }
+        }
+    }
+    
+}
+
+.gly-footer-2-copyright {
+
+    &-area {
+        padding: 35px 0;
+    }
+
+    font-family: var(--gly-pr-font);
+    color: #1c1c1c;
+    display: inline-block;
+    font-size: 18px;
+    text-transform: capitalize;
+
+    a {
+        color: inherit;
+        display: inline-block;
+        transition: 400ms var(--cube-1);
+            
+        &:hover {
+            color: var(--gly-pr-1);
+            transform: skewX(7deg);
+        }
+    }
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px 20px;
+        flex-wrap: wrap;
+
+        @media #{$xs} {
+            justify-content: center;
+        }
+    }
+}
+
+
+/* 
+    footer-2-css-end
+*/

@@ -23,6 +23,20 @@
      
     <body >
 
+        <!-- PRELOADER -->
+        <div id="preloader">
+            <div class="preloader-wrap">
+                <div class="loading">
+                    <img class="logo" src="assets/img/logo/logo-1.png" alt="">
+                    <div class="icon-ani">
+                        <img src="assets/img/preloader.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /PRELOADER -->
+
         <!-- header-start -->
         <header class="gly-header-1-area"  >
             <div class="gly-header-1-container">
@@ -48,10 +62,10 @@
                                         <a href="index.html">home 1</a>
                                     </li>
                                     <li>
-                                        <a href="home-2.html">home 2</a>
+                                        <a href="index-2.html">home 2</a>
                                     </li>
                                     <li>
-                                        <a href="home-3.html">home 3</a>
+                                        <a href="index-3.html">home 3</a>
                                     </li>
                                 </ul>
                             </li>
@@ -127,7 +141,7 @@
                         </a>
 
                         <!-- search-btn -->
-                        <button class="gly-search-btn-1" type="button" aria-label="name">
+                        <button class="gly-search-btn-1 search_btn_toggle" type="button" aria-label="name">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
 
@@ -165,6 +179,14 @@
                         <i class="fa-duotone fa-circle-xmark"></i>
                     </div>
                 </div>
+
+                <div class="mobile-menu-inner">
+
+                    <div class="mobile-menu-inner-left">
+                        
+                    </div>
+
+                </div>
     
                 <div class="mobile-menu-search-bar">
                     <form action="#" class="txa-search-form-1 mb-50" >
@@ -180,38 +202,6 @@
     
     
                 <div class="mobile-menu-content-wrap mb-50">
-                    <!-- action-link -->
-                    <div class="mobile-menu-action-link">
-
-                            <!-- cart-btn -->
-                            <a href="#" aria-label="name" class="txa-cart-btn-1">
-                                $0.00 
-                                <span class="icon">
-                                    <i class="flaticon-grocery-store icon-1"></i>
-                                    <i class="flaticon-grocery-store icon-2"></i>
-                                </span>
-                            </a>
-
-                            <!-- login-register-button -->
-                            <div class="txa-login-reg-btn-1">
-                                <a href="#" aria-label="themexriver login">login</a>
-                                <span>/</span>
-                                <a href="#" aria-label="themexriver register">register</a>
-                            </div>
-
-                            <!-- freebie-button -->
-                            <a class="txa-pr-btn-1 border-btn" href="#" aria-label="themexriver Freebie"><span class="txt">Freebie</span></a>
-                            <!-- reating -->
-                            <div class="txa-rating-1">
-                            <i class="flaticon-star"></i>
-                            <i class="flaticon-star"></i>
-                            <i class="flaticon-star"></i>
-                            <i class="flaticon-star"></i>
-                            <i class="flaticon-star"></i>
-                            <h4 class="txa-heading-1 title"><i class="flaticon-star"></i> trustpilot</h4>
-                        </div>
-
-                    </div>
     
                     <!-- mobile-menu-list -->
                     <div class="mobile-menu-navigation">
@@ -225,10 +215,10 @@
                                             <a href="index.html">home 1</a>
                                         </li>
                                         <li>
-                                            <a href="home-2.html">home 2</a>
+                                            <a href="index-2.html">home 2</a>
                                         </li>
                                         <li>
-                                            <a href="home-3.html">home 3</a>
+                                            <a href="index-3.html">home 3</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -1350,6 +1340,23 @@
             <!-- footer-end -->
 
         </div>
+
+        <!-- search-popup -->
+        <div class="popup-search-box search_1_popup_active ">
+            <div class="container">
+                <h4 class="title gly-heading-1">find what you need</h4>
+                <div class="popup-search-box-form">
+                    <form action="#">
+                        <div class="popup-search-box-input">
+                            <input type="text" placeholder="Search...">
+                        </div>
+                        <button aria-label="search" type="submit"><i class="fal fa-search"></i></button>
+                    </form>
+                    <button aria-label="search" type="button" class="popup-search-box-close-action-btn search_1_popup_close"><i class="fal fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- search-popup -->
 
         
 		<!-- JS here -->

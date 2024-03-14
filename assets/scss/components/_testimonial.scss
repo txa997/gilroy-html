@@ -244,7 +244,8 @@
 .gly-testimonial-2 {
 
     &-area  {
-        background-color: #030406;
+        position: relative;
+        z-index: 1;
     }
 
     &-item {
@@ -428,7 +429,42 @@
     }
 }
 
+.gly-earth {
+    &-animation {
+        position: absolute;
+        left: 50%;
+        bottom: -960px;
+        width: 70%;
+        transform: translateX(-50%);
 
+        @media #{$xxxl} {
+            bottom: -720px;
+        }
+
+        @media #{$xxl} {
+            bottom: -620px;
+        }
+
+        @media #{$xl} {
+            bottom: -520px;
+        }
+
+        @media #{$lg} {
+            bottom: -420px;
+        }
+
+        @media #{$md} {
+            bottom: -320px;
+        }
+
+        @media #{$xs} {
+            bottom: -100px;
+        }
+    }
+
+    // filter: drop-shadow(0px -40px  25px #1667A9);
+    
+}
 
 
 /* 
