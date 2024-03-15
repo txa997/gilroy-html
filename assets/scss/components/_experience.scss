@@ -175,6 +175,16 @@
         &-item {
             border-radius: 15px;
             overflow: hidden;
+            height: 100%;
+            video {
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                border-radius: 15px;
+                overflow: hidden;
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
         }
 
         .swiper-container {

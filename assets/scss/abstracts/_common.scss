@@ -263,6 +263,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     background: var(--gly-gd-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 
     &:is(.has-gd-underline) {
         &::after {
@@ -289,6 +290,20 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .gly-home-2 {
     background-color: #030406;
+}
+
+.gly-split-text {
+    text-transform: unset !important;
+    letter-spacing: -0.5px !important;
+    .split-line {
+        div {
+             div {
+                &:nth-child(1) {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
 }
 
 /* 

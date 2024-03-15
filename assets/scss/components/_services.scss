@@ -55,16 +55,16 @@
 
 .gly-services-1 {
     &-icon-1 {
-        font-size: 95px;
-        width: 181px;
-        height: 181px;
+        font-size: 65px;
+        width: 130px;
+        height: 130px;
+        line-height: 163px;
         background: var(--gly-gd-1);
         text-align: center;
-        line-height: 223px;
         border-radius: 50%;
         color: #fff;
         position: absolute;
-        right: 6%;
+        right: 19%;
         top: 0%;
 
         @media #{$xxl,$xl,$lg,$md,$xs} {
@@ -75,16 +75,17 @@
         }
     }
     &-icon-2 {
-        font-size: 95px;
-        width: 181px;
-        height: 181px;
+        font-size: 65px;
+        width: 130px;
+        height: 130px;
+        line-height: 163px;
         background: var(--gly-gd-1);
         text-align: center;
-        line-height: 223px;
+
         border-radius: 50%;
         color: #fff;
         position: absolute;
-        right: -100px;
+        right: -60px;
         top: 50%;
         transform: translateY(-50%);
 
@@ -97,16 +98,16 @@
         }
     }
     &-icon-3 {
-        font-size: 95px;
-        width: 181px;
-        height: 181px;
+        font-size: 65px;
+        width: 130px;
+        height: 130px;
+        line-height: 163px;
         background: var(--gly-gd-1);
         text-align: center;
-        line-height: 223px;
         border-radius: 50%;
         color: #fff;
         position: absolute;
-        right: 5%;
+        right: 13%;
         bottom: 1%;
 
         @media #{$xxl,$xl,$lg,$md,$xs} {

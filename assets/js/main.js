@@ -165,6 +165,76 @@ if (menuToggle2) {
 }
 
 
+gsap.utils.toArray('.title-ani ').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 90%",
+		end: "buttom 50%",
+		toggleActions: "play none none reverse",
+		 markers: true
+	  }
+	})
+	
+	tl1
+	.from(el, { y: "+=100" , opacity: .8 }, {opacity: 1, scale: 1, y: 0, duration: 1, immediateRender: false})
+  })
+
+gsap.utils.toArray('.fadeleft ').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 90%",
+		end: "buttom 50%",
+		toggleActions: "play none none reverse",
+		 markers: true
+	  }
+	})
+	
+	tl1
+	.from(el, { x: "-=100" , opacity: .8 }, {opacity: 1, scale: 1, x: 0, duration: 1, immediateRender: false})
+  })
+
+gsap.utils.toArray('.has-stoke ').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 90%",
+		end: "buttom 60%",
+		toggleActions: "play none none reverse",
+		 markers: true
+	  }
+	})
+	
+	tl1
+	.fromTo(el , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
+						{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" })
+  })
+  
+
+
+  gsap.utils.toArray(".image-pllx").forEach(function(container) {
+    let image = container.querySelector("img");
+  
+    let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          scrub: true,
+          pin: false,
+        },
+      }); 
+      tl.from(image, {
+        yPercent: -30,
+        ease: "none",
+      }).to(image, {
+        yPercent: 30,
+        ease: "none",
+      }); 
+  });
+
 
 // services-scetion
 var gtbp1 = gsap.timeline({
@@ -172,37 +242,22 @@ var gtbp1 = gsap.timeline({
 	scrollTrigger: {
 	  animation: gtbp1,
 	  trigger: '.gly-services-1-area',
-	  start: "top 90%",
-	  end: "top -50%",
+	  start: "top 100%",
+	  end: "bottom 30%",
 	  scrub: 2,
 	  toggleActions: "play reverse play reverse",
 	  markers: false
 	}
 });
 	
-gtbp1.fromTo( ".gly-services-1-icon-wrap" , { rotateZ: 0,  duration:1 } , {
-	rotateZ: 400,
-} )
+gtbp1.from( ".gly-services-1-icon-wrap" , { rotateZ: -200,  duration:1 } )
 
-// services-section-icon
-var ardh9 = gsap.timeline({
-		
-	scrollTrigger: {
-		animation: ardh9,
-		trigger: '.gly-services-1-area',
-		start: "top 70%",
-		end: "bottom 0%",
-		scrub: 1,
-		// pin: true,
-		// pinSpacing: true,
-		markers: false
-	}
-});
 
-ardh9.from( ".gly-services-1-icon-3" , { scale: .1, duration:1 })
-	.from( ".gly-services-1-img img" , { scale: 1.5, duration:1 }, "<" )
-	.from( ".gly-services-1-icon-2" , { scale: .1, duration:1 }, "<" )
-	.from( ".gly-services-1-icon-1" , { scale: .1, duration:1 }, "<" )
+
+gtbp1.from( ".gly-services-1-icon-3" , { scale: 0 ,  },"<")
+gtbp1.from( ".gly-services-1-icon-2" , { scale: 0 , },"<=.1")
+gtbp1.from( ".gly-services-1-icon-1" , { scale: 0 , },"<=.1")
+gtbp1.from( ".gly-services-1-img img" , { scale: 1.5, duration:1 }, "<" )
 
 
 // project-section-icon
@@ -266,6 +321,46 @@ glyf2g.from( ".gly-footer-2-area" , { yPercent: 20,  duration:1 })
 .from( ".gly-footer-2-il-1" , { yPercent: -20, xPercent: 20,  duration:1 }, "<.3")
 .from( ".gly-footer-2-il-2" , { yPercent: 20, xPercent: -20,  duration:1 }, "<.3")
 .from( ".gly-footer-2-top-line" , { scaleX: .5 ,  duration:1 }, "<")
+
+
+$(window).on('load',function(){
+	var st = $(".gly-split-text");
+	if(st.length == 0) return;
+	gsap.registerPlugin(SplitText);
+	st.each(function(index, el) {
+	  el.split = new SplitText(el, { 
+		type: "lines,words,chars",
+		linesClass: "split-line"
+	  });
+	  gsap.set(el, { perspective: 400 });
+	
+	
+	  if( $(el).hasClass('gly-split-in-clr') ){
+		gsap.set(el.split.chars, {
+		  opacity: 1,
+			scale: .8,
+			x: 5,
+		  color:'#a249ed',
+		  ease: "Back.easeOut",
+		});
+	  }
+	  
+	  el.anim = gsap.to(el.split.chars, {
+		scrollTrigger: {
+		  trigger: el,
+		  start: "top 90%",
+		},
+		x: "0",
+		y: "0",
+		rotateX: "0",
+		color: 'inherit',
+		scale: 1,
+		opacity: 1,
+		duration: 1, 
+		stagger: 0.02,
+	  });
+	});
+})
 
 
 
