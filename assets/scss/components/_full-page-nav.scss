@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
 
-// mobile-menu-css-start
+/* 
+  mobile-menu-css-start
+*/
 
 .mobile-menu {
     position: fixed;
@@ -52,6 +54,15 @@
       height: 100%;
       padding: 60px 200px;
       overflow-y: scroll;
+
+      @media #{$xl} {
+        padding: 60px 100px;
+      }
+
+      @media #{$lg,$md} {
+        padding: 60px 50px;
+      }
+
       @media #{$xs} {
           padding: 40px 20px;
       }
@@ -64,7 +75,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 15px;
-      margin-bottom: 30px;
     }
     &-close {
       font-size: 30px;
@@ -81,88 +91,90 @@
         color: var(--gly-pr-1);
       }
     }
-    &-search-bar {
-      margin-bottom: 50px;
-      .txa-search-form-1 {
-        max-width: 55%;
-        margin-left: 0;
-        @media #{$xs} {
-          max-width: 100%;
-        }
-        @media #{$sm} {
-          max-width: 65%;
-        }
 
-        input {
-          height: 60px;
-          border-radius: 5px;
-          padding-left: 30px;
-          padding-right: 230px;
-          background: #f2f2f2dd;
-          padding-right: 140px;
-          @media #{$xs} {
-            padding-right: 30px;
-          }
-          @media #{$sm} {
-            padding-right: 140px;
-          }
-        }
-        .form-btn {
-          border-radius: 5px;
-          padding: 12px 15px;
-          top: 9px;
-          @media #{$xs} {
-            right: 0;
-          }
-        }
-      }
-    }
-    &-content-wrap {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 50px;
-      justify-content: space-between;
-      @media #{$xs} {
-        gap: 30px 50px;
-        flex-wrap: wrap;
-        justify-content: start;
-      }
-      @media #{$sm} {
-        gap: 30px 50px;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-      }
-    }
-    &-action-link {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 20px 40px;
-      align-items: center;
-      flex: 0 0 auto;
-      @media #{$xs} {
-        grid-template-columns: 1fr;
-        justify-items: left;
-      }
-      @media #{$sm} {
-        grid-template-columns: 1fr;
-        justify-items: center;
-      }
-    }
-    .mobile-menu-navigation {
-      min-width: 260px;
-      .mobile-main-navigation {
-        max-width: 450px;
-      }
+    nav.mobile-main-navigation {
+      max-width: 700px;
     }
 
 }
 
-// fullpage-menu-end
+.mobile-menu-inner {
+  display: grid;
+  grid-template-columns: 1fr .5fr;
+  gap: 100px 200px;
+  align-items: center;
+
+  @media #{$lg,$md} {
+    grid-template-columns: 1fr 0.6fr;
+    gap: 100px;
+  }
+
+  @media #{$xs} {
+    grid-template-columns: 1fr;
+  }
+
+}
 
 
 
-// mobile-menu-css-start
+.mobile-menu-search-form-1 {
+  input {
+    height: 60px;
+    border-radius: 5px;
+    padding: 0 30px;
+    background: #fff;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  .form-btn {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: #000;
+    transition: 400ms var(--cube-1);
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: var(--gly-pr-1);
+      color: #fff;
+      transform: scale(95%);
+    }
+  }
+}
+
+
+.mobile-menu-social-1 {
+  gap: 15px;
+
+  a {
+
+    display: inline-block;
+    font-size: 25px;
+    line-height: 1;
+    color: #fff;
+    opacity: .8;
+    transition: 400ms var(--cube-1);
+
+    &:hover {
+      color: var(--gly-pr-1);
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
+/* 
+  header-menu-customazition-start
+*/
 
   .mobile-main-navigation .navbar-nav {
     width: 100%;
@@ -188,7 +200,7 @@
     padding: 10px 60px 10px 0 !important;
     color: #fff;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 30px;
     transition: 400ms var(--cube-1);
     &:hover {
       color: var(--gly-pr-1);
@@ -223,7 +235,7 @@
   }
    .mobile-main-navigation .navbar-nav .dropdown-menu li a {
     color: rgb(255 255 255 / 80%);
-    font-size: 16px;
+    font-size: 20px;
   }
    .mobile-main-navigation .navbar-nav .dropdown-menu li a:hover {
     color: var(--gly-pr-1);
@@ -239,6 +251,7 @@
     right: 0;
     height: 30px;
     padding: 5px 10px;
+    font-size: 28px;
     cursor: pointer;
     &:hover {
       color: var(--gly-pr-1);
@@ -250,8 +263,12 @@
             color: var(--gly-pr-1);
   }
   
-  // mobile-menu-css-end
+/* 
+  header-menu-customazition-start
+*/
 
 
-// mobile-categories-css-end
+/* 
+  mobile-menu-css-start
+*/
 

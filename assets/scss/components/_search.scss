@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
 
-// search-box-popup-start
+/* 
+    search-box-css-start
+*/
 .popup-search-box {
     background-color: #fff;
     position: fixed;
@@ -131,3 +133,6 @@
     }
 }
 
+/* 
+    search-box-css-end
+*/

@@ -1,7 +1,7 @@
 /*
 
-Author: themexriver
-Version: 1.0
+	Author: themexriver
+	Version: 1.0
 
 */
 
@@ -19,7 +19,7 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 
-
+// preloader
 document.addEventListener("DOMContentLoaded", function () {
 
 	let preloader = document.querySelector("#preloader");
@@ -28,13 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	  preloader.classList.add("preloaded");
 	  setTimeout(function () {
 			preloader.remove();
-
-			const h2tl = gsap.timeline();
-
-			h2tl.from(".h2-fade-up" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:2 });
-			h2tl.fromTo(".gly-hero-2-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
-						{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" } , "<.5"
-			);
 			
 			// class-add
 			const txaaddclass = gsap.utils.toArray('.add-class');
@@ -62,6 +55,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		h1tl.fromTo(".gly-hero-1-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
 					{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }, "<1.5"
 		);
+
+		// home-2-hero-2-animation
+		const h2tl = gsap.timeline();
+
+		h2tl.from(".gly-hero-2-il-3" , { y: 200, duration: 1 });
+		h2tl.from(".gly-hero-2-title" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:1 });
+		h2tl.fromTo(".gly-hero-2-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
+					{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" });
+		h2tl.from(".gly-hero-2-il-2" , {  y: 200,  opacity: 0 });
+		h2tl.from(".gly-hero-2-il-1" , {  y: -200, opacity: 0 });
+		h2tl.from(".gly-project-2-area" , {  y: 200, opacity: 0 });
 
 	})
 
@@ -131,27 +135,27 @@ if (menuToggle2) {
 		opacity: 1,
 		ease: 'Expo.easeInOut'
 	}, "<");
-	menubgline.from('.mobile-menu-navigation' , {
+	menubgline.fromTo('.mobile-main-navigation  ul li' , {
 		opacity: 0,
-		x: -50,
-		ease: 'Expo.easeInOut'
-	});
+		y: 50,
+		ease: 'Expo.easeInOut',
+		stagger: 0.2,
+	} , {
+		opacity: 1,
+		y: 0,
+	}, "<");
 	menubgline.from('.mobile-menu-search-bar' , {
 		opacity: 0,
 		y: 50,
 		ease: 'Expo.easeInOut'
 	}, "<");
-	menubgline.from('.mobile-menu-action-link' , {
+
+	menubgline.from('.mobile-menu-socail-link' , {
 		opacity: 0,
 		x: 50,
 		ease: 'Expo.easeInOut'
 	}, "<");
-	
-	menubgline.from('.mobile-menu-socail-link ' , {
-		opacity: 0,
-		y: 50,
-		ease: 'Expo.easeInOut'
-	}, "<");
+
 	
 	menubgline.reverse();
 
@@ -164,7 +168,7 @@ if (menuToggle2) {
 	
 }
 
-
+// fadeinup-animation-start
 gsap.utils.toArray('.title-ani ').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
 	  scrollTrigger: {
@@ -173,7 +177,7 @@ gsap.utils.toArray('.title-ani ').forEach((el, index) => {
 		start: "top 90%",
 		end: "buttom 50%",
 		toggleActions: "play none none reverse",
-		 markers: true
+		 markers: false
 	  }
 	})
 	
@@ -181,6 +185,8 @@ gsap.utils.toArray('.title-ani ').forEach((el, index) => {
 	.from(el, { y: "+=100" , opacity: .8 }, {opacity: 1, scale: 1, y: 0, duration: 1, immediateRender: false})
   })
 
+
+// fadeinleft-animation-start
 gsap.utils.toArray('.fadeleft ').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
 	  scrollTrigger: {
@@ -189,7 +195,7 @@ gsap.utils.toArray('.fadeleft ').forEach((el, index) => {
 		start: "top 90%",
 		end: "buttom 50%",
 		toggleActions: "play none none reverse",
-		 markers: true
+		 markers: false
 	  }
 	})
 	
@@ -197,6 +203,7 @@ gsap.utils.toArray('.fadeleft ').forEach((el, index) => {
 	.from(el, { x: "-=100" , opacity: .8 }, {opacity: 1, scale: 1, x: 0, duration: 1, immediateRender: false})
   })
 
+// text-clipPath-animation-start
 gsap.utils.toArray('.has-stoke ').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
 	  scrollTrigger: {
@@ -205,7 +212,7 @@ gsap.utils.toArray('.has-stoke ').forEach((el, index) => {
 		start: "top 90%",
 		end: "buttom 60%",
 		toggleActions: "play none none reverse",
-		 markers: true
+		 markers: false
 	  }
 	})
 	
@@ -215,7 +222,7 @@ gsap.utils.toArray('.has-stoke ').forEach((el, index) => {
   })
   
 
-
+// image-paralax-animation-start
   gsap.utils.toArray(".image-pllx").forEach(function(container) {
     let image = container.querySelector("img");
   
@@ -251,16 +258,13 @@ var gtbp1 = gsap.timeline({
 });
 	
 gtbp1.from( ".gly-services-1-icon-wrap" , { rotateZ: -200,  duration:1 } )
-
-
-
 gtbp1.from( ".gly-services-1-icon-3" , { scale: 0 ,  },"<")
 gtbp1.from( ".gly-services-1-icon-2" , { scale: 0 , },"<=.1")
 gtbp1.from( ".gly-services-1-icon-1" , { scale: 0 , },"<=.1")
 gtbp1.from( ".gly-services-1-img img" , { scale: 1.5, duration:1 }, "<" )
 
 
-// project-section-icon
+// project-1-section-animation
 var glypr1 = gsap.timeline({
 		
 	scrollTrigger: {
@@ -280,7 +284,7 @@ glypr1.from( ".gly-project-1-curlc-icon i" , { yPercent: 100, xPercent: -100,  d
 
 
 
-// testimonial-2
+// testimonial-2-animation
 var glyt2g = gsap.timeline({
 		
 	scrollTrigger: {
@@ -302,7 +306,8 @@ glyt2g.fromTo( ".gly-earth img" , { filter: "drop-shadow(0px 0px  0px #1667A9)" 
 }, "<.5" )
 
 
-// footer-2
+
+// footer-2-animation
 var glyf2g = gsap.timeline({
 		
 	scrollTrigger: {
@@ -323,6 +328,7 @@ glyf2g.from( ".gly-footer-2-area" , { yPercent: 20,  duration:1 })
 .from( ".gly-footer-2-top-line" , { scaleX: .5 ,  duration:1 }, "<")
 
 
+// title-animation
 $(window).on('load',function(){
 	var st = $(".gly-split-text");
 	if(st.length == 0) return;
@@ -339,9 +345,9 @@ $(window).on('load',function(){
 		gsap.set(el.split.chars, {
 		  opacity: 1,
 			scale: .8,
-			x: 5,
-		  color:'#a249ed',
-		  ease: "Back.easeOut",
+			x: "100",
+			ease: "Back.easeOut",
+			color:'#a249ed',
 		});
 	  }
 	  
@@ -356,13 +362,11 @@ $(window).on('load',function(){
 		color: 'inherit',
 		scale: 1,
 		opacity: 1,
-		duration: 1, 
+		duration: 1.5, 
 		stagger: 0.02,
 	  });
 	});
 })
-
-
 
 
 // project-1-slider
@@ -456,8 +460,6 @@ let glyexp1 = new Swiper('.gly-ex1-active', {
 });
 
 
-
-
 // project-2-slider
 let glyp2 = new Swiper('.gly-p2-active', {
 	loop: true,
@@ -492,8 +494,6 @@ let glyp2 = new Swiper('.gly-p2-active', {
 	  },
 });
 
-  
-
 // testimonial-2-slider
 let glyt2 = new Swiper('.gly-t2-active', {
 	loop: true,
@@ -512,26 +512,30 @@ let glyt2 = new Swiper('.gly-t2-active', {
 
 });
 
-  
+/* mouse-move-animation */
+document.addEventListener("mousemove" , parallax);
+function parallax(e){
+
+	document.querySelectorAll(".object").forEach(function(move){
+
+		var moving_value = move.getAttribute("data-value");
+		var x = (e.clientX * moving_value) /250;
+		var y = (e.clientY * moving_value) /250;
+
+		move.style.transform = "translateX(" + x + "px) translateY(" + y +"px)";
+	})
+
+}
 
 
 
-/*
-faq-active-class
-====start====
-*/
+/* faq-active-class */
 $(document).on('click', '.gly-accordion-item', function(){
 	$(this).addClass('faq_bg').siblings().removeClass('faq_bg')
 })
-/*
-faq-active-class
-====end====
-*/
 
 
-/*
-back-to-top
-=====start==== */
+/* back-to-top */
 var backtotop = $('.scroll-top');
 
 $(window).scroll(function() {
@@ -546,53 +550,27 @@ backtotop.on('click', function(e) {
 	e.preventDefault();
 	$('html, body').animate({scrollTop:0}, '700');
 });
-/*
-back-to-top
-=====end==== 
-*/
 
 
 
-/*
-nice-selector-activiton
-====start====
-*/
+/* nice-selector */
 var niceselect = document.querySelector(".nice-select");
 if (niceselect) {
 	$('.nice-select select').niceSelect();
 }
-/*
-nice-selector-activiton
-=====end==== 
-*/
 
 
-
-/*
-counter-activition
-====start====
-*/
+/* counter */
 $('.counter').counterUp({
 	delay: 10,
 	time: 3000
 });
-/*
-counter-activition
-====end====
-*/
 
-
-/*
-data-bg-activition
-====start====
-*/
+/* data-bg-activition */
 $("[data-background]").each(function(){
 	$(this).css("background-image","url("+$(this).attr("data-background") + ") ")
 })
-/*
-data-bg-activition
-====end====
-*/
+
 
 // wow-activation
 if($('.wow').length){

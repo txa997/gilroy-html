@@ -325,6 +325,9 @@
                 line-height: 1;
                 margin-top: 10px;
             }
+
+            
+
         }
 
         .title-wrap {
@@ -363,6 +366,12 @@
             }
             .gly-services-2-item-btn {
                 background: linear-gradient(90deg, rgba(169,14,109,1) 0%, rgba(12,61,207,1) 50%, rgba(59,63,199,1) 100%);
+            }
+        }
+
+        &:hover {
+            .item-icon i {
+                animation: shakeup 150ms 2 linear;
             }
         }
         
