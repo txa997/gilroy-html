@@ -272,3 +272,269 @@
 /* 
   header-2-css-end
 */
+/* 
+  header-3-css-start
+*/
+
+
+.gly-header-3 {
+
+  &-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &-container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  &-top {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        width: 45%;
+        height: 100%;
+        background: var(--gly-pr-2);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+      
+    
+    &-content {
+      background: var(--gly-pr-2);
+      display: inline-flex;
+      align-items: center;
+      gap: 45px;
+      padding: 16px 30px;
+      border-radius: 0 40px 0 0;
+
+      @media #{$md,$xs} {
+        flex-wrap: wrap;
+        gap: 10px 45px;
+        justify-content: center;
+      }
+
+    }
+
+    &-contact {
+      display: flex;
+      gap: 10px 30px;
+      align-items: center;
+
+      @media #{$xs} {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      li , a , p{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        margin-bottom: 0;
+        transition: 400ms var(--cube-1);
+
+        i {
+          margin-right: 7px;
+          display: inline-block;
+        }
+        
+      }
+      
+      a {
+        &:hover {
+          color: #000;
+          transform: translateX(3px);
+        }
+      }
+
+    }
+    
+    &-social {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+      .title {
+        font-size: 16px;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+
+      a {
+        display: inline-flex;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-size: 12px;
+        transition: 400ms var(--cube-1);
+        color: #fff;
+
+        &:hover {
+          background-color: #fff;
+          transform: translateX(3px);
+          color: #000;
+        }
+      }
+      
+    }
+
+  }
+
+  &-bottom {
+
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      width: 45%;
+      height: 100%;
+      background: #232D39;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &-content {
+      background: #232D39;
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      padding: 0px 40px;
+      border-radius: 0 0 0 60px;
+
+      @media #{$xxl,$xl,$lg} {
+        padding: 0px 20px;
+        gap: 30px;
+      }
+
+      @media #{$md,$xs} {
+        padding: 15px 20px;
+        gap: 30px;
+      }
+    }
+
+    &-action-link {
+      gap: 40px;
+
+      @media #{$xxl,$xl,$lg,$md,$xs} {
+        gap: 30px;
+      }
+
+      .gly-mobile-menu-btn-2 {
+        background: var(--gly-pr-2);
+        
+      }
+    }
+
+  }
+}
+
+
+/* 
+  manu-customaziton-css-start
+*/
+.gly-header-3-bottom-content {
+  .main-navigation {
+    .navbar-nav {
+      li {
+
+        &:not(:last-child) {
+          margin-right: 50px;
+
+          @media #{$xxl,$xl,$lg,$md,$xs} {
+            margin-right: 20px;
+          }
+        }
+
+        &:is(.dropdown) {
+          > a {
+            padding-right: 15px;
+          }
+        }
+
+        a {
+          font-family: var(--montserrat);
+          font-weight: 600;
+          line-height: 26px;
+          padding: 35px 0;
+
+          &::after {
+            position: absolute;
+            content: "";
+            background: transparent;
+            width: 8px;
+            height: 0%;
+            border-radius: 0;
+            border: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            background: linear-gradient(180deg, rgba(16,66,242,1) 0%, rgba(35,45,57,1) 29%, rgba(35,45,57,1) 70%, rgba(16,66,242,1) 100%);
+            z-index: -1;
+            transition: 400ms var(--cube-2);
+          }
+        }
+
+        .dropdown-menu {
+          border-color: var(--gly-pr-2);
+          li {
+            margin-right: 0;
+
+            a {
+              padding: 10px 30px;
+
+              &::after {
+                left: 35px ;
+                top: 50%;
+                background: linear-gradient(180deg, rgba(16,66,242,1) 0%, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 70%, rgba(16,66,242,1) 100%);
+              }
+            }
+
+            &:hover {
+              > a {
+                color: var(--gly-pr-2);
+              }
+            }
+
+          }
+        }
+
+        &:hover {
+          > a {
+            color: #fff;
+            &::after {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* 
+  manu-customaziton-css-start
+*/
+
+
+
+
+/* 
+  header-3-css-end
+*/

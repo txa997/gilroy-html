@@ -235,6 +235,14 @@ input:focus::placeholder, textarea:focus::placeholder {
     font-family: var(--gly-sd-font);
 }
 
+.gly-font-inter {
+    font-family: var(--inter);
+}
+
+.gly-font-montserrat {
+    font-family: var(--montserrat);
+}
+
 .gly-font-400 {
     font-weight: 400;
 }

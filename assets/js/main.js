@@ -25,28 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
 	let preloader = document.querySelector("#preloader");
 
 	window.addEventListener('load', function(){
-	  preloader.classList.add("preloaded");
-	  setTimeout(function () {
-			preloader.remove();
-			
-			// class-add
-			const txaaddclass = gsap.utils.toArray('.add-class');
-			txaaddclass.forEach(img => {
-				gsap.to(img, {
-					scrollTrigger: {
-						trigger: img,
-						scrub: 1,
-						start: "top 70%",
-						toggleClass: "active",
-						toggleActions: "play reverse play reverse",
-					}
-				});
+
+		if (preloader) {
+			preloader.classList.add("preloaded");
+			setTimeout(function () {
+				  preloader.remove();
+	  
+			  }, 1000 ) ;
+		}
+					
+		// class-add
+		const txaaddclass = gsap.utils.toArray('.add-class');
+		txaaddclass.forEach(img => {
+			gsap.to(img, {
+				scrollTrigger: {
+					trigger: img,
+					scrub: 1,
+					start: "top 70%",
+					toggleClass: "active",
+					toggleActions: "play reverse play reverse",
+				}
 			});
-
-
-
-		}, 1000 ) ;
-
+		});
 
 		// home-1-hero-1-animation
 		const h1tl = gsap.timeline();
@@ -585,6 +585,14 @@ if($('.wow').length){
 	);
 	wow.init();
 };
+
+/* 
+	fancybox-activation
+*/
+
+if($('a').length) {
+	Fancybox.bind() 
+}
 
 
 })(jQuery);

@@ -4,7 +4,9 @@
     all-button-css-start
 */
 
-/* chat-btn-1-start */
+/* 
+    chat-btn-1-start 
+*/
 .gly-chat-btn-1 {
     display: inline-block;
     flex:  0 0 auto;
@@ -28,9 +30,13 @@
     }
 
 }
-/* chat-btn-1-end */
+/* 
+    chat-btn-1-end 
+*/
 
-/* search-btn-1-start */
+/* 
+    search-btn-1-start 
+*/
 .gly-search-btn-1 {
     border: none;
     outline: none;
@@ -55,9 +61,13 @@
         }
     }
 }
-/* search-btn-1-end */
+/* 
+    search-btn-1-end 
+*/
 
-/* cart-btn-1-start */
+/* 
+    cart-btn-1-start 
+*/
 .gly-cart-btn-1 {
     border: none;
     outline: none;
@@ -99,10 +109,14 @@
         }
     }
 }
-/* cart-btn-1-end */
+/* 
+    cart-btn-1-end 
+*/
 
 
-/* mobile-menu-btn-1-start */
+/* 
+    mobile-menu-btn-1-start 
+*/
 .gly-mobile-menu-btn-1 {
     border: none;
     outline: none;
@@ -150,10 +164,14 @@
         }
     }
 }
-/* mobile-menu-btn-1-end */
+/* 
+    mobile-menu-btn-1-end 
+*/
 
 
-/* mobile-menu-btn-2-start */
+/* 
+    mobile-menu-btn-2-start 
+*/
 .gly-mobile-menu-btn-2 {
     overflow: hidden;
     border: none;
@@ -209,9 +227,13 @@
         }
     }
 }
-/* mobile-menu-btn-2-end */
+/* 
+    mobile-menu-btn-2-end 
+*/
 
-/* pr-btn-1-start */
+/* 
+    pr-btn-1-start 
+*/
 .gly-pr-btn-1 {
     display: inline-block;
     flex: 0 0 auto;
@@ -282,9 +304,13 @@
 }
 
 
-/* pr-btn-1-end */
+/* 
+    pr-btn-1-end 
+*/
 
-/* pr-btn-2-start */
+/* 
+    pr-btn-2-start 
+*/
 .gly-pr-btn-2 {
     display: inline-block;
     font-family: var(--gly-pr-font);
@@ -334,9 +360,70 @@
     }
 }
 
-/* pr-btn-2-end */
+/* 
+    pr-btn-2-end 
+*/
 
-/* gd-border-btn-1-start */
+
+/* 
+    pr-btn-3-start
+*/
+
+.gly-pr-btn-3 {
+    font-family: var(--montserrat);
+    display: inline-block;
+    flex: 0 0 auto;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 15px 30px;
+    border-radius: 11px;
+    background: #1042F2;
+    transition: 400ms var(--cube-1);
+
+    i {
+        margin-left: 3px;
+        font-weight: 600;
+    }
+
+    .text {
+        display: inline-block;
+    }
+
+    &:hover {
+        color: #fff;
+        transform: scale(95%);
+
+        &::after {
+            left: 0%;
+        }
+        .text {
+            animation: tilt-shaking .5s linear;
+
+        }
+    }
+
+    &:is(.has-border) {
+        border: 1px solid #fff;
+        background: transparent;
+
+        &:hover {
+            background: #1042F2;
+            border-color: transparent;
+        }
+    }
+}
+
+/* 
+    pr-btn-3-end
+*/
+
+
+/* 
+    gd-border-btn-1-start 
+*/
 .gd-border-btn-1 {
     background: var(--gly-gd-1);
     display: inline-block;
@@ -389,10 +476,14 @@
 
     
 }
-/* gd-border-btn-1-end */
+/* 
+    gd-border-btn-1-end 
+*/
 
 
-/* arrow-btn-1-css-start */
+/* 
+    arrow-btn-1-css-start
+*/
 .gly-arrow-btn-1 {
     width: 68px;
     height: 68px;
@@ -437,10 +528,176 @@
     }
 }
 
-/* arrow-btn-1-css-end */
+/* 
+    arrow-btn-1-css-end 
+*/
+
+/* 
+    phone-btn-1-css-end 
+*/
+
+.gly-phone-btn-1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &-icon {
+        display: inline-block;
+        flex: 0 0 auto;
+        width: 56px;
+        height: 56px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #1042F2;
+        color: #fff;
+        font-size: 20px;
+        line-height: 1;
+        transition: 400ms var(--cube-2);
+    }
+
+    &-text {
+        .title {
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+            opacity: 70%;
+            display: block;
+            line-height: 24px;
+        }
+        .number {
+            display: inline-block;
+            font-size: 20px;
+            line-height: 24px;
+            color: #fff;
+            transition: 400ms var(--cube-2);
+
+            &:hover {
+                transform: translateX(3px);
+                color: var(--gly-pr-2);
+            }
+        }
+        
+    }
+
+    &:hover {
+        .gly-phone-btn-1-icon {
+            transform: scale(95%);
+            i {
+                animation: tilt-shaking 0.4s linear;
+
+            }
+        }
+    }
+    
+}
+/* 
+    phone-btn-1-css-end 
+*/
+
+/* 
+    ply-btn-2-css-start
+*/
+
+
+.gly-ply-btn-2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    &-icon {
+        display: inline-flex;
+        width: 60px;
+        height: 60px;
+        background: #F99B36;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-size: 22px;
+        color: #fff;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        transition: 400ms var(--cube-1);
+
+        &::after {
+            content: "";
+            width: 150%;
+            height: 150%;
+            border-radius: 50%;
+            background: rgb(255 255 255 / 10%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: -1;
+            animation: ply-btn-2 5s linear infinite;
+        }
+
+        &::before {
+            content: "";
+            width: 150%;
+            height: 150%;
+            border-radius: 50%;
+            background: rgb(255 255 255 / 10%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: -1;
+            animation: ply-btn-2 3s linear infinite;
+        }
+    }
+    
+
+    &-text {
+        font-size: 18px;
+        text-transform: capitalize;
+        display: inline-block;
+        color: #fff;
+        transition: 400ms var(--cube-2);
+
+        &:hover {
+            color: var(--gly-pr-2);
+            transform: translateX(3px);
+        }
+    }
+
+    &:hover{
+        .gly-ply-btn-2-icon {
+            color: var(--gly-pr-2);
+        }
+        .gly-ply-btn-2-text {
+            color: var(--gly-pr-2);
+        }
+    }
+}
+
+@keyframes ply-btn-2 {
+    0% {
+        width: 100%;
+        height: 100%;
+    }
+    50% {
+        width: 150%;
+        height: 150%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
 
 
 
+/* 
+    ply-btn-2-css-end
+*/
 
-// all-button-css-end
+
+
+/*
+    all-button-css-end 
+*/
 
