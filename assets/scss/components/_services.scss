@@ -386,3 +386,222 @@
 */
 
 
+/* 
+    services-3-css-start
+*/
+
+
+.gly-services-3 {
+    &-content {
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        height: calc(100% - 30px);
+
+        @media #{$md,$xs} {
+            height: 500px;
+        }
+
+        
+        .content-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 50px 40px;
+        }
+
+        .title {
+            font-size: 55px;
+            line-height: 1.09;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .disc {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        &-btn {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 19%;
+            padding: 10px 10px 0px 10px;
+            background: #DBE0FE;
+            border-radius: 12px 12px 0 0;
+
+            @media #{$xl} {
+                left: 13%;
+            }
+
+            @media #{$lg} {
+                left: 5%;
+            }
+
+            @media #{$md} {
+                left: 35%;
+            }
+
+            @media #{$xs} {
+                left: 5%;
+            }
+
+            @media #{$sm} {
+                left: 25%;
+            }
+        }
+    }
+}
+
+
+
+.gly-services-3-item {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    transition: 400ms ease-in-out;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: 500ms var(--cube-1);
+
+    .popup-icon {
+        line-height: 1;
+        font-size: 116px;
+        color: #fff;
+        opacity: 20%;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .icon {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 45px;
+        line-height: 100px;
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        margin-bottom: 24px;
+        transition: 400ms var(--cube-1);
+        i {
+            display: inline-block;
+            line-height: 1;
+            position: relative;
+            z-index: 2;
+        }
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: var(--gly-pr-2);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 50%;
+            z-index: -1;
+            transition: 400ms ease-in-out;
+        }
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #D3DCF9;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            border-radius: 50%;
+            z-index: -2;
+            transition: 400ms ease-in-out;
+        }
+
+    }
+    .title {
+        font-size: 26px;
+        line-height: 1.38;
+        margin-bottom: 20px;
+        transition: 400ms var(--cube-1);
+        @media #{$xs} {
+            font-size: 22px;
+        }
+        @media #{$lg} {
+            font-size: 24px;
+        }
+
+        a {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+
+    .disc-wrap {
+        height: 120px;
+        overflow: hidden;
+    }
+    .disc {
+        font-size: 16px;
+        margin-bottom: 22px;
+        transition: 400ms var(--cube-1);
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .item-btn {
+        font-family: var(--montserrat);
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        transition: 400ms ease-in-out;
+        transform: translateY(30px);
+        opacity: 0;
+        i {
+            margin-left: 5px;
+        }
+
+        &:hover {
+            letter-spacing: .5px;
+        }
+    }
+    &:hover {
+        background-color: var(--gly-pr-2);
+
+        &::after {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 0;
+        }
+
+        .title {
+            color: #fff;
+        }
+        .disc {
+            -webkit-line-clamp: 3;
+            color: #fff;
+        }
+
+        .item-btn {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+
+
+
+/* 
+    services-3-css-end
+*/

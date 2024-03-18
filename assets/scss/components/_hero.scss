@@ -425,6 +425,9 @@
         background: #161425;
         padding-bottom: 285px;
         padding-top: 340px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
     }
 
     &-title {
@@ -486,6 +489,57 @@
 }
 
 
+.gly-hero-3 {
+    &-demo {
+        border-radius: 12px;
+        overflow: hidden;
+
+        &-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 25px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 23%;
+            @media #{$xxl,$xl,$lg} {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            @media #{$md} {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media #{$xs} {
+                grid-template-columns: 1fr 1fr ;
+            }
+        }
+
+        &-clm {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            &:nth-child(5) {
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    display: none;
+                }
+            }
+            &:nth-child(4) {
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+            &:nth-child(3) {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+}
 
 
 /* 

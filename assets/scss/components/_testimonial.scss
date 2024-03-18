@@ -468,3 +468,76 @@
 /* 
     testimonial-2-css-end
 */
+
+/* 
+    testimonial-3-css-start
+*/
+.gly-testimonial-3-slider-item {
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 6%);
+
+    .icon-rating {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+
+    .quote {
+        font-size: 54px;
+        display: inline-block;
+        line-height: 0.6;
+        color: var(--gly-pr-2);
+    }
+
+    .rating {
+        font-size: 22px;
+        line-height: 1;
+        color: #FEB018;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .comment {
+        font-size: 22px;
+        line-height: 1.54;
+        font-weight: 600;
+        margin-bottom: 22px;
+    }
+
+    .autho {
+        font-size: 22px;
+        line-height: 1.54;
+        text-transform: uppercase;
+
+        span {
+            font-size: 16px;
+            text-transform: capitalize;
+            opacity: 70%;
+            font-family: var(--inter);
+            font-weight: 400;
+        }
+    }
+    
+}
+
+
+.gly-testimonial-3-slider {
+    .swiper-container{
+        padding: 20px;
+
+        .swiper-wrapper {
+            height: 1110px;
+        }
+    }
+}
+
+
+ 
+/* 
+    testimonial-3-css-end
+*/

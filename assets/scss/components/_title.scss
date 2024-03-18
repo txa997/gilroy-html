@@ -228,3 +228,85 @@
 /* 
     home-2-heading-paragraph-css-end
 */
+
+/* 
+    home-3-heading-paragraph-css-start
+*/
+.gly-subtitle-3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--gly-pr-2);
+    line-height: 32px;
+    font-size: 15px;
+    margin-bottom: 12px;
+
+    .line1 {
+        display: inline-block;
+        width: 62px;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(16,66,242,1) 0%, rgba(0,212,255,0) 100%);
+        flex: 0 0 auto;
+    }
+
+    .line2 {
+        display: inline-block;
+        width: 62px;
+        height: 2px;
+        background: linear-gradient(270deg, rgba(16,66,242,1) 0%, rgba(0,212,255,0) 100%);
+        flex: 0 0 auto;
+    }
+}
+
+.gly-heading-3 {
+    font-family: var(--montserrat);
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.33;
+    color: var(--gly-heading-3);
+    margin-bottom: 0;
+}
+
+.gly-section-title-3 {
+    font-family: var(--montserrat);
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.33;
+    color: var(--gly-heading-3);
+    font-size: 45px;
+    margin-bottom: 25px;
+
+    @media #{$lg} {
+        font-size: 40px;
+    }
+
+    @media #{$md} {
+        font-size: 35px;
+    }
+    @media #{$xs} {
+        font-size: 26px;
+    }
+    @media #{$sm} {
+        font-size: 30px;
+    }
+}
+
+
+.gly-para-3 {
+    font-family: var(--inter);
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 18px;
+    color: var(--gly-para-3);
+    margin-bottom: 0px;
+    &:is(.has-white) {
+        color: #fff;
+    }
+}
+
+/* 
+    home-3-heading-paragraph-css-end
+*/

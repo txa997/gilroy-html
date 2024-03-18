@@ -512,6 +512,30 @@ let glyt2 = new Swiper('.gly-t2-active', {
 
 });
 
+// testimonial-3-slider-active
+if($('.gly-t3-active'.length)) {
+  
+	var glyt3= new Swiper('.gly-t3-active', {
+	  speed: 500,
+	  loop: true,
+	  spaceBetween: 20,
+	  direction: "vertical",
+	  mousewheel: true,
+	  slidesPerView: 3,
+	//   autoplay: {
+	// 	delay: 4000,
+	//   },
+	
+	  navigation: {
+		nextEl: ".txa_t1_next",
+		prevEl: ".txa_t1_prev",
+	  },
+
+	  
+	});
+  }
+  
+
 /* mouse-move-animation */
 document.addEventListener("mousemove" , parallax);
 function parallax(e){

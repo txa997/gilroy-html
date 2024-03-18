@@ -271,3 +271,258 @@
 /* 
     about-1-css-end
 */
+/* 
+    about-3-css-start
+*/
+
+.gly-about-3 {
+
+    &-area {
+        position: relative;
+        z-index: 1;
+    }
+
+    &-shape-2 {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 0;
+        z-index: -1;
+    }
+
+    &-shape-1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &-section-title {
+        max-width: 1111px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-row {
+        margin-left: -90px;
+        display: grid;
+        grid-template-columns: 1fr 1.7fr;
+        gap: 50px;
+        align-items: center;
+
+        @media #{$xxl,$xl,$lg} {
+            margin-left: 0px;
+        }
+        @media #{$md,$xs} {
+            margin-left: 0px;
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    &-img {
+        height: 650px;
+        overflow: hidden;
+
+        @media #{$md,$xs} {
+            height: 450px;
+        }
+    }
+
+    &-content {
+        position: relative;
+
+        .disc {
+            max-width: 510px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &-feature {
+        &-wrap {
+            max-width: 375px;
+        }
+
+        display: flex;
+        gap: 20px;
+
+        &:not(:last-child) {
+            padding-bottom: 22px;
+            margin-bottom: 22px;
+            border-bottom: 1px solid rgb(15 13 30 / 10%);
+        }
+
+
+        .main-icon {
+            i {
+                font-size: 48px;
+                line-height: 1;
+                display: inline-block;
+                color: var(--gly-pr-2);
+            }
+        }
+
+        .title {
+            font-size: 19px;
+            line-height: 30px;
+        }
+
+        .disc {
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+    }
+
+    &-counter {
+        width: 140px;
+        height: 140px;
+        background: var(--gly-pr-2);
+        border-radius: 50%;
+        padding: 9px;
+        box-shadow: inset 0 0px 4px 4px rgba(0, 0, 0, 25%);
+        position: absolute;
+        right: 38%;
+        top: 26%;
+
+        @media #{$lg} {
+            right: 0;
+            top: 57%;
+        }
+
+        @media #{$md} {
+            right: 0;
+            top: 37%;
+        }
+
+        @media #{$xs} {
+            right: 0;
+            top: 37%;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        @media #{$sm} {
+            position: absolute;
+            right: 0;
+            top: 37%;
+        }
+
+        svg {
+            font-size: 27px;
+            fill: #fff;
+        }
+
+        .number {
+            width: 90px;
+            height: 90px;
+            color: var(--gly-pr-2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+            font-size: 33px;
+            box-shadow: 0 0 0 12px rgb(0 0 0 / 10%);
+        }
+    }
+
+    &-popup-img {
+        position: absolute;
+        right: 0;
+        top: 11%;
+
+        @media #{$xl,$lg} {
+            top: 26%;
+            width: 31%;
+        }
+
+        @media #{$md,$xs} {
+           display: none;
+        }
+    }
+    
+}
+
+.gly-about-3-phone {
+    width: 205px;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 30px 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 33%;
+    bottom: -100px;
+    z-index: 1;
+
+    @media #{$xl,$lg,$md} {
+        right: 0%;
+    }
+
+    @media #{$xs} {
+        right: 0%;
+        position: relative;
+        
+    }
+
+    @media #{$sm} {
+        position: absolute;
+        right: 0%;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #1042F2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: .6;
+    }
+
+    i {
+        font-size: 60px;
+        line-height: 1;
+        color: #FEB018;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        color: #FEB018;
+        text-transform: capitalize;
+        font-weight: 400;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    .item-link {
+        font-size: 22px;
+        display: inline-block;
+        line-height: 30px;
+        color: #fff;
+    }
+
+    img {
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+
+
+/* 
+    about-3-css-end
+*/
