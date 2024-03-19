@@ -306,6 +306,42 @@ glyt2g.fromTo( ".gly-earth img" , { filter: "drop-shadow(0px 0px  0px #1667A9)" 
 }, "<.5" )
 
 
+// project-3-animation
+gsap.utils.toArray('.gly-project-3-item1 ').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 90%",
+		end: "buttom 50%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.set(el, { perspective: 2000 , transformStyle: "preserve-3d" , transformOrigin: "0% 50%" })
+	.from(el , { scaleX: .2  , opacity: 0})
+  })
+
+
+gsap.utils.toArray('.gly-project-3-item2 ').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 90%",
+		end: "buttom 50%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.set(el, { perspective: 2000 , transformStyle: "preserve-3d" , transformOrigin: "100% 50%" })
+	.from(el , { scaleX: .2  , opacity: 0})
+  })
+
 
 // footer-2-animation
 var glyf2g = gsap.timeline({
@@ -516,19 +552,37 @@ let glyt2 = new Swiper('.gly-t2-active', {
 if($('.gly-t3-active'.length)) {
   
 	var glyt3= new Swiper('.gly-t3-active', {
-	  speed: 500,
+	  speed: 1000,
 	  loop: true,
 	  spaceBetween: 20,
 	  direction: "vertical",
 	  mousewheel: true,
 	  slidesPerView: 3,
-	//   autoplay: {
-	// 	delay: 4000,
-	//   },
+	  autoplay: {
+		delay: 3000,
+	  },
 	
 	  navigation: {
-		nextEl: ".txa_t1_next",
-		prevEl: ".txa_t1_prev",
+		nextEl: ".gly_t3_next",
+		prevEl: ".gly_t3_prev",
+	  },
+
+	  breakpoints: {
+		0: {
+		  slidesPerView: 1,
+		},
+		576: {
+		  slidesPerView: 1,
+		},
+		768: {
+		  slidesPerView: 2,
+		},
+		992: {
+		  slidesPerView: 2,
+		},
+		1200: {
+		  slidesPerView: 3,
+		},
 	  },
 
 	  

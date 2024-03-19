@@ -472,10 +472,81 @@
 /* 
     testimonial-3-css-start
 */
+
+.gly-testimonial-3 {
+    &-area {
+        position: relative;
+        z-index: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+        @media #{$md,$xs} {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 336px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, rgba(0,80,255,1) 0%, rgba(0,233,204,1) 100%);
+            z-index: 1;
+            clip-path: polygon(0 0, 100% 65%, 100% 100%, 0 100%);
+
+            @media #{$md,$xs} {
+                height: 160px;
+            }
+        }
+
+    }
+
+    &-section-title {
+        max-width: 610px;
+    }
+
+    &-bg-img {
+        position: absolute;
+        left: 0;
+        bottom: 121px;
+        width: 53%;
+        text-align: right;
+        z-index: 2;
+
+        @media #{$xl} {
+            width: 60%;
+            
+        }
+
+        @media #{$lg} {
+            width: 60%;
+            bottom: 100px;
+        }
+
+        @media #{$md} {
+            position: unset;
+        }
+
+        @media #{$xs} {
+            position: unset;
+            width: 100%;
+            margin-bottom: -50px;
+        }
+    }
+}
+
 .gly-testimonial-3-slider-item {
     border-radius: 10px;
     padding: 35px;
     box-shadow: 0 0 30px rgb(0 0 0 / 6%);
+
+    @media #{$xs} {
+        padding: 15px;
+    }
+
+    @media #{$sm} {
+        padding: 35px;
+    }
 
     .icon-rating {
         display: flex;
@@ -507,6 +578,10 @@
         line-height: 1.54;
         font-weight: 600;
         margin-bottom: 22px;
+
+        @media #{$lg,$md,$xs} {
+            font-size: 20px;
+        }
     }
 
     .autho {
@@ -527,13 +602,88 @@
 
 
 .gly-testimonial-3-slider {
+        position: relative;
+        z-index: 1;
+    
+        &::after {
+            content: "";
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(255,255,255,1) 100%);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
     .swiper-container{
         padding: 20px;
 
+        @media #{$xs} {
+            padding: 10px; 
+        }
+        @media #{$sm} {
+            padding: 20px; 
+        }
+
         .swiper-wrapper {
             height: 1110px;
+
+            @media #{$lg} {
+                height: 900px;
+            }
+
+            @media #{$md} {
+                height: 700px;
+            }
+
+            @media #{$xs} {
+                height: 680px;
+            }
+
+            @media #{$sm} {
+                height: 450px;
+            }
         }
     }
+}
+
+.gly-testimonial-3-slider-btn {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 30px;
+    line-height: 2;
+    z-index: 2;
+
+    @media #{$xl,$lg,$md,$xs} {
+        right: 30px;
+        top: unset;
+        transform: unset;
+        bottom: 100px;
+        
+    }
+
+    i {
+        display: inline-block;
+        line-height: 1;
+        transition: 400ms var(--cube-1);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--gly-pr-2);
+        }
+    }
+
+
 }
 
 

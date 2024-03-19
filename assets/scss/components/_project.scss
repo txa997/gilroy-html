@@ -494,3 +494,305 @@
     project-2-css-end
 */
 
+
+/* 
+    project-3-css-start
+*/
+.gly-project-3 {
+    &-area {
+        padding-bottom: 231px;
+        padding-top: 230px;
+        background: #0E0D1D;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs} {
+            padding-bottom: 131px;
+            padding-top: 130px;
+        }
+    }
+
+    &-bg-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-section-title {
+        padding-left: 40px;
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 0px;
+        }
+
+        .gly-section-title-3 {
+            color: #fff;
+        }
+
+        .disc {
+            color: #fff;
+            opacity: 80%;
+            margin-bottom: 50px;
+        }
+    }
+    
+}
+
+.gly-project-3-section {
+    &-relative {
+        position: relative;
+    }
+    &-abs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        @media #{$lg,$md,$xs} {
+            position: unset;
+        }
+    }
+}
+
+
+
+.gly-project-3-item-wrap {
+    display: grid;
+    grid-template-columns: 1fr .6fr 390px;
+
+    @media #{$xxl,$xl} {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    @media #{$lg,$md} {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    @media #{$xs} {
+        grid-template-columns: 1fr;
+        gap: 30px 20px;
+    }
+
+    .gly-project-3-item {
+
+        &:nth-child(2) {
+            margin-top: 620px;
+
+            @media #{$lg,$md,$xs} {
+                margin-top: 0px;
+            }
+            .main-img {
+                height: 410px;
+            }
+        }
+    
+        &:nth-child(3) {
+            margin-top: calc( 620px + 410px ) ;
+
+            @media #{$lg,$md,$xs} {
+                margin-top: 0 ;
+            }
+            .main-img {
+                height: 534px;
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    height: 410px;  
+                }
+            }
+        }
+    }
+}
+
+.gly-project-3-item-wrap-2 {
+    margin-top: -133px;
+    display: grid;
+    grid-template-columns: 570px 1fr 390px;
+
+    @media #{$xxl,$xl} {
+        grid-template-columns: 1fr 1fr;
+        padding-right: 25%;
+    }
+
+    @media #{$lg,$md} {
+        grid-template-columns: 1fr 1fr;
+        padding-right: 0%;
+        gap: 30px 20px;
+        margin-top: 30px;
+    }
+
+    @media #{$xs} {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+        padding-right: 0%;
+        gap: 30px 20px;
+    }
+
+    .gly-project-3-item {
+        &:nth-child(1) {
+            margin-top: 695px;
+
+            @media #{$xxl,$xl} {
+                margin-top: 410px;
+            }
+
+            @media #{$lg,$md,$xs} {
+                margin-top: 0px;
+            }
+
+            .main-img {
+                height: 412px;
+            }
+        }
+        &:nth-child(2) {
+            text-align: right;
+            .main-img {
+                height: 695px;
+
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    height: 410px;
+                }
+            }
+        }
+    }
+
+}
+
+.gly-project-3-item-wrap-3 {
+    margin-top: -133px;
+    display: grid;
+    grid-template-columns: 1fr 543px;
+    padding-left: 571px;
+
+    @media #{$xxl,$xl} {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 38%;
+    }
+
+    @media #{$lg,$md} {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 0%;
+        gap: 30px 20px;
+        margin-top: 30px;
+    }
+
+    @media #{$xs} {
+        grid-template-columns: 1fr;
+        padding-left: 0%;
+        gap: 30px 20px;
+        margin-top: 30px;
+    }
+
+    .gly-project-3-item {
+        &:nth-child(1) {
+            .main-img {
+                height: 536px;
+
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    height: 410px;
+                }
+            }
+        }
+        &:nth-child(2) {
+            margin-top: 536px;
+            @media #{$xxl,$xl} {
+                margin-top: 410px;
+            }
+            @media #{$lg,$md,$xs} {
+                margin-top: 0px;
+            }
+            .main-img {
+                height: 543px;
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    height: 410px;
+                }
+            }
+        }
+
+    }
+}
+
+.gly-project-3-item {
+
+    flex: 0 0 auto;
+
+
+    .main-img {
+        height: 620px;
+        margin-bottom: 30px;
+
+        @media #{$lg,$md,$xs} {
+            height: 410px;
+        }
+
+    }
+
+    .item-title {
+        font-size: 28px;
+        line-height: 1.33;
+        color: #fff;
+        margin-bottom: 20px;
+        transition: 400ms var(--cube-1); 
+        padding: 0 20px;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            font-size: 22px;
+        }
+
+        a {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            @media #{$xs} {
+                -webkit-line-clamp: 2;
+            }
+        }
+
+        &:hover {
+            transform: skewX(10deg);
+            color: var(--gly-pr-1);
+        }
+    }
+
+    .item-tags {
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+        overflow: hidden;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    .tag-link {
+        flex: 0 0 auto;
+        display: inline-block;
+        font-size: 16px;
+        font-family: var(--inter);
+        text-transform: capitalize;
+        font-weight: 400;
+        background: rgb(255 255 255 / 8%);
+        line-height: 26px;
+        padding: 10px 25px;
+        border-radius: 30px;
+        color: #fff;
+        transition: 400ms var(--cube-1);
+
+        &:hover {
+            background: rgb(255 255 255 / 98%);
+            color: var(--gly-pr-1) ;
+        }
+    }
+    
+}
+
+
+/* 
+    project-3-css-end
+*/
+

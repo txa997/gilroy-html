@@ -302,6 +302,25 @@
         max-width: 1111px;
         margin-left: auto;
         margin-right: auto;
+
+        .gly-section-title-3 {
+            font-size: 45px;
+            
+            @media #{$lg} {
+                font-size: 40px;
+            }
+
+            @media #{$md} {
+                font-size: 35px;
+            }
+            @media #{$xs} {
+                font-size: 26px;
+            }
+            @media #{$sm} {
+                font-size: 30px;
+            }
+        }
+
     }
 
     &-row {

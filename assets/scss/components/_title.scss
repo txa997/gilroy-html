@@ -276,8 +276,16 @@
     text-transform: capitalize;
     line-height: 1.33;
     color: var(--gly-heading-3);
-    font-size: 45px;
+    font-size: 55px;
     margin-bottom: 25px;
+
+    @media #{$xxl} {
+        font-size: 50px;
+    }
+
+    @media #{$xl} {
+        font-size: 45px;
+    }
 
     @media #{$lg} {
         font-size: 40px;

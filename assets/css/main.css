@@ -2535,8 +2535,18 @@ input:focus::placeholder, textarea:focus::placeholder {
   text-transform: capitalize;
   line-height: 1.33;
   color: var(--gly-heading-3);
-  font-size: 45px;
+  font-size: 55px;
   margin-bottom: 25px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .gly-section-title-3 {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-section-title-3 {
+    font-size: 45px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .gly-section-title-3 {
@@ -4095,6 +4105,29 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-left: auto;
   margin-right: auto;
 }
+.gly-about-3-section-title .gly-section-title-3 {
+  font-size: 45px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-about-3-section-title .gly-section-title-3 {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-about-3-section-title .gly-section-title-3 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-about-3-section-title .gly-section-title-3 {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-about-3-section-title .gly-section-title-3 {
+    font-size: 30px;
+  }
+}
 .gly-about-3-row {
   margin-left: -90px;
   display: grid;
@@ -5301,6 +5334,298 @@ input:focus::placeholder, textarea:focus::placeholder {
     project-2-css-end
 */
 /* 
+    project-3-css-start
+*/
+.gly-project-3-area {
+  padding-bottom: 231px;
+  padding-top: 230px;
+  background: #0E0D1D;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-area {
+    padding-bottom: 131px;
+    padding-top: 130px;
+  }
+}
+.gly-project-3-bg-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.gly-project-3-section-title {
+  padding-left: 40px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-section-title {
+    padding-left: 0px;
+  }
+}
+.gly-project-3-section-title .gly-section-title-3 {
+  color: #fff;
+}
+.gly-project-3-section-title .disc {
+  color: #fff;
+  opacity: 80%;
+  margin-bottom: 50px;
+}
+
+.gly-project-3-section-relative {
+  position: relative;
+}
+.gly-project-3-section-abs {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-section-abs {
+    position: unset;
+  }
+}
+
+.gly-project-3-item-wrap {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 390px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-project-3-item-wrap {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-3-item-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-3-item-wrap {
+    grid-template-columns: 1fr;
+    gap: 30px 20px;
+  }
+}
+.gly-project-3-item-wrap .gly-project-3-item:nth-child(2) {
+  margin-top: 620px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap .gly-project-3-item:nth-child(2) {
+    margin-top: 0px;
+  }
+}
+.gly-project-3-item-wrap .gly-project-3-item:nth-child(2) .main-img {
+  height: 410px;
+}
+.gly-project-3-item-wrap .gly-project-3-item:nth-child(3) {
+  margin-top: 1030px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap .gly-project-3-item:nth-child(3) {
+    margin-top: 0;
+  }
+}
+.gly-project-3-item-wrap .gly-project-3-item:nth-child(3) .main-img {
+  height: 534px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap .gly-project-3-item:nth-child(3) .main-img {
+    height: 410px;
+  }
+}
+
+.gly-project-3-item-wrap-2 {
+  margin-top: -133px;
+  display: grid;
+  grid-template-columns: 570px 1fr 390px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-project-3-item-wrap-2 {
+    grid-template-columns: 1fr 1fr;
+    padding-right: 25%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-3-item-wrap-2 {
+    grid-template-columns: 1fr 1fr;
+    padding-right: 0%;
+    gap: 30px 20px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-3-item-wrap-2 {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    padding-right: 0%;
+    gap: 30px 20px;
+  }
+}
+.gly-project-3-item-wrap-2 .gly-project-3-item:nth-child(1) {
+  margin-top: 695px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-project-3-item-wrap-2 .gly-project-3-item:nth-child(1) {
+    margin-top: 410px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap-2 .gly-project-3-item:nth-child(1) {
+    margin-top: 0px;
+  }
+}
+.gly-project-3-item-wrap-2 .gly-project-3-item:nth-child(1) .main-img {
+  height: 412px;
+}
+.gly-project-3-item-wrap-2 .gly-project-3-item:nth-child(2) {
+  text-align: right;
+}
+.gly-project-3-item-wrap-2 .gly-project-3-item:nth-child(2) .main-img {
+  height: 695px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap-2 .gly-project-3-item:nth-child(2) .main-img {
+    height: 410px;
+  }
+}
+
+.gly-project-3-item-wrap-3 {
+  margin-top: -133px;
+  display: grid;
+  grid-template-columns: 1fr 543px;
+  padding-left: 571px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-project-3-item-wrap-3 {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 38%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-3-item-wrap-3 {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0%;
+    gap: 30px 20px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-3-item-wrap-3 {
+    grid-template-columns: 1fr;
+    padding-left: 0%;
+    gap: 30px 20px;
+    margin-top: 30px;
+  }
+}
+.gly-project-3-item-wrap-3 .gly-project-3-item:nth-child(1) .main-img {
+  height: 536px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap-3 .gly-project-3-item:nth-child(1) .main-img {
+    height: 410px;
+  }
+}
+.gly-project-3-item-wrap-3 .gly-project-3-item:nth-child(2) {
+  margin-top: 536px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-project-3-item-wrap-3 .gly-project-3-item:nth-child(2) {
+    margin-top: 410px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap-3 .gly-project-3-item:nth-child(2) {
+    margin-top: 0px;
+  }
+}
+.gly-project-3-item-wrap-3 .gly-project-3-item:nth-child(2) .main-img {
+  height: 543px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item-wrap-3 .gly-project-3-item:nth-child(2) .main-img {
+    height: 410px;
+  }
+}
+
+.gly-project-3-item {
+  flex: 0 0 auto;
+}
+.gly-project-3-item .main-img {
+  height: 620px;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item .main-img {
+    height: 410px;
+  }
+}
+.gly-project-3-item .item-title {
+  font-size: 28px;
+  line-height: 1.33;
+  color: #fff;
+  margin-bottom: 20px;
+  transition: 400ms var(--cube-1);
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-project-3-item .item-title {
+    font-size: 22px;
+  }
+}
+.gly-project-3-item .item-title a {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .gly-project-3-item .item-title a {
+    -webkit-line-clamp: 2;
+  }
+}
+.gly-project-3-item .item-title:hover {
+  transform: skewX(10deg);
+  color: var(--gly-pr-1);
+}
+.gly-project-3-item .item-tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .gly-project-3-item .item-tags {
+    flex-wrap: wrap;
+  }
+}
+.gly-project-3-item .tag-link {
+  flex: 0 0 auto;
+  display: inline-block;
+  font-size: 16px;
+  font-family: var(--inter);
+  text-transform: capitalize;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.08);
+  line-height: 26px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: #fff;
+  transition: 400ms var(--cube-1);
+}
+.gly-project-3-item .tag-link:hover {
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--gly-pr-1);
+}
+
+/* 
+    project-3-css-end
+*/
+/* 
     campaign-1-css-start
 */
 .gly-campaign-1-area {
@@ -6120,10 +6445,81 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     testimonial-3-css-start
 */
+.gly-testimonial-3-area {
+  position: relative;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-3-area {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  }
+}
+.gly-testimonial-3-area::after {
+  content: "";
+  width: 100%;
+  height: 336px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgb(0, 80, 255) 0%, rgb(0, 233, 204) 100%);
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 65%, 100% 100%, 0 100%);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-3-area::after {
+    height: 160px;
+  }
+}
+.gly-testimonial-3-section-title {
+  max-width: 610px;
+}
+.gly-testimonial-3-bg-img {
+  position: absolute;
+  left: 0;
+  bottom: 121px;
+  width: 53%;
+  text-align: right;
+  z-index: 2;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-testimonial-3-bg-img {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-testimonial-3-bg-img {
+    width: 60%;
+    bottom: 100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-testimonial-3-bg-img {
+    position: unset;
+  }
+}
+@media (max-width: 767px) {
+  .gly-testimonial-3-bg-img {
+    position: unset;
+    width: 100%;
+    margin-bottom: -50px;
+  }
+}
+
 .gly-testimonial-3-slider-item {
   border-radius: 10px;
   padding: 35px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+}
+@media (max-width: 767px) {
+  .gly-testimonial-3-slider-item {
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-testimonial-3-slider-item {
+    padding: 35px;
+  }
 }
 .gly-testimonial-3-slider-item .icon-rating {
   display: flex;
@@ -6153,6 +6549,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-weight: 600;
   margin-bottom: 22px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-3-slider-item .comment {
+    font-size: 20px;
+  }
+}
 .gly-testimonial-3-slider-item .autho {
   font-size: 22px;
   line-height: 1.54;
@@ -6166,11 +6567,90 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-weight: 400;
 }
 
+.gly-testimonial-3-slider {
+  position: relative;
+  z-index: 1;
+}
+.gly-testimonial-3-slider::after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgb(255, 255, 255) 100%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .gly-testimonial-3-slider::after {
+    display: none;
+  }
+}
 .gly-testimonial-3-slider .swiper-container {
   padding: 20px;
 }
+@media (max-width: 767px) {
+  .gly-testimonial-3-slider .swiper-container {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-testimonial-3-slider .swiper-container {
+    padding: 20px;
+  }
+}
 .gly-testimonial-3-slider .swiper-container .swiper-wrapper {
   height: 1110px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-testimonial-3-slider .swiper-container .swiper-wrapper {
+    height: 900px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-testimonial-3-slider .swiper-container .swiper-wrapper {
+    height: 700px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-testimonial-3-slider .swiper-container .swiper-wrapper {
+    height: 680px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-testimonial-3-slider .swiper-container .swiper-wrapper {
+    height: 450px;
+  }
+}
+
+.gly-testimonial-3-slider-btn {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 30px;
+  line-height: 2;
+  z-index: 2;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-3-slider-btn {
+    right: 30px;
+    top: unset;
+    transform: unset;
+    bottom: 100px;
+  }
+}
+.gly-testimonial-3-slider-btn i {
+  display: inline-block;
+  line-height: 1;
+  transition: 400ms var(--cube-1);
+  cursor: pointer;
+}
+.gly-testimonial-3-slider-btn i:hover {
+  color: var(--gly-pr-2);
 }
 
 /* 
