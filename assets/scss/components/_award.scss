@@ -1,0 +1,168 @@
+@use '../abstracts/variables' as *;
+/* 
+    award-3-css-start
+*/
+
+
+.gly-award-3 {
+
+    &-area {
+        background-color: #F4F9FD;
+        padding-top: 205px;
+        margin-top: -116px;
+        position: relative;
+        z-index: 1;
+
+        @media #{$md,$xs} {
+            padding-top: 115px;
+            margin-top: 0;
+        }
+
+    }
+
+    &-bg-shape {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        opacity: 4%;
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1.8fr;
+        gap: 50px 100px;
+
+        @media #{$xl,$lg} {
+            gap: 50px 50px;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+
+    &-content {
+        position: relative;
+        z-index: 1;
+
+        @media #{$xl,$lg,$md,$xs} {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-shape {
+            position: absolute;
+            left: -210px;
+            bottom: 150px;
+
+            @media #{$xxxl} {
+                left: -100px;
+            }
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                display: none;
+            }
+
+        }
+    }
+    
+
+    &-item {
+        &-single {
+            display: grid;
+            grid-template-columns: 200px 1fr auto;
+            align-items: center;
+            gap: 35px;
+            padding: 40px 0;
+            border-bottom: 1px solid #E5E8F0;
+            position: relative;
+            z-index: 1;
+
+            @media #{$lg} {
+                grid-template-columns: 120px 1fr auto;
+            }
+
+            @media #{$xs} {
+                grid-template-columns:  auto;
+            }
+
+            @media #{$sm} {
+                grid-template-columns: 100px 1fr auto;
+            }
+
+            &:nth-child(1) {
+                border-top: 1px solid #E5E8F0;
+            }
+
+            &::after {
+                content: "";
+                width: 0%;
+                height: 1px;
+                background: linear-gradient(90deg, rgba(0,80,255,1) 0%, rgba(0,233,204,1) 100%);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: 400ms var(--cube-2);
+            }
+
+            .item-logo {
+                position: relative;
+                z-index: 1;
+
+                .logo-1 {
+                    transition: 400ms var(--cube-1);
+                }
+
+                .logo-2 {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transition: 400ms var(--cube-1);
+                    opacity: 0;
+                }
+            }
+
+            .item-title {
+                font-size: 22px;
+                line-height: 1.54;
+                margin-bottom: 10px;
+            }
+
+            .disc {
+                font-size: 16px;
+            }
+
+            .item-date {
+                font-size: 18px;
+                color: var(--gly-pr-2);
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+
+                .item-logo {
+                    .logo-1 {
+                        opacity: 0;
+                    }
+    
+                    .logo-2 {
+                        opacity: 1;
+                    }
+                }
+
+            }
+        }
+    }
+    
+    
+}
+/* 
+    award-3-css-end
+*/

@@ -506,9 +506,26 @@
         position: relative;
         z-index: 1;
 
-        @media #{$lg,$md,$xs} {
+        clip-path: polygon(0 0, 100% 4.5%, 100% 100%, 0 100%);
+        margin-top: -210px;
+
+        @media #{$lg} {
             padding-bottom: 131px;
             padding-top: 130px;
+        }
+
+        @media #{$md} {
+            padding-bottom: 131px;
+            padding-top: 130px;
+            clip-path: polygon(0 0, 100% 3.5%, 100% 100%, 0 100%);
+            margin-top: -102px;
+        }
+
+        @media #{$xs} {
+            padding-bottom: 131px;
+            padding-top: 130px;
+            clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+            margin-top: -102px;
         }
     }
 

@@ -1,0 +1,168 @@
+/* 
+    team-3-css-start
+*/
+
+.gly-team-3 {
+    &-slider-item {
+        max-width: 465px;
+        height: 565px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+
+        &::after {
+            content: "";
+            width: 69%;
+            height: 30%;
+            background: var(--gly-pr-2);
+            position: absolute;
+            bottom: -10px;
+            right: -12px;
+            z-index: 1;
+            filter: blur(40px);
+        }
+
+        img {
+            filter: grayscale(1);
+            transition: 400ms var(--cube-1);
+        }
+
+        .content-wrap {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 35px 30px;
+            text-align: right;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .item-name {
+            font-size: 32px;
+            line-height: 1.06;
+            margin-bottom: 10px;
+            color: #fff;
+            transition: 400ms var(--cube-1);
+            
+            &:hover {
+                transform: translateX(-5px);
+            }
+        }
+
+        .item-bio {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+        
+    }
+    
+}
+
+.gly-team-3-social {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 3;
+
+    .toggle-icon {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        border: 3.5px solid #fff;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+        transition: 400ms var(--cube-1);
+
+        i {
+            display: inline-block;
+            transition: 400ms var(--cube-2);
+        }
+
+        &:hover {
+            color: var(--gly-pr-2);
+            border-color: var(--gly-pr-2);
+            
+            i {
+                transform: rotate(360deg);
+
+                &::before {
+                    content: "\f068";
+                }
+            }
+        }
+
+
+    }
+
+        
+    .icon-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transform: translateY(100%);
+        transition: 500ms var(--cube-2);
+
+    }
+
+    .social-icon {
+        display: inline-flex;
+        width: 62px;
+        height: 62px;
+        background: var(--gly-pr-2);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 26px;
+        line-height: 1;
+        transition: 400ms var(--cube-1);
+
+        i {
+            display: inline-block;
+            transition: 400ms var(--cube-1);
+
+        }
+        &:hover {
+            transform: scale(92%);
+            i {
+                transform: scale(110%);
+            }
+        }
+    }
+
+    &:is(.active) {
+        .icon-wrap {
+            transform: translateY(0%);
+        }
+    }
+    
+}
+
+
+.gly-team-3-slider {
+    margin-right: -630px;
+}
+
+
+
+/* 
+    team-3-css-end
+*/

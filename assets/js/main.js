@@ -588,7 +588,70 @@ if($('.gly-t3-active'.length)) {
 	  
 	});
   }
+
+// team-3-slider-active
+if($('.gly-t4-active'.length)) {
   
+	var glyt4= new Swiper('.gly-t4-active', {
+	  speed: 1000,
+	  loop: true,
+	  spaceBetween: 30,
+	  slidesPerView: 4,
+	  autoplay: {
+		delay: 3000,
+	  },
+
+
+	  breakpoints: {
+		0: {
+		  slidesPerView: 1,
+		},
+		576: {
+		  slidesPerView: 1,
+		},
+		768: {
+		  slidesPerView: 2,
+		},
+		992: {
+		  slidesPerView: 2,
+		},
+		1200: {
+		  slidesPerView: 4,
+		},
+	  },
+
+	  
+	});
+  }
+
+
+
+
+// team-3-hover-class-add
+const t3togglebtns = document.querySelectorAll(".gly-team-3-social .toggle-icon");
+
+t3togglebtns.forEach(togglebtn => {
+  const t3social = togglebtn.closest(".gly-team-3-social");
+
+  togglebtn.addEventListener('click', function() {
+    // Check if the t3social element has the 'active' class
+    const isActive = t3social.classList.contains('active');
+
+    if (isActive) {
+      // If it's active, remove the 'active' class
+      t3social.classList.remove('active');
+    } else {
+      // If it's not active, add the 'active' class
+      t3social.classList.add('active');
+    }
+  });
+
+
+});
+
+
+
+
 
 /* mouse-move-animation */
 document.addEventListener("mousemove" , parallax);

@@ -414,6 +414,17 @@
             border-color: transparent;
         }
     }
+
+    &:is(.has-border-color) {
+        border: 1px solid var(--gly-pr-2);
+        background: transparent;
+        color: var(--gly-pr-2);
+        &:hover {
+            background: #1042F2;
+            border-color: transparent;
+            color: #fff;
+        }
+    }
 }
 
 /* 
