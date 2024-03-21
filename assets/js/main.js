@@ -203,6 +203,8 @@ gsap.utils.toArray('.fadeleft ').forEach((el, index) => {
 	.from(el, { x: "-=100" , opacity: .8 }, {opacity: 1, scale: 1, x: 0, duration: 1, immediateRender: false})
   })
 
+
+
 // text-clipPath-animation-start
 gsap.utils.toArray('.has-stoke ').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
@@ -362,6 +364,24 @@ glyf2g.from( ".gly-footer-2-area" , { yPercent: 20,  duration:1 })
 .from( ".gly-footer-2-il-1" , { yPercent: -20, xPercent: 20,  duration:1 }, "<.3")
 .from( ".gly-footer-2-il-2" , { yPercent: 20, xPercent: -20,  duration:1 }, "<.3")
 .from( ".gly-footer-2-top-line" , { scaleX: .5 ,  duration:1 }, "<")
+
+
+// portfolio-3-animation
+var glyf3g = gsap.timeline({
+		
+	scrollTrigger: {
+		animation: glyf3g,
+		trigger: '.gly-portfolio-3-area',
+		start: "top 100%",
+		end: "top 30%",
+		scrub: 1,
+		markers: false
+	}
+});
+
+glyf3g.from( ".gly-portfolio-3-item-wrap" , { xPercent: 100,  duration:1 })
+.from( ".gly-portfolio-3-bg-shape" , { xPercent: 100,  duration:1 }, "<=.5")
+
 
 
 // title-animation
@@ -598,8 +618,16 @@ if($('.gly-t4-active'.length)) {
 	  spaceBetween: 30,
 	  slidesPerView: 4,
 	  autoplay: {
-		delay: 3000,
+		delay: 40000000,
 	  },
+
+	  pagination: {
+        el: ".gly-team-3-slider-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
 
 
 	  breakpoints: {
@@ -616,6 +644,12 @@ if($('.gly-t4-active'.length)) {
 		  slidesPerView: 2,
 		},
 		1200: {
+		  slidesPerView: 3,
+		},
+		1400: {
+		  slidesPerView: 3,
+		},
+		1600: {
 		  slidesPerView: 4,
 		},
 	  },
@@ -649,6 +683,21 @@ t3togglebtns.forEach(togglebtn => {
 
 });
 
+
+
+// gellary-marquee-active
+
+if($('.gellary-marquee').length) {
+	$('.gellary-marquee').marquee({
+		duration: 25000,
+		gap: 12,
+		delayBeforeStart: 0,
+		startVisible:true,
+	  	pauseOnHover: true,
+		direction: 'left',
+		duplicated: true
+	});
+}
 
 
 

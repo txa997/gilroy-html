@@ -7130,6 +7130,174 @@ input:focus::placeholder, textarea:focus::placeholder {
     portfolio-2-css-end
 */
 /* 
+    portfolio-3-css-start
+*/
+.gly-portfolio-3-area {
+  position: relative;
+  z-index: 1;
+}
+.gly-portfolio-3-bg-shape {
+  display: inline-block;
+  width: 38%;
+  height: 100%;
+  background: var(--gly-pr-2);
+  position: absolute;
+  top: 0;
+  right: -22.4%;
+  z-index: 1;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-portfolio-3-bg-shape {
+    display: none;
+  }
+}
+.gly-portfolio-3-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.gly-portfolio-3-section-title {
+  padding: 120px 0;
+}
+.gly-portfolio-3-section-title .gly-section-title-3 {
+  color: #fff;
+  margin-bottom: 50px;
+}
+.gly-portfolio-3-item-wrap {
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 40px;
+  padding-right: 0;
+  padding-bottom: 90px;
+  border-radius: 500px 0 0 500px;
+  border-left: 9px solid rgba(15, 13, 30, 0.2);
+  margin-left: -70px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-portfolio-3-item-wrap {
+    margin-left: 0px;
+    padding: 60px 40px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-portfolio-3-item-wrap {
+    margin-left: 0px;
+    padding: 60px 40px;
+    border-radius: 0;
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-portfolio-3-item-wrap {
+    margin-left: 0px;
+    padding: 60px 40px;
+    border-radius: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.gly-portfolio-3-item {
+  text-align: center;
+  padding: 40px 40px;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-portfolio-3-item {
+    padding: 40px 20px;
+  }
+}
+.gly-portfolio-3-item:is(.has-border-btm)::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(72, 70, 85) 0%, rgb(72, 70, 85) 35%, rgba(0, 212, 255, 0) 90%);
+  bottom: -1px;
+  left: 0;
+  position: absolute;
+  opacity: 40%;
+}
+.gly-portfolio-3-item:is(.has-border-btm)::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(72, 70, 85) 0%, rgb(72, 70, 85) 35%, rgba(0, 212, 255, 0) 90%);
+  top: 0;
+  right: -1px;
+  position: absolute;
+  opacity: 40%;
+}
+.gly-portfolio-3-item:is(.has-border-top)::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, rgb(72, 70, 85) 0%, rgb(72, 70, 85) 35%, rgba(0, 212, 255, 0) 90%);
+  top: -1px;
+  right: 0;
+  position: absolute;
+  opacity: 40%;
+}
+.gly-portfolio-3-item:is(.has-border-top)::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(72, 70, 85) 0%, rgb(72, 70, 85) 35%, rgba(0, 212, 255, 0) 90%);
+  top: 0;
+  left: -1px;
+  position: absolute;
+  opacity: 40%;
+}
+.gly-portfolio-3-item i {
+  display: inline-block;
+  font-size: 76px;
+  line-height: 0.5;
+  color: var(--gly-pr-2);
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-portfolio-3-item i {
+    font-size: 56px;
+  }
+}
+.gly-portfolio-3-item .item-title {
+  font-size: 52px;
+  line-height: 1.11;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-portfolio-3-item .item-title {
+    font-size: 42px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-portfolio-3-item .item-title {
+    font-size: 36px;
+  }
+}
+.gly-portfolio-3-item .item-disc {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #484655;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-portfolio-3-item .item-disc {
+    font-size: 18px;
+  }
+}
+.gly-portfolio-3-item:hover i {
+  animation: tilt-shaking 0.5s linear;
+}
+
+/* 
+    portfolio-3-css-end
+*/
+/* 
     experience-1-css-start
 */
 .gly-experience-1-wrap {
@@ -7793,6 +7961,149 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     blog-2-css-end
+*/
+/* 
+    blog-3-css-start
+*/
+.gly-blog-3-area {
+  position: relative;
+  z-index: 1;
+}
+.gly-blog-3-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.gly-blog-3-section-title {
+  max-width: 785px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gly-blog-3-card {
+  margin-bottom: 30px;
+}
+.gly-blog-3-card .card-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.gly-blog-3-card .card-img::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: var(--gly-pr-2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-3-card .card-meta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #E5E9FB;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px 0;
+  z-index: 2;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-3-card .meta-item {
+  font-size: 16px;
+  line-height: 22px;
+  writing-mode: vertical-rl;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-3-card .meta-item i {
+  margin-right: 5px;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.gly-blog-3-card .card-btn-position {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-top: 25px;
+  padding-left: 25px;
+  z-index: 2;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-3-card .card-btn-position img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.gly-blog-3-card .card-btn {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #484655;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-size: 34px;
+  color: #fff;
+  transition: 400ms var(--cube-2);
+}
+.gly-blog-3-card .card-btn:hover {
+  transform: rotate(45deg);
+}
+.gly-blog-3-card .card-title {
+  font-size: 27px;
+  line-height: 1.33;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-blog-3-card .card-title {
+    font-size: 22px;
+  }
+}
+.gly-blog-3-card .card-title a {
+  display: inline;
+  background-image: linear-gradient(#0F0D1E, #0F0D1E);
+  background-position: left bottom;
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-3-card .card-title:hover a {
+  background-size: 100% 1px;
+}
+.gly-blog-3-card:hover .card-img::after {
+  width: 100%;
+  opacity: 0.2;
+}
+.gly-blog-3-card:hover .card-meta {
+  background: var(--gly-pr-2);
+}
+.gly-blog-3-card:hover .meta-item {
+  color: #fff;
+}
+.gly-blog-3-card:hover .card-btn {
+  background: var(--gly-pr-2);
+}
+
+/* 
+    blog-3-css-end
 */
 /* 
     price-1-css-start
@@ -8605,8 +8916,13 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     team-3-css-start
 */
+.gly-team-3-section-title {
+  max-width: 835px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .gly-team-3-slider-item {
-  max-width: 465px;
   height: 565px;
   position: relative;
   overflow: hidden;
@@ -8634,8 +8950,13 @@ input:focus::placeholder, textarea:focus::placeholder {
   right: 0;
   padding: 35px 30px;
   text-align: right;
-  width: 100%;
+  width: 80%;
   z-index: 2;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-team-3-slider-item .content-wrap {
+    padding: 35px 10px;
+  }
 }
 .gly-team-3-slider-item .item-name {
   font-size: 32px;
@@ -8643,6 +8964,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-bottom: 10px;
   color: #fff;
   transition: 400ms var(--cube-1);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-team-3-slider-item .item-name {
+    font-size: 25px;
+  }
 }
 .gly-team-3-slider-item .item-name:hover {
   transform: translateX(-5px);
@@ -8666,6 +8992,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   flex-direction: column;
   gap: 15px;
   z-index: 3;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-team-3-social {
+    padding: 35px 10px;
+  }
 }
 .gly-team-3-social .toggle-icon {
   width: 62px;
@@ -8732,10 +9063,200 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-team-3-slider {
   margin-right: -630px;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-team-3-slider {
+    margin-right: 0px;
+  }
+}
+
+.gly-team-3-slider-pagination {
+  text-align: right;
+}
+.gly-team-3-slider-pagination .swiper-pagination-bullet {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: var(--montserrat);
+  color: #484655;
+  opacity: 30%;
+  line-height: 1;
+  padding: 0 10px;
+  background: transparent;
+  transition: 500ms var(--cube-1);
+  position: relative;
+  z-index: 1;
+}
+.gly-team-3-slider-pagination .swiper-pagination-bullet::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #d9d9d9;
+  position: absolute;
+  top: 15px;
+  left: 43px;
+}
+@media (max-width: 767px) {
+  .gly-team-3-slider-pagination .swiper-pagination-bullet::after {
+    left: 28px;
+  }
+}
+.gly-team-3-slider-pagination .swiper-pagination-bullet::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--gly-pr-2);
+  position: absolute;
+  top: 15px;
+  left: 43px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .gly-team-3-slider-pagination .swiper-pagination-bullet::before {
+    left: 28px;
+  }
+}
+.gly-team-3-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active) {
+  opacity: 100%;
+  color: var(--gly-pr-2);
+  font-weight: 700;
+  background: transparent;
+  padding-right: 315px;
+}
+@media (max-width: 767px) {
+  .gly-team-3-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active) {
+    padding-right: 130px;
+  }
+}
+.gly-team-3-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active)::after {
+  width: 86%;
+}
+.gly-team-3-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active)::before {
+  width: 86%;
+  transition: 5s linear;
+}
 
 /* 
     team-3-css-end
 */
+.gly-gallery-1-area {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.gly-gallery-1-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.gly-gallery-1-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 175px;
+  height: 180px;
+  transition: 0.4s var(--txa-cube-1);
+  border: 2px solid transparent;
+}
+.gly-gallery-1-item:nth-child(odd) {
+  animation: gallery-1-slideup 10s linear infinite;
+}
+.gly-gallery-1-item:nth-child(even) {
+  animation: gallery-1-slideup 10s linear infinite;
+  animation-delay: 5s;
+}
+.gly-gallery-1-item .item-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(130%);
+  z-index: 1;
+  color: #fff;
+  line-height: 1;
+  font-size: 40px;
+  transition: 0.4s var(--cube-1);
+  opacity: 0;
+}
+.gly-gallery-1-item img {
+  filter: grayscale(1);
+}
+.gly-gallery-1-item:hover {
+  border-color: var(--gly-pr-2);
+}
+.gly-gallery-1-item:hover .item-icon {
+  transform: translate(-50%, -50%) scale(100%);
+  opacity: 1;
+}
+.gly-gallery-1-item:hover img {
+  filter: grayscale(0);
+}
+
+@keyframes gallery-1-slideup {
+  0% {
+    transform: translateY(-35px);
+  }
+  50% {
+    transform: translateY(35px);
+  }
+  100% {
+    transform: translateY(-35px);
+  }
+}
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  cursor: pointer;
+  display: block;
+  z-index: 6;
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms linear;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+  background: var(--txa-gd-1);
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: 300ms var(--cube-2);
+  transform: translateY(200px);
+}
+.scroll-top:hover {
+  bottom: 35px;
+}
+
+.scroll-top-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 7px 0;
+}
+.scroll-top-wrap svg {
+  fill: var(--txa-pr-1);
+  width: 38px;
+}
+.scroll-top-wrap .text {
+  display: inline-block;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--txa-gd-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 767px) {
+  .scroll-top-wrap .text {
+    display: none;
+  }
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 /* 
     footer-1-css-start
 */
