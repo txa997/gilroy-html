@@ -1984,7 +1984,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: inline-block;
   flex: 0 0 auto;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
   font-size: 18px;
   line-height: 30px;
@@ -2639,7 +2639,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   right: 0;
   width: 100%;
-  overflow-x: clip;
+  z-index: 9;
+}
+.gly-header-1-area:is(.gly_sticky_show) {
+  background: #000;
 }
 .gly-header-1-area .left-shape-wrap {
   position: relative;
@@ -2841,6 +2844,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 */
 .gly-header-1-area:is(.has-header-2) {
   top: 35px;
+}
+.gly-header-1-area:is(.has-header-2):is(.gly_sticky) {
+  top: 0;
+}
+.gly-header-1-area:is(.has-header-2):is(.gly_sticky_show) {
+  top: 0;
 }
 @media (max-width: 767px) {
   .gly-header-1-area:is(.has-header-2) {
@@ -3076,6 +3085,40 @@ input:focus::placeholder, textarea:focus::placeholder {
 */
 /* 
   header-3-css-end
+*/
+/* 
+  sticky-header-css-start
+*/
+.gly_sticky_header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 500ms var(--cube-1);
+}
+.gly_sticky_header:is(.gly_sticky) {
+  transform: translateY(-100%);
+}
+.gly_sticky_header:is(.gly_sticky):is(.gly_sticky_show) {
+  transform: translateY(0%);
+}
+
+.gly_sticky .gly-cart-btn-1:is(.has-black) {
+  color: #fff;
+}
+.gly_sticky .gly-cart-btn-1:is(.has-black):hover {
+  color: var(--gly-pr-1);
+}
+.gly_sticky .gly-search-btn-1:is(.has-black) {
+  color: #fff;
+}
+.gly_sticky .gly-search-btn-1:is(.has-black):hover {
+  color: var(--gly-pr-1);
+}
+
+/* 
+  sticky-header-css-end
 */
 /* 
   mobile-menu-css-start
@@ -3861,11 +3904,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 .gly-hero-3-demo-clm:nth-child(odd) {
-  animation: h3-demo-1 20s linear infinite;
+  animation: h3-demo-1 25s linear infinite;
 }
 .gly-hero-3-demo-clm:nth-child(even) {
   transform: translateY(-50%);
-  animation: h3-demo-2 20s linear infinite;
+  animation: h3-demo-2 25s linear infinite;
 }
 
 @keyframes h3-demo-2 {
@@ -5424,7 +5467,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     project-3-css-start
 */
 .gly-project-3-area {
-  padding-bottom: 231px;
+  padding-bottom: 120px;
   padding-top: 230px;
   background: #0E0D1D;
   position: relative;
@@ -9019,6 +9062,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   right: -12px;
   z-index: 1;
   filter: blur(40px);
+  transition: 400ms var(--cube-1);
 }
 .gly-team-3-slider-item img {
   filter: grayscale(1);
@@ -9061,6 +9105,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .gly-team-3-slider-item:hover img {
   filter: grayscale(0);
+}
+.gly-team-3-slider-item:hover::after {
+  width: 75%;
+  height: 35%;
 }
 
 .gly-team-3-social {
@@ -9136,7 +9184,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-team-3-social .social-icon:hover i {
   transform: scale(110%);
 }
-.gly-team-3-social:is(.active) .icon-wrap {
+.gly-team-3-social:hover .icon-wrap {
   transform: translateY(0%);
 }
 
@@ -9829,6 +9877,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-footer-3-bg {
   position: relative;
   z-index: 1;
+  background-color: #171620;
 }
 .gly-footer-3-bg-img {
   width: 100%;

@@ -29,6 +29,7 @@
             right: -12px;
             z-index: 1;
             filter: blur(40px);
+            transition: 400ms var(--cube-1);
         }
 
         img {
@@ -77,6 +78,11 @@
         &:hover {
             img {
                 filter: grayscale(0);
+            }
+
+            &::after {
+                width: 75%;
+                height: 35%;
             }
         }
         
@@ -169,11 +175,13 @@
         }
     }
 
-    &:is(.active) {
+    &:hover {
         .icon-wrap {
             transform: translateY(0%);
         }
     }
+
+
     
 }
 

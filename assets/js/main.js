@@ -77,6 +77,37 @@ document.addEventListener("DOMContentLoaded", function () {
 	})
 
 });
+
+
+function glystickyHeader() {
+    var $window = $(window);
+    var lastScrollTop = 0;
+    var $header = $('.gly_sticky_header');
+    var headerHeight = $header.outerHeight() + 30;
+
+    $window.scroll(function () {
+      var windowTop = $window.scrollTop();
+
+      if (windowTop >= headerHeight) {
+        $header.addClass('gly_sticky');
+      } else {
+        $header.removeClass('gly_sticky');
+        $header.removeClass('gly_sticky_show');
+      }
+
+      if ($header.hasClass('gly_sticky')) {
+        if (windowTop < lastScrollTop) {
+          $header.addClass('gly_sticky_show');
+        } else {
+          $header.removeClass('gly_sticky_show');
+        }
+      }
+
+      lastScrollTop = windowTop;
+    });
+  }
+
+  glystickyHeader();
   
 
 // mobile-menu-start
@@ -756,28 +787,6 @@ if($('.gly-t4-active'.length)) {
 
 
 
-
-// team-3-hover-class-add
-const t3togglebtns = document.querySelectorAll(".gly-team-3-social .toggle-icon");
-
-t3togglebtns.forEach(togglebtn => {
-  const t3social = togglebtn.closest(".gly-team-3-social");
-
-  togglebtn.addEventListener('click', function() {
-    // Check if the t3social element has the 'active' class
-    const isActive = t3social.classList.contains('active');
-
-    if (isActive) {
-      // If it's active, remove the 'active' class
-      t3social.classList.remove('active');
-    } else {
-      // If it's not active, add the 'active' class
-      t3social.classList.add('active');
-    }
-  });
-
-
-});
 
 
 

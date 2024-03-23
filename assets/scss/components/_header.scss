@@ -4,6 +4,7 @@
   header-1-css-start
 */
 
+
 .gly-header-1-area {
   background: transparent;
   position: absolute;
@@ -12,7 +13,12 @@
   left: 0;
   right: 0;
   width: 100%;
-  overflow-x: clip;
+  // overflow-x: clip;
+  z-index: 9;
+  
+  &:is(.gly_sticky_show) {
+    background: #000;
+  }
 
   .left-shape-wrap {
     position: relative;
@@ -250,6 +256,14 @@
 .gly-header-1-area {
   &:is(.has-header-2) {
     top: 35px;
+
+    &:is(.gly_sticky) {
+      top: 0;
+    }
+
+    &:is(.gly_sticky_show) {
+      top: 0;
+    }
 
     @media #{$xs} {
       top: 0px;
@@ -538,4 +552,46 @@
 
 /* 
   header-3-css-end
+*/
+
+
+/* 
+  sticky-header-css-start
+*/
+.gly_sticky_header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 500ms var(--cube-1);
+
+  &:is(.gly_sticky) {
+    transform: translateY(-100%);
+
+    &:is(.gly_sticky_show) {
+      transform: translateY(0%);
+    }
+  }
+}
+
+.gly_sticky {
+  .gly-cart-btn-1:is(.has-black) {
+    color: #fff;
+
+    &:hover {
+      color: var(--gly-pr-1);
+    }
+  }
+  .gly-search-btn-1:is(.has-black) {
+    color: #fff;
+
+    &:hover {
+      color: var(--gly-pr-1);
+    }
+  }
+}
+
+/* 
+  sticky-header-css-end
 */

@@ -1,0 +1,98 @@
+
+
+@font-face {
+    font-family: "flaticon_gilroy_digital_agency";
+    src: url("../fonts/flaticon_gilroy_digital_agency.woff2?bb382bc3f02bdac3fe2b7b32dc311473") format("woff2"),
+url("../fonts/flaticon_gilroy_digital_agency.woff?bb382bc3f02bdac3fe2b7b32dc311473") format("woff"),
+url("../fonts/flaticon_gilroy_digital_agency.eot?bb382bc3f02bdac3fe2b7b32dc311473#iefix") format("embedded-opentype"),
+url("../fonts/flaticon_gilroy_digital_agency.ttf?bb382bc3f02bdac3fe2b7b32dc311473") format("truetype"),
+url("../fonts/flaticon_gilroy_digital_agency.svg?bb382bc3f02bdac3fe2b7b32dc311473#flaticon_gilroy_digital_agency") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_gilroy_digital_agency !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-facebook:before {
+    content: "\f101";
+}
+.flaticon-instagram:before {
+    content: "\f102";
+}
+.flaticon-linkedin:before {
+    content: "\f103";
+}
+.flaticon-twitter:before {
+    content: "\f104";
+}
+.flaticon-email:before {
+    content: "\f105";
+}
+.flaticon-viber:before {
+    content: "\f106";
+}
+.flaticon-location:before {
+    content: "\f107";
+}
+.flaticon-downward-arrow:before {
+    content: "\f108";
+}
+.flaticon-up-right-arrow:before {
+    content: "\f109";
+}
+.flaticon-medal:before {
+    content: "\f10a";
+}
+.flaticon-phone:before {
+    content: "\f10b";
+}
+.flaticon-team:before {
+    content: "\f10c";
+}
+.flaticon-rating:before {
+    content: "\f10d";
+}
+.flaticon-management:before {
+    content: "\f10e";
+}
+.flaticon-seo:before {
+    content: "\f10f";
+}
+.flaticon-diagram:before {
+    content: "\f110";
+}
+.flaticon-market-analysis:before {
+    content: "\f111";
+}
+.flaticon-market-analysis-1:before {
+    content: "\f112";
+}
+.flaticon-plan:before {
+    content: "\f113";
+}
+.flaticon-text:before {
+    content: "\f114";
+}
+.flaticon-design-thinking:before {
+    content: "\f115";
+}
+.flaticon-thinking:before {
+    content: "\f116";
+}
+.flaticon-trophy:before {
+    content: "\f117";
+}
+.flaticon-maps-and-flags:before {
+    content: "\f118";
+}
+.flaticon-phone-call:before {
+    content: "\f119";
+}
+

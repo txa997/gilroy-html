@@ -540,13 +540,13 @@
             }
 
             &:nth-child(odd) {
-                animation: h3-demo-1 20s linear infinite;
+                animation: h3-demo-1 25s linear infinite;
                 // justify-content: end;
             }
 
             &:nth-child(even) {
                 transform: translateY(-50%);
-                animation: h3-demo-2 20s linear infinite;
+                animation: h3-demo-2 25s linear infinite;
             }
         }
     }
