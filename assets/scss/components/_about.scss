@@ -288,6 +288,7 @@
         height: 100%;
         left: 0;
         z-index: -1;
+        transform-origin: left;
     }
 
     &-shape-1 {
@@ -296,6 +297,7 @@
         top: 0;
         height: 100%;
         z-index: -1;
+        transform-origin: right;
     }
 
     &-section-title {
@@ -390,6 +392,14 @@
             font-weight: 300;
             margin-bottom: 0;
         }
+
+        &:hover {
+            .main-icon {
+                i {
+                    animation: tilt-shaking 0.5s linear;
+                }
+            }
+        }
     }
 
     &-counter {
@@ -429,6 +439,7 @@
         svg {
             font-size: 27px;
             fill: #fff;
+            animation: about-3-count-svg 20s linear infinite;
         }
 
         .number {
@@ -466,6 +477,16 @@
     }
     
 }
+
+@keyframes about-3-count-svg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .gly-about-3-phone {
     width: 205px;
@@ -530,6 +551,11 @@
         display: inline-block;
         line-height: 30px;
         color: #fff;
+        transition: 400ms var(--cube-1);
+        &:hover {
+            transform: scaleX(105%);
+            opacity: .8;
+        }
     }
 
     img {

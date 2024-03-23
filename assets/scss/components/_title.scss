@@ -250,6 +250,9 @@
         height: 2px;
         background: linear-gradient(90deg, rgba(16,66,242,1) 0%, rgba(0,212,255,0) 100%);
         flex: 0 0 auto;
+        transform-origin: left;
+        transform: scaleX(0%);
+        transition: 2s var(--cube-2);
     }
 
     .line2 {
@@ -258,6 +261,15 @@
         height: 2px;
         background: linear-gradient(270deg, rgba(16,66,242,1) 0%, rgba(0,212,255,0) 100%);
         flex: 0 0 auto;
+        transform-origin: right;
+        transform: scaleX(0%);
+        transition: 2s var(--cube-2);
+    }
+
+    &:is(.active) {
+        .line1,.line2 {
+            transform: scaleX(100%);
+        }
     }
 }
 

@@ -67,6 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		h2tl.from(".gly-hero-2-il-1" , {  y: -200, opacity: 0 });
 		h2tl.from(".gly-project-2-area" , {  y: 200, opacity: 0 });
 
+		
+		// home-1-hero-1-animation
+		const h3tl = gsap.timeline();
+
+		h3tl.from(".gly-hero-3-demo-row" , { opacity: 1, duration:2 });
+		h3tl.from(".h3-fadebttm" , { y: "-=100", opacity: 0, stagger: .2, duration:1 });
+
 	})
 
 });
@@ -266,6 +273,8 @@ gtbp1.from( ".gly-services-1-icon-1" , { scale: 0 , },"<=.1")
 gtbp1.from( ".gly-services-1-img img" , { scale: 1.5, duration:1 }, "<" )
 
 
+
+
 // project-1-section-animation
 var glypr1 = gsap.timeline({
 		
@@ -383,6 +392,68 @@ glyf3g.from( ".gly-portfolio-3-item-wrap" , { xPercent: 100,  duration:1 })
 .from( ".gly-portfolio-3-bg-shape" , { xPercent: 100,  duration:1 }, "<=.5")
 
 
+// about-3-animation
+var glyabut3g = gsap.timeline({
+		
+	scrollTrigger: {
+		animation: glyabut3g,
+		trigger: '.gly-about-3-area',
+		start: "top 80%",
+		end: "top -30%",
+		scrub: 1,
+		markers: false
+	}
+});
+
+glyabut3g.from( ".gly-about-3-shape-1" , { scaleX: 0,  duration:1 })
+
+
+// testimonial-3-animation
+var glyt3g = gsap.timeline({
+		
+	scrollTrigger: {
+		animation: glyt3g,
+		trigger: '.gly-testimonial-3-bg-img',
+		start: "top 70%",
+		end: "top 0%",
+		scrub: 1,
+		markers: false
+	}
+});
+
+glyt3g.from( ".gly-testimonial-3-bg-img img" , { yPercent: 100,  duration:1 })
+
+// campaign-3-animation
+var glyc3g = gsap.timeline({
+		
+	scrollTrigger: {
+		animation: glyc3g,
+		trigger: '.gly-campaign-3-img',
+		start: "top 70%",
+		end: "top 0%",
+		scrub: 2,
+		markers: false
+	}
+});
+
+glyc3g.from( ".gly-campaign-3-img" , { xPercent: 100, stagger: .2,  duration:1 })
+
+// award-3-animation
+var glyaw3g = gsap.timeline({
+		
+	scrollTrigger: {
+		animation: glyaw3g,
+		trigger: '.gly-award-3-img',
+		start: "top 80%",
+		end: "top 40%",
+		scrub: 2,
+		markers: false
+	}
+});
+
+glyaw3g.from( ".gly-award-3-img img" , { yPercent: 100, stagger: .2,  duration:1 })
+
+
 
 // title-animation
 $(window).on('load',function(){
@@ -407,7 +478,32 @@ $(window).on('load',function(){
 		});
 	  }
 	  
+	
+	  if( $(el).hasClass('gly-split-in-down') ){
+		gsap.set(el.split.lines, {
+		  	opacity: 0,
+			y: "-100",
+			rotateX: "50",
+			ease: "Back.easeOut",
+			color: "red",
+		});
+	  }
+	  
 	  el.anim = gsap.to(el.split.chars, {
+		scrollTrigger: {
+		  trigger: el,
+		  start: "top 90%",
+		},
+		x: "0",
+		y: "0",
+		rotateX: "0",
+		color: 'inherit',
+		scale: 1,
+		opacity: 1,
+		duration: 1.5, 
+		stagger: 0.02,
+	  });
+	  el.anim = gsap.to(el.split.lines, {
 		scrollTrigger: {
 		  trigger: el,
 		  start: "top 90%",
@@ -618,7 +714,7 @@ if($('.gly-t4-active'.length)) {
 	  spaceBetween: 30,
 	  slidesPerView: 4,
 	  autoplay: {
-		delay: 40000000,
+		delay: 4000,
 	  },
 
 	  pagination: {

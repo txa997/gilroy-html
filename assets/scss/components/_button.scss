@@ -382,27 +382,58 @@
     border-radius: 11px;
     background: #1042F2;
     transition: 400ms var(--cube-1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
     i {
         margin-left: 3px;
         font-weight: 600;
+        transition: 400ms var(--cube-1);
+    }
+
+    &::after {
+        content: "\f356";
+        width: 60px;
+        color: var(--gly-pr-2);
+        height: 100%;
+        background: #fff;
+        z-index: 1;
+        position: absolute;
+        // left: -32px;
+        left: -72px;
+        top: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        font-family:
+        "Font Awesome 6 Pro";
+        padding-right: 5px;
     }
 
     .text {
         display: inline-block;
+        transition: 400ms var(--cube-1);
     }
+
 
     &:hover {
         color: #fff;
-        transform: scale(95%);
+
+        .text {
+            transform: translateX(15px);
+        }
 
         &::after {
-            left: 0%;
+            left: -32px;
         }
-        .text {
-            animation: tilt-shaking .5s linear;
 
+        i {
+            transform: translate(30px , -30px);
+            opacity: 0;
         }
+
     }
 
     &:is(.has-border) {
