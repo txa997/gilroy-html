@@ -575,3 +575,306 @@
 /* 
     hero-3-css-end
 */
+
+/* 
+    hero-4-css-start
+*/
+
+.gly-hero-4 {
+    &-area {
+        position: relative;
+        z-index: 1;
+        padding-top: 155px;
+    }
+
+    &-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+
+
+
+}
+
+
+.gly-hero-4 {
+
+
+    &-subtitle {
+        color: #fff;
+        font-size: 52px;
+        line-height: 1;
+        margin-bottom: 5px;
+
+        
+        @media #{$xs} {
+            font-size: 35px;
+        }
+    }
+
+    &-title {
+        font-size: 176px;
+        line-height: 1;
+        color: #fff;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        @media #{$xl} {
+            font-size: 140px;
+        }
+
+        @media #{$lg,$md} {
+            font-size: 120px;
+        }
+
+        @media #{$xs} {
+            font-size: 70px;
+        }
+    }
+
+    &-title-2 {
+        line-height: 1;
+        margin-bottom: 30px;
+
+        .stroke-text {
+            display: inline-block;
+            font-size: 160px;
+            font-weight: 800;
+            line-height: 1;
+            -webkit-text-stroke: 1px #fff;
+            color: transparent;
+            text-transform: uppercase;
+            @media #{$xl} {
+                font-size: 140px;
+            }
+            @media #{$lg,$md} {
+                font-size: 130px;
+            }
+
+            @media #{$xs} {
+                font-size: 100px;
+            }
+        }
+
+        .normal-text {
+            font-size: 64px;
+            display: inline-block;
+            font-weight: 900;
+            color: #fff;
+            font-family: var(--urbanist);
+            text-transform: uppercase;
+            @media #{$xl} {
+                font-size: 50px;
+            }
+            @media #{$lg,$md} {
+                font-size: 40px;
+            }
+            @media #{$xs} {
+                font-size: 50px;
+            }
+        }
+
+        .roted-text {
+            display: inline-block;
+            writing-mode: vertical-rl;
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--gly-heading-4);
+            font-family: var(--urbanist);
+            margin-left: -10px;
+            margin-bottom: -7px;
+            @media #{$xl} {
+                font-size: 35px;
+            }
+            @media #{$lg,$md} {
+                font-size: 33px;
+            }
+            @media #{$xs} {
+                font-size: 26px;
+            }
+        }
+        
+    }
+
+    &-disc {
+        margin-bottom: 45px;
+        max-width: 595px;
+    }
+
+    &-img {
+        margin-right: -50px;
+        margin-left: -130px;
+
+        @media #{$md,$xs} {
+            margin-right: 0;
+            margin-left: 0;
+            margin-top: 50px;
+        }
+    }
+
+
+    &-slider-item {
+        position: relative;
+        z-index: 1;
+
+        &-content {
+            margin-left: -20px;
+            padding-top: 100px;
+
+            @media #{$md,$xs} {
+                margin-left: 0px;
+            }
+        }
+
+        &-btn {
+            justify-content: end;
+            max-width: 595px;
+
+            @media #{$md,$xs} {
+                justify-content: start;
+            }
+        }
+
+        &-shape {
+            display: inline-block;
+            width: 640px;
+            height: 1375px;
+            position: absolute;
+            bottom: -395px;
+            left: 210px;
+            border-radius: 500px 500px 0 0;
+            background: linear-gradient(90deg, rgba(255,76,19,1) 0%, rgba(254,117,36,1) 100%);
+            transform: rotate(39deg);
+            z-index: -1;
+
+            @media #{$xl} {
+                height: 1145px;
+                bottom: -295px;
+            }
+
+            @media #{$lg} {
+                width: 540px;
+                height: 935px;
+                position: absolute;
+                bottom: -200px;
+            }
+
+            @media #{$md} {
+                width: 90%;
+                height: 100%;
+                bottom: 0;
+                left: -120px;
+                transform: rotate(0deg);
+            }
+
+            @media #{$xs} {
+                width: 90%;
+                height: 100%;
+                bottom: 0;
+                left: -30px;
+                transform: rotate(0deg);
+            }
+        }
+
+        &-il-posi {
+            position: absolute;
+            top: 150px;
+            left: -260px;
+            display: flex;
+            justify-content: end;
+            gap: 40px;
+
+            @media #{$xxxl} {
+                width: 24%;
+                left: -150px;
+            }
+
+            @media #{$xxl} {
+                width: 17%;
+                gap: 0;
+                left: 0px;
+            }
+
+            @media #{$xl} {
+                left: 0;
+                gap: 0;
+                width: 18%;
+            }
+
+            @media #{$lg,$md,$xs} {
+               display: none;
+            }
+        }
+    }
+
+    &-slider {
+        .swiper-container {
+            .swiper-slide {
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+
+.gly-scroll-down {
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-2%);
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    padding: 8px;
+    color: #fff;
+    fill: #fff;
+    font-size: 22px;
+    cursor: pointer;
+
+    @media #{$lg} {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(38%);
+    }
+
+    @media #{$xs} {
+        bottom: 50px;
+        left: 20%;
+    }
+
+    &-icon {
+        display: flex;
+        width: 64px;
+        height: 64px;
+        background: #fff;
+        color: var(--gly-pr-3);
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        z-index: 1;
+
+
+    }
+
+    svg {
+        animation: about-3-count-svg 20s linear infinite;
+    }
+}
+
+
+/* 
+    hero-4-css-end
+*/

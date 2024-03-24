@@ -1,5 +1,9 @@
 @use '../abstracts/variables' as *;
 
+/* 
+    client-3-css-start
+*/
+
 .gly-client-3 {
 
     &-area {
@@ -155,3 +159,80 @@
         transform: translateX(100%);
     }
 }
+
+/* 
+    client-3-css-start
+*/
+
+/* 
+    client-4-css-start
+*/
+
+.client-4-about-4-bg {
+    background: linear-gradient(189deg, rgb(249, 239, 255) 0%, rgb(249, 239, 255) 50%, rgba(0, 212, 255, 0) 100%);
+    position: relative;
+    z-index: 1;
+
+    &-shape {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        top: 176px;
+    }
+}
+
+
+.gly-client-4 {
+    &-area {
+        overflow: hidden;
+        border-bottom: 1.5px solid rgb(254 117 36 / 25%);
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+
+        @media #{$xl,$lg,$md,xs} {
+            gap: 50px;
+        }
+    }
+
+    &-item {
+        display: inline-block;
+        flex: 0 0 auto;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        .logo-1 {
+            transition: 400ms var(--cube-2);
+            transform-origin: right;
+        }
+
+        .logo-2 {
+            position: absolute;
+            top: 190%;
+            left: 0;
+            transition: 400ms var(--cube-2);
+            transform-origin: right;
+            transform: rotate(30deg);
+            opacity: 0;
+        }
+
+        &:hover {
+            .logo-1 {
+                transform: translateY(-100%) rotate(30deg);
+            }
+            .logo-2 {
+                top: 0;
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+        }
+    }
+}
+/* 
+    client-4-css-end
+*/

@@ -552,6 +552,26 @@ $(window).on('load',function(){
 })
 
 
+// hero-4slider
+let glyhero4 = new Swiper('.gly-horo-4-active', {
+	loop: true,
+	rtl: false,
+	speed: 3000,
+	// autoplay: {
+	//   delay: 3000,
+	// },
+	// effect: 'fade',
+	// fadeEffect: {
+	// 	crossFade: true
+	// },
+	pagination: {
+	el: ".gly-p1-pagination",
+	clickable: true,
+	},
+	
+});
+
+
 // project-1-slider
 let glyp1 = new Swiper('.gly-p1-slider-active', {
 	loop: true,

@@ -554,6 +554,325 @@
   header-3-css-end
 */
 
+/* 
+  header-4-css-start
+*/
+.gly-header-4 {
+
+  &-area {
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+
+  &-row {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-bg-color-1 {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 70%;
+    height: 106px;
+    background: #6907A8;
+    border-radius: 0 100px 100px 0;
+    z-index: -2;
+  }
+
+  &-bg-color-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #171924;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &-action-link {
+    gap: 35px;
+
+    .gly-dark-toggle-btn-1  {
+      @media #{$lg} {
+        display: none;
+      }
+
+      @media #{$xs} {
+        display: none;
+      }
+
+      @media #{$sm} {
+        display: flex;
+      }
+    }
+
+    .gly-phone-btn-1 {
+
+      @media #{$xxl,$xl,$lg,$md,$xs} {
+        display: none;
+      }
+
+      &-icon {
+        width: 58px;
+        height: 58px;
+        background: #6907A8;
+      }
+      
+      &:hover {
+        .gly-phone-btn-1-text .number {
+          color: #6907A8;
+        }
+      }
+
+    }
+
+    .gly-cart-btn-1 {
+
+      @media #{$lg} {
+        display: none;
+      }
+
+      @media #{$xs} {
+        display: none;
+      }
+
+      @media #{$sm} {
+        display: block;
+      }
+
+      .count {
+        font-weight: 500;
+        color: #fff;
+        background: var(--gly-pr-3);
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: -10px;
+        left: unset;
+        top: -18px;
+      }
+
+      &:hover {
+        color: var(--gly-pr-3);
+      }
+    }
+
+    .gly-mobile-menu-btn-2 {
+      border: 1px solid #fff;
+      width: 58px;
+      height: 58px;
+      background: transparent;
+    }
+
+  }
+
+  &-area {
+
+    /* home-3-menu-customization */
+    .gly-header-3 {
+      &-bottom {
+
+        &-bg-1 {
+          position: absolute;
+          top: -10px;
+          width: 85%;
+          height: 106px;
+          border-radius: 0 100px  100px 0;
+          background: #6907A8;
+          z-index: -3;
+        }
+        &-bg-2 {
+          position: absolute;
+          right: 0;
+          width: 80%;
+          height: 100%;
+          background: #31323D;
+          border-left: 2px solid var(--gly-pr-3);
+          border-radius: 100px  0 0 100px;
+          z-index: -2;
+
+
+
+          @media #{$xxxl} {
+            width: 83.5%;
+          }
+
+          @media #{$xl} {
+            width: 75%;
+          }
+
+          @media #{$lg} {
+            width: 72%;
+          }
+
+          @media #{$md} {
+            width: 50%;
+          }
+
+          @media #{$xs} {
+            width: 50%;
+          }
+
+          @media #{$sm} {
+            width: 56%;
+          }
+
+        }
+        &-bg-3 {
+          position: absolute;
+          right: 0;
+          width: 39.5%;
+          height: 100%;
+          background: #171924;
+          border-left: 2px solid #6907A8;
+          border-radius: 100px  0 0 100px;
+          z-index: -1;
+
+          @media #{$xxxl} {
+            width: 47.5%;
+          }
+
+          @media #{$xxl} {
+            width: 35.5%;
+          }
+
+          @media #{$xl} {
+            width: 23.5%;
+          }
+
+          @media #{$lg} {
+            width: 12.5%;
+          }
+
+          
+          @media #{$xs} {
+            width: 50%;
+          }
+
+          @media #{$sm} {
+            width: 50%;
+          }
+
+        }
+
+        &-content {
+            background: transparent;
+            gap: 30px;
+            padding-right: 30px;
+            padding-left: 60px;
+            border-radius: 0;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+              padding-left: 30px;
+            }
+
+
+            .gly-header-1-logo {
+              display: inline-block;
+              flex: 0 0 auto;
+              margin-right: 55px;
+
+              
+              @media #{$xxxl,$xxl,$xl,$lg,$md} {
+                margin-right: 0px;
+              }
+              
+              @media #{$xs} {
+                width: 130px;
+              }
+              
+              @media #{$sm} {
+                width: unset;
+              }
+
+            }
+
+            .main-navigation {
+              .navbar-nav {
+                li {
+
+                  &:not(:last-child) {
+                    margin-right: 40px;
+
+                    @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                      margin-right: 15px;
+                    }
+
+                  }
+
+                  &:is(.dropdown) {
+                    a {
+                      padding-right: 15px;
+                    }
+                  }
+
+                  a {
+                    font-weight: 500;
+                    padding: 30px 0;
+                    font-size: 18px;
+
+                    &::after {
+                      width: 4px;
+                      background: linear-gradient(180deg, #FE7524 0%, #232d39 29%, #232d39 70%, #FE7524 100%);
+                    }
+                  }
+
+                  .dropdown-menu {
+                    border-color: var(--gly-pr-3);
+                    background: #31323D;
+
+                    li {
+                      margin-right: 0;
+                      
+                      a {
+                        font-size: 16px;
+                        color: #fff;
+
+                        &::after {
+                          width: 4px;
+                          background: linear-gradient(180deg, #FE7524 0%, #232d39 29%, #232d39 70%, #FE7524 100%);
+                        }
+                      }
+
+                      &:hover {
+                        > a {
+                          color: var(--gly-pr-3);
+                        }
+                      }
+                    }
+                  }
+
+                  &:hover {
+                    > a {
+                      color: var(--gly-pr-3);
+                    }
+                  }
+                }
+              }
+            }
+        }
+      }
+    }
+  }
+  
+}
+
+/* 
+  header-4-css-end
+*/
+
 
 /* 
   sticky-header-css-start
