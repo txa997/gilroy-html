@@ -257,13 +257,6 @@
     
 }
 
-
-
-
-
-
-
-
 .gly-campaign-3-img {
     max-width: 335px;
     height: 550px;
@@ -334,5 +327,136 @@
 
 /* 
     campaign-3-css-end
+*/
+
+/* 
+    campaign-4-css-start
+*/
+.gly-campaign-4 {
+    &-area {
+        background: #0D0237;
+        position: relative;
+        z-index: 1;
+        border-radius: 150px 150px 0 0;
+        overflow: hidden;
+        padding-bottom: 325px;
+
+        @media #{$xxxl,$xxl,$xl} {
+            padding-bottom: 245px;
+        }
+
+        @media #{$lg,$md} {
+            padding-bottom: 245px;
+            border-radius: 70px 70px 0 0;
+        }
+
+        @media #{$xs} {
+            border-radius: 30px 30px 0 0;
+            padding-bottom: 0px;
+        }
+    }
+
+    &-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -2;
+    }
+
+    &-img {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-38%);
+        z-index: -1;
+        width: 44%;
+
+        @media #{$xxl,$xl} {
+            width: 52%;
+        }
+
+        @media #{$md} {
+            transform: translateX(-25%);
+            width: 54%;
+        }
+
+        @media #{$xs} {
+            transform: unset;
+            width: 100%;
+            position: unset;
+            margin-top: 50px;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-scn-title {
+        max-width: 504px;
+        .gly-subtitle-4 {
+            color: #B153ED;
+            background-color: #221C3C;
+        }
+
+        .gly-section-title-3 {
+            color: #fff;
+        }
+
+        .scn-disc {
+            color: #fff;
+            margin-bottom: 50px;
+        }
+    }
+
+    &-content {
+        padding-top: 20px;
+    }
+
+    &-feature-wrap {
+        max-width: 312px;
+    }
+
+    &-feature {
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+        .title {
+            font-size: 22px;
+            line-height: 1.45;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+    
+            i {
+                font-size: 16px;
+                color: #26C6D7;
+            }
+        }
+    
+        .disc {
+            font-size: 16px;
+            line-height: 28px;
+            color: #fff;
+        }
+        
+    }
+}
+
+
+/* 
+    campaign-4-css-end
 */
 

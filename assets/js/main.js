@@ -553,7 +553,7 @@ $(window).on('load',function(){
 
 
 // hero-4slider
-let glyhero4 = new Swiper('.gly-horo-4-active', {
+let glyhero4 = new Swiper('.gly-hero-4-active', {
 	loop: true,
 	rtl: false,
 	speed: 3000,
@@ -564,9 +564,9 @@ let glyhero4 = new Swiper('.gly-horo-4-active', {
 	// fadeEffect: {
 	// 	crossFade: true
 	// },
-	pagination: {
-	el: ".gly-p1-pagination",
-	clickable: true,
+	navigation: {
+		nextEl: ".gly_h4_next",
+		prevEl: ".gly_h4_prev",
 	},
 	
 });
@@ -645,6 +645,36 @@ let glysp1 = new Swiper('.gly-sponser-1-active', {
 		  slidesPerView: 5,
 		},
 	  },
+});
+
+// service-4-slider
+let glys4 = new Swiper('.gly-s4-active', {
+	loop: true,
+	spaceBetween: 30,
+	speed: 1000,
+	// autoplay: {
+	//   delay: 3000,
+	// },
+
+	navigation: {
+		nextEl: ".gly_s4_next",
+		prevEl: ".gly_s4_prev",
+	},
+
+	breakpoints: {
+		0: {
+		  slidesPerView: 1,
+		},
+		768: {
+		  slidesPerView: 2,
+		},
+		992: {
+		  slidesPerView: 2,
+		},
+		1200: {
+		  slidesPerView: 3,
+		},
+	},
 });
 
 

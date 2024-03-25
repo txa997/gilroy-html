@@ -605,3 +605,228 @@
 /* 
     services-3-css-end
 */
+
+
+/* 
+    services-4-css-start
+*/
+.gly-service-4 {
+
+    &-all-btn a {
+        display: inline-block;
+        color: var(--gly-sd-2);
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+        transition: 400ms var(--cube-2);
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: var(--gly-sd-2);
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition: 400ms var(--cube-2);
+        }
+
+        &:hover {
+            color: var(--gly-pr-3);
+
+            &::after {
+                background: var(--gly-pr-3);
+                bottom: 90%;
+            }
+        }
+    }
+    
+
+    &-slider {
+        position: relative;
+        z-index: 1;
+
+        &-card {
+            text-align: center;
+            background: #F8EDFF;
+            border-radius: 15px;
+            padding: 35px 30px;
+            padding-bottom: 0;
+
+            @media #{$md,$xs} {
+                padding: 35px 15px;
+                padding-bottom: 0;
+            }
+        
+            .card-icon {
+                font-size: 75px;
+                display: inline-block;
+                line-height: 1;
+                color: var(--gly-sd-2);
+                position: relative;
+                z-index: 1;
+                margin-bottom: 22px;
+        
+                &::after {
+                    content: "";
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    background: #F1DBFF;
+                    position: absolute;
+                    left: -20px;
+                    bottom: -5px;
+                    z-index: -1;
+                }
+                
+            }
+        
+            .card-title {
+                font-size: 26px;
+                line-height: 1.38;
+                margin-bottom: 15px;
+                transition: 400ms var(--cube-1);
+
+                &:hover {
+                    letter-spacing: .5px;
+                }
+
+                @media #{$xl,$lg,$md} {
+                    font-size: 24px;  
+                }
+
+                @media #{$xs} {
+                    font-size: 24px;  
+                }
+            }
+        
+            .card-disc{
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            &:is(.has-bg-2) {
+                background: var(--gly-gd-2);
+
+                .card-icon {
+                    color: #fff;
+            
+                    &::after {
+                        background: #FF804F;
+                    }
+                    
+                }
+                .card-title {
+                    color: #fff;
+                }
+                .card-disc{
+                    color: #fff;
+                }
+            }
+
+            &:is(.has-bg-3) {
+                background: #DDF8FB;
+
+                .card-icon {
+                    color: #34AAB7;
+            
+                    &::after {
+                        background: #C3EEF3;
+                    }
+                    
+                }
+            }
+
+        }    
+
+        &-btn-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                margin-top: 30px;
+            }
+
+            .gly_s4_prev {
+                position: absolute;
+                left: -85px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    position: relative;
+                    transform: unset;
+                    left: 0;
+                    top: 0;
+                }
+            }
+
+            .gly_s4_next {
+                position: absolute;
+                right: -85px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    position: relative;
+                    transform: unset;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+    
+}
+
+
+.service-4-slider-btn {
+
+
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #FFEEE3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--gly-pr-3);
+    position: relative;
+    z-index: 1;
+    transition: 400ms var(--cube-1);
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--gly-gd-2);
+        z-index: -1;
+        transform: scale(0%);
+        transition: 400ms var(--cube-2);
+        opacity: 0;
+    }
+
+    &:hover {
+        i {
+            animation: tilt-shaking 0.5s linear;
+        }
+        color: #fff;
+        &::after {
+            transform: scale(100%);
+            opacity: 1;
+        }
+    }
+}
+
+/* 
+    services-4-css-end
+*/

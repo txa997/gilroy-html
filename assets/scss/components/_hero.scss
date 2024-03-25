@@ -595,10 +595,8 @@
         height: 100%;
         overflow: hidden;
         z-index: -1;
+        transform: scale(1.1);
     }
-
-
-
 
 }
 
@@ -611,7 +609,9 @@
         font-size: 52px;
         line-height: 1;
         margin-bottom: 5px;
-
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 600ms var(--cube-1);
         
         @media #{$xs} {
             font-size: 35px;
@@ -624,6 +624,9 @@
         color: #fff;
         font-weight: 800;
         text-transform: uppercase;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 600ms var(--cube-1);
 
         @media #{$xl} {
             font-size: 140px;
@@ -650,6 +653,9 @@
             -webkit-text-stroke: 1px #fff;
             color: transparent;
             text-transform: uppercase;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transition: 600ms var(--cube-1);
+
             @media #{$xl} {
                 font-size: 140px;
             }
@@ -689,6 +695,9 @@
             font-family: var(--urbanist);
             margin-left: -10px;
             margin-bottom: -7px;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: 600ms var(--cube-1);
+
             @media #{$xl} {
                 font-size: 35px;
             }
@@ -746,23 +755,26 @@
             width: 640px;
             height: 1375px;
             position: absolute;
-            bottom: -395px;
-            left: 210px;
+            // bottom: -395px;
+            // left: 210px;
+            bottom: -1325px;
+            left: -40px;
             border-radius: 500px 500px 0 0;
             background: linear-gradient(90deg, rgba(255,76,19,1) 0%, rgba(254,117,36,1) 100%);
             transform: rotate(39deg);
             z-index: -1;
+            transition: 600ms var(--cube-1);
 
             @media #{$xl} {
                 height: 1145px;
-                bottom: -295px;
+                bottom: -1130px;
             }
 
             @media #{$lg} {
                 width: 540px;
                 height: 935px;
                 position: absolute;
-                bottom: -200px;
+                bottom: -930px;
             }
 
             @media #{$md} {
@@ -817,9 +829,159 @@
         .swiper-container {
             .swiper-slide {
                 overflow: hidden;
+
+                &:is(.swiper-slide-active) {
+                    .gly-hero-4 {
+                        &-slider-item {
+                            &-shape {
+                                bottom: -395px;
+                                left: 210px;
+                                transition-delay: 1s;
+    
+                                @media #{$xl} {
+                                    bottom: -295px;
+                                }
+                    
+                                @media #{$lg} {
+                                    bottom: -200px;
+                                }
+                    
+                                @media #{$md} {
+                                    bottom: 0;
+                                    left: -120px;
+                                    transform: rotate(0deg);
+                                }
+                    
+                                @media #{$xs} {
+                                    bottom: 0;
+                                    left: -30px;
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+
+                        &-subtitle {
+                            transform: translateY(0);
+                            opacity: 1;
+                            transition-delay: 1.7s;
+                        }
+
+                        &-title {
+                            transform: translateY(0);
+                            opacity: 1;
+                            transition-delay: 1.5s;
+                        }
+                        &-title-2 {
+                            .stroke-text {
+                                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                                transition-delay: 1.5s;
+                            }
+                            .roted-text {
+                                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                                transition-delay: 1.7s;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+
+    &-slider-btn {
+        position: absolute;
+        right: 3.5vw;
+        top: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 100%;
+        padding-top: 7%;
+
+        @media #{$xxl,$xl} {
+            top: unset;
+            bottom: 30px;
+            flex-direction: row;
+            height: auto;
+        }
+
+        @media #{$lg,$md} {
+            top: unset;
+            bottom: 30px;
+            flex-direction: row;
+            height: auto;
+            right: unset;
+            left: 3.5vw;
+        }
+
+        @media #{$xs} {
+            top: unset;
+            bottom: 30px;
+            flex-direction: row;
+            height: auto;
+        }
+
+        span {
+            display: inline-block;
+            width: 2px;
+            height: 100%;
+            opacity: 20%;
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                display: none;
+            }
+        }
+
+        .line-2 {
+            height: 55px;
+            flex: 0 0 auto;
+            background-color: #fff;
+        }
+
+        .line-1 {
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+        }
+
+        .line-3 {
+            background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+        }
+        
+
+        .slider-btn {
+            flex: 0 0 auto;
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            border: 3px solid rgb(255 255 255 / 40%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            line-height: 1;
+            color: rgb(255 255 255 / 40%);
+            background: var(--gly-heading-4);
+            transition: 400ms var(--cube-1);
+            cursor: pointer;
+
+            @media #{$xs} {
+                width: 48px;
+                height: 48px;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+                font-size: 20px;
+            }
+
+            &:hover {
+                transform: scale(95%);
+                color: var(--gly-pr-3);
+                border-color: var(--gly-pr-3);
+                i {
+                    animation: tilt-shaking 0.5s linear;
+                }
+            }
+        }
+    }
+    
 }
 
 

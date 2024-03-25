@@ -33,6 +33,7 @@
   --gly-para-3: #484655;
   --gly-para-4: #454753;
   --gly-gd-1: linear-gradient( 90deg, rgb(67,0,231) 0%, rgb(125,0,252) 100%);
+  --gly-gd-2: linear-gradient(90deg, rgba(255,76,19,1) 0%, rgba(254,117,36,1) 100%);
   --cube-1: cubic-bezier(.23,1,.32,1);
   --cube-2: cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
@@ -4289,6 +4290,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  transform: scale(1.1);
 }
 
 .gly-hero-4-subtitle {
@@ -4296,6 +4298,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 52px;
   line-height: 1;
   margin-bottom: 5px;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 600ms var(--cube-1);
 }
 @media (max-width: 767px) {
   .gly-hero-4-subtitle {
@@ -4308,6 +4313,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
   font-weight: 800;
   text-transform: uppercase;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 600ms var(--cube-1);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .gly-hero-4-title {
@@ -4336,6 +4344,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   -webkit-text-stroke: 1px #fff;
   color: transparent;
   text-transform: uppercase;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: 600ms var(--cube-1);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .gly-hero-4-title-2 .stroke-text {
@@ -4384,6 +4394,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-family: var(--urbanist);
   margin-left: -10px;
   margin-bottom: -7px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: 600ms var(--cube-1);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .gly-hero-4-title-2 .roted-text {
@@ -4442,17 +4454,18 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 640px;
   height: 1375px;
   position: absolute;
-  bottom: -395px;
-  left: 210px;
+  bottom: -1325px;
+  left: -40px;
   border-radius: 500px 500px 0 0;
   background: linear-gradient(90deg, rgb(255, 76, 19) 0%, rgb(254, 117, 36) 100%);
   transform: rotate(39deg);
   z-index: -1;
+  transition: 600ms var(--cube-1);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .gly-hero-4-slider-item-shape {
     height: 1145px;
-    bottom: -295px;
+    bottom: -1130px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -4460,7 +4473,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     width: 540px;
     height: 935px;
     position: absolute;
-    bottom: -200px;
+    bottom: -930px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4516,6 +4529,146 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .gly-hero-4-slider .swiper-container .swiper-slide {
   overflow: hidden;
+}
+.gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-slider-item-shape {
+  bottom: -395px;
+  left: 210px;
+  transition-delay: 1s;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-slider-item-shape {
+    bottom: -295px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-slider-item-shape {
+    bottom: -200px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-slider-item-shape {
+    bottom: 0;
+    left: -120px;
+    transform: rotate(0deg);
+  }
+}
+@media (max-width: 767px) {
+  .gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-slider-item-shape {
+    bottom: 0;
+    left: -30px;
+    transform: rotate(0deg);
+  }
+}
+.gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-subtitle {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 1.7s;
+}
+.gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-title {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 1.5s;
+}
+.gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-title-2 .stroke-text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 1.5s;
+}
+.gly-hero-4-slider .swiper-container .swiper-slide:is(.swiper-slide-active) .gly-hero-4-title-2 .roted-text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 1.7s;
+}
+.gly-hero-4-slider-btn {
+  position: absolute;
+  right: 3.5vw;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  padding-top: 7%;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-hero-4-slider-btn {
+    top: unset;
+    bottom: 30px;
+    flex-direction: row;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-hero-4-slider-btn {
+    top: unset;
+    bottom: 30px;
+    flex-direction: row;
+    height: auto;
+    right: unset;
+    left: 3.5vw;
+  }
+}
+@media (max-width: 767px) {
+  .gly-hero-4-slider-btn {
+    top: unset;
+    bottom: 30px;
+    flex-direction: row;
+    height: auto;
+  }
+}
+.gly-hero-4-slider-btn span {
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  opacity: 20%;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-hero-4-slider-btn span {
+    display: none;
+  }
+}
+.gly-hero-4-slider-btn .line-2 {
+  height: 55px;
+  flex: 0 0 auto;
+  background-color: #fff;
+}
+.gly-hero-4-slider-btn .line-1 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
+.gly-hero-4-slider-btn .line-3 {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
+.gly-hero-4-slider-btn .slider-btn {
+  flex: 0 0 auto;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.4);
+  background: var(--gly-heading-4);
+  transition: 400ms var(--cube-1);
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .gly-hero-4-slider-btn .slider-btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+  }
+}
+.gly-hero-4-slider-btn .slider-btn:hover {
+  transform: scale(95%);
+  color: var(--gly-pr-3);
+  border-color: var(--gly-pr-3);
+}
+.gly-hero-4-slider-btn .slider-btn:hover i {
+  animation: tilt-shaking 0.5s linear;
 }
 
 .gly-scroll-down {
@@ -5117,6 +5270,25 @@ input:focus::placeholder, textarea:focus::placeholder {
   align-items: center;
   margin-left: -320px;
 }
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .gly-about-4-row {
+    margin-left: -190px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .gly-about-4-row {
+    margin-left: 0px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-about-4-row {
+    margin-left: 0px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
 .gly-about-4-img-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -5124,6 +5296,20 @@ input:focus::placeholder, textarea:focus::placeholder {
   grid-template-rows: auto;
   gap: 22px;
   overflow: hidden;
+}
+@media (max-width: 767px) {
+  .gly-about-4-img-grid {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-about-4-img-grid {
+    height: 460px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
 }
 .gly-about-4-img-item {
   border-radius: 15px;
@@ -5134,19 +5320,59 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-about-4-img-item:nth-child(1) {
   grid-area: 1/1/2/2;
 }
+@media (max-width: 767px) {
+  .gly-about-4-img-item:nth-child(1) {
+    grid-area: 1/1/2/2;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-about-4-img-item:nth-child(1) {
+    grid-area: 1/1/2/2;
+  }
+}
 .gly-about-4-img-item:nth-child(2) {
   grid-area: 2/1/3/2;
   max-width: 310px;
   margin-left: auto;
 }
+@media (max-width: 767px) {
+  .gly-about-4-img-item:nth-child(2) {
+    grid-area: 2/1/3/2;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-about-4-img-item:nth-child(2) {
+    grid-area: 2/1/3/2;
+  }
+}
 .gly-about-4-img-item:nth-child(3) {
   grid-area: 1/2/3/3;
   border-radius: 15px 45px 15px 15px;
+}
+@media (max-width: 767px) {
+  .gly-about-4-img-item:nth-child(3) {
+    grid-area: 3/1/4/2;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-about-4-img-item:nth-child(3) {
+    grid-area: 1/2/3/3;
+  }
 }
 .gly-about-4-content-div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-about-4-content-div {
+    max-width: 600px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-about-4-content-div {
+    grid-template-columns: 1fr;
+  }
 }
 .gly-about-4-content-line {
   display: block;
@@ -5165,6 +5391,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   gap: 30px;
   max-width: 600px;
 }
+@media (max-width: 767px) {
+  .gly-about-4-feature-wrap {
+    grid-template-columns: 1fr;
+  }
+}
 .gly-about-4-feature .main-icon {
   flex: 0 0 auto;
   width: 68px;
@@ -5182,6 +5413,26 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-about-4-feature .title {
   font-size: 18px;
   line-height: 1.66;
+}
+.gly-about-4-expi {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: var(--gly-sd-2);
+  border: 5px solid #F0E3F8;
+  border-radius: 100px;
+  padding: 30px 15px;
+}
+.gly-about-4-expi .title {
+  font-size: 50px;
+  line-height: 1;
+  writing-mode: vertical-lr;
+  color: #fff;
+  margin: 0;
+}
+.gly-about-4-expi .title .disc {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .gly-list-4 {
@@ -5772,6 +6023,201 @@ input:focus::placeholder, textarea:focus::placeholder {
     services-3-css-end
 */
 /* 
+    services-4-css-start
+*/
+.gly-service-4-all-btn a {
+  display: inline-block;
+  color: var(--gly-sd-2);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  transition: 400ms var(--cube-2);
+}
+.gly-service-4-all-btn a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--gly-sd-2);
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: 400ms var(--cube-2);
+}
+.gly-service-4-all-btn a:hover {
+  color: var(--gly-pr-3);
+}
+.gly-service-4-all-btn a:hover::after {
+  background: var(--gly-pr-3);
+  bottom: 90%;
+}
+.gly-service-4-slider {
+  position: relative;
+  z-index: 1;
+}
+.gly-service-4-slider-card {
+  text-align: center;
+  background: #F8EDFF;
+  border-radius: 15px;
+  padding: 35px 30px;
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-service-4-slider-card {
+    padding: 35px 15px;
+    padding-bottom: 0;
+  }
+}
+.gly-service-4-slider-card .card-icon {
+  font-size: 75px;
+  display: inline-block;
+  line-height: 1;
+  color: var(--gly-sd-2);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 22px;
+}
+.gly-service-4-slider-card .card-icon::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #F1DBFF;
+  position: absolute;
+  left: -20px;
+  bottom: -5px;
+  z-index: -1;
+}
+.gly-service-4-slider-card .card-title {
+  font-size: 26px;
+  line-height: 1.38;
+  margin-bottom: 15px;
+  transition: 400ms var(--cube-1);
+}
+.gly-service-4-slider-card .card-title:hover {
+  letter-spacing: 0.5px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-service-4-slider-card .card-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-service-4-slider-card .card-title {
+    font-size: 24px;
+  }
+}
+.gly-service-4-slider-card .card-disc {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.gly-service-4-slider-card:is(.has-bg-2) {
+  background: var(--gly-gd-2);
+}
+.gly-service-4-slider-card:is(.has-bg-2) .card-icon {
+  color: #fff;
+}
+.gly-service-4-slider-card:is(.has-bg-2) .card-icon::after {
+  background: #FF804F;
+}
+.gly-service-4-slider-card:is(.has-bg-2) .card-title {
+  color: #fff;
+}
+.gly-service-4-slider-card:is(.has-bg-2) .card-disc {
+  color: #fff;
+}
+.gly-service-4-slider-card:is(.has-bg-3) {
+  background: #DDF8FB;
+}
+.gly-service-4-slider-card:is(.has-bg-3) .card-icon {
+  color: #34AAB7;
+}
+.gly-service-4-slider-card:is(.has-bg-3) .card-icon::after {
+  background: #C3EEF3;
+}
+.gly-service-4-slider-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-service-4-slider-btn-wrap {
+    margin-top: 30px;
+  }
+}
+.gly-service-4-slider-btn-wrap .gly_s4_prev {
+  position: absolute;
+  left: -85px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-service-4-slider-btn-wrap .gly_s4_prev {
+    position: relative;
+    transform: unset;
+    left: 0;
+    top: 0;
+  }
+}
+.gly-service-4-slider-btn-wrap .gly_s4_next {
+  position: absolute;
+  right: -85px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-service-4-slider-btn-wrap .gly_s4_next {
+    position: relative;
+    transform: unset;
+    right: 0;
+    top: 0;
+  }
+}
+
+.service-4-slider-btn {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #FFEEE3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--gly-pr-3);
+  position: relative;
+  z-index: 1;
+  transition: 400ms var(--cube-1);
+}
+.service-4-slider-btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gly-gd-2);
+  z-index: -1;
+  transform: scale(0%);
+  transition: 400ms var(--cube-2);
+  opacity: 0;
+}
+.service-4-slider-btn:hover {
+  color: #fff;
+}
+.service-4-slider-btn:hover i {
+  animation: tilt-shaking 0.5s linear;
+}
+.service-4-slider-btn:hover::after {
+  transform: scale(100%);
+  opacity: 1;
+}
+
+/* 
+    services-4-css-end
+*/
+/* 
     project-1-css-start 
 */
 .gly-project-1-area {
@@ -6283,6 +6729,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-project-3-item-wrap {
   display: grid;
   grid-template-columns: 1fr 0.6fr 390px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
   .gly-project-3-item-wrap {
@@ -6333,6 +6782,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-top: -133px;
   display: grid;
   grid-template-columns: 570px 1fr 390px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
   .gly-project-3-item-wrap-2 {
@@ -6389,6 +6841,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: grid;
   grid-template-columns: 1fr 543px;
   padding-left: 571px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
   .gly-project-3-item-wrap-3 {
@@ -6515,6 +6970,167 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     project-3-css-end
+*/
+/* 
+    project-4-css-start
+*/
+.gly-project-4-area {
+  background: linear-gradient(180deg, rgb(249, 239, 255) 0%, rgba(254, 123, 47, 0) 33%, rgba(254, 117, 36, 0) 100%);
+}
+.gly-project-4-scn-title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0 140px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-4-scn-title {
+    gap: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-4-scn-title {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gly-project-4-item {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 25px 45px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-4-item {
+    grid-template-columns: 1fr 1.3fr;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-4-item {
+    grid-template-columns: 1fr;
+  }
+}
+.gly-project-4-item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.gly-project-4-item .item-title {
+  grid-area: 1/2/2/3;
+  font-size: 32px;
+  line-height: 1.31;
+  transition: 400ms var(--cube-1);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-4-item .item-title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-4-item .item-title {
+    font-size: 22px;
+    grid-area: 1/1/2/2;
+  }
+}
+.gly-project-4-item .item-title:hover {
+  color: var(--gly-pr-3);
+}
+.gly-project-4-item .item-content {
+  grid-area: 2/1/3/2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .gly-project-4-item .item-content {
+    grid-area: 2/1/3/2;
+  }
+}
+.gly-project-4-item .item-img {
+  grid-area: 2/2/3/3;
+}
+@media (max-width: 767px) {
+  .gly-project-4-item .item-img {
+    grid-area: 3/1/4/2;
+  }
+}
+.gly-project-4-item .item-date {
+  color: var(--gly-pr-3);
+}
+.gly-project-4-item .line {
+  width: 100%;
+  height: 1px;
+  background: #070917;
+  display: inline-block;
+  opacity: 10%;
+}
+.gly-project-4-item .item-list {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 15px;
+}
+.gly-project-4-item .item-list .name {
+  color: var(--gly-heading-4);
+  font-weight: 500;
+}
+.gly-project-4-item .item-list .name li {
+  position: relative;
+  padding-left: 17px;
+  z-index: 1;
+}
+.gly-project-4-item .item-list .name li::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gly-sd-2);
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+.gly-project-4-item .item-list .name li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.gly-project-4-item:is(.has-style-2) {
+  grid-template-columns: 1.8fr 1fr;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-project-4-item:is(.has-style-2) {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .gly-project-4-item:is(.has-style-2) {
+    grid-template-columns: 1fr;
+  }
+}
+.gly-project-4-item:is(.has-style-2) .item-title {
+  grid-area: 1/1/2/2;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .gly-project-4-item:is(.has-style-2) .item-title {
+    grid-area: 1/1/2/2;
+    text-align: left;
+  }
+}
+.gly-project-4-item:is(.has-style-2) .item-content {
+  grid-area: 2/2/3/3;
+}
+@media (max-width: 767px) {
+  .gly-project-4-item:is(.has-style-2) .item-content {
+    grid-area: 2/1/3/2;
+  }
+}
+.gly-project-4-item:is(.has-style-2) .item-img {
+  grid-area: 2/1/3/2;
+}
+@media (max-width: 767px) {
+  .gly-project-4-item:is(.has-style-2) .item-img {
+    grid-area: 3/1/4/2;
+  }
+}
+
+/* 
+    project-4-css-end
 */
 /* 
     campaign-1-css-start
@@ -6819,6 +7435,125 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     campaign-3-css-end
+*/
+/* 
+    campaign-4-css-start
+*/
+.gly-campaign-4-area {
+  background: #0D0237;
+  position: relative;
+  z-index: 1;
+  border-radius: 150px 150px 0 0;
+  overflow: hidden;
+  padding-bottom: 325px;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-campaign-4-area {
+    padding-bottom: 245px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-campaign-4-area {
+    padding-bottom: 245px;
+    border-radius: 70px 70px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .gly-campaign-4-area {
+    border-radius: 30px 30px 0 0;
+    padding-bottom: 0px;
+  }
+}
+.gly-campaign-4-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+.gly-campaign-4-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-38%);
+  z-index: -1;
+  width: 44%;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-campaign-4-img {
+    width: 52%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-campaign-4-img {
+    transform: translateX(-25%);
+    width: 54%;
+  }
+}
+@media (max-width: 767px) {
+  .gly-campaign-4-img {
+    transform: unset;
+    width: 100%;
+    position: unset;
+    margin-top: 50px;
+  }
+}
+.gly-campaign-4-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-campaign-4-wrap {
+    flex-wrap: wrap;
+  }
+}
+.gly-campaign-4-scn-title {
+  max-width: 504px;
+}
+.gly-campaign-4-scn-title .gly-subtitle-4 {
+  color: #B153ED;
+  background-color: #221C3C;
+}
+.gly-campaign-4-scn-title .gly-section-title-3 {
+  color: #fff;
+}
+.gly-campaign-4-scn-title .scn-disc {
+  color: #fff;
+  margin-bottom: 50px;
+}
+.gly-campaign-4-content {
+  padding-top: 20px;
+}
+.gly-campaign-4-feature-wrap {
+  max-width: 312px;
+}
+.gly-campaign-4-feature:not(:last-child) {
+  margin-bottom: 35px;
+}
+.gly-campaign-4-feature .title {
+  font-size: 22px;
+  line-height: 1.45;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.gly-campaign-4-feature .title i {
+  font-size: 16px;
+  color: #26C6D7;
+}
+.gly-campaign-4-feature .disc {
+  font-size: 16px;
+  line-height: 28px;
+  color: #fff;
+}
+
+/* 
+    campaign-4-css-end
 */
 /* 
     categorie-1-css-start
@@ -8440,6 +9175,98 @@ input:focus::placeholder, textarea:focus::placeholder {
     experience-1-css-end
 */
 /* 
+    experience-4-css-start
+*/
+.gly-expi-count-4-area {
+  position: relative;
+  z-index: 1;
+  background: #0EA0B0;
+  border-radius: 150px 150px 0 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-expi-count-4-area {
+    border-radius: 70px 70px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .gly-expi-count-4-area {
+    border-radius: 30px 30px 0 0;
+  }
+}
+.gly-expi-count-4-area::after {
+  content: "";
+  width: 100%;
+  height: 160px;
+  background: #0ea0b0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+}
+.gly-expi-count-4-wrap {
+  margin-left: -90px;
+  margin-right: -90px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gly-expi-count-4-wrap {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-expi-count-4-wrap {
+    margin-left: 0px;
+    margin-right: 0px;
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 767px) {
+  .gly-expi-count-4-wrap {
+    margin-left: 0px;
+    margin-right: 0px;
+    grid-template-columns: auto;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-expi-count-4-wrap {
+    margin-left: 0px;
+    margin-right: 0px;
+    grid-template-columns: auto auto;
+  }
+}
+.gly-expi-count-4-item .number {
+  font-size: 140px;
+  line-height: 1;
+  opacity: 22%;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-expi-count-4-item .number {
+    font-size: 80px;
+  }
+}
+.gly-expi-count-4-item .item-disc {
+  font-size: 26px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  transform: translateY(-47px);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-expi-count-4-item .item-disc {
+    font-size: 20px;
+    transform: translateY(-33px);
+  }
+}
+
+/* 
+    experience-4-css-end
+*/
+/* 
     event-1-css-start
 */
 .gly-event-1-area {
@@ -9645,7 +10472,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     client-4-css-start
 */
 .client-4-about-4-bg {
-  background: linear-gradient(189deg, rgb(249, 239, 255) 0%, rgb(249, 239, 255) 50%, rgba(0, 212, 255, 0) 100%);
+  background: linear-gradient(180deg, rgb(249, 239, 255) 0%, rgba(254, 123, 47, 0) 100%, rgba(254, 117, 36, 0) 100%);
   position: relative;
   z-index: 1;
 }
@@ -9654,11 +10481,15 @@ input:focus::placeholder, textarea:focus::placeholder {
   right: 0;
   z-index: -1;
   top: 176px;
+  width: 17%;
 }
 
 .gly-client-4-area {
   overflow: hidden;
   border-bottom: 1.5px solid rgba(254, 117, 36, 0.25);
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .gly-client-4-wrap {
   display: flex;

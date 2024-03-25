@@ -169,7 +169,7 @@
 */
 
 .client-4-about-4-bg {
-    background: linear-gradient(189deg, rgb(249, 239, 255) 0%, rgb(249, 239, 255) 50%, rgba(0, 212, 255, 0) 100%);
+    background: linear-gradient(180deg, rgba(249,239,255,1) 0%, rgba(254,123,47,0) 100%, rgba(254,117,36,0) 100%);
     position: relative;
     z-index: 1;
 
@@ -178,6 +178,7 @@
         right: 0;
         z-index: -1;
         top: 176px;
+        width: 17%;
     }
 }
 
@@ -186,6 +187,9 @@
     &-area {
         overflow: hidden;
         border-bottom: 1.5px solid rgb(254 117 36 / 25%);
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &-wrap {
