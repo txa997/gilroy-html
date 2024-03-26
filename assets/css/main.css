@@ -7089,42 +7089,42 @@ input:focus::placeholder, textarea:focus::placeholder {
 .gly-project-4-item .item-list .name li:not(:last-child) {
   margin-bottom: 12px;
 }
-.gly-project-4-item:is(.has-style-2) {
+.gly-project-4-item:nth-child(even) {
   grid-template-columns: 1.8fr 1fr;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .gly-project-4-item:is(.has-style-2) {
+  .gly-project-4-item:nth-child(even) {
     grid-template-columns: 1.3fr 1fr;
   }
 }
 @media (max-width: 767px) {
-  .gly-project-4-item:is(.has-style-2) {
+  .gly-project-4-item:nth-child(even) {
     grid-template-columns: 1fr;
   }
 }
-.gly-project-4-item:is(.has-style-2) .item-title {
+.gly-project-4-item:nth-child(even) .item-title {
   grid-area: 1/1/2/2;
   text-align: right;
 }
 @media (max-width: 767px) {
-  .gly-project-4-item:is(.has-style-2) .item-title {
+  .gly-project-4-item:nth-child(even) .item-title {
     grid-area: 1/1/2/2;
     text-align: left;
   }
 }
-.gly-project-4-item:is(.has-style-2) .item-content {
+.gly-project-4-item:nth-child(even) .item-content {
   grid-area: 2/2/3/3;
 }
 @media (max-width: 767px) {
-  .gly-project-4-item:is(.has-style-2) .item-content {
+  .gly-project-4-item:nth-child(even) .item-content {
     grid-area: 2/1/3/2;
   }
 }
-.gly-project-4-item:is(.has-style-2) .item-img {
+.gly-project-4-item:nth-child(even) .item-img {
   grid-area: 2/1/3/2;
 }
 @media (max-width: 767px) {
-  .gly-project-4-item:is(.has-style-2) .item-img {
+  .gly-project-4-item:nth-child(even) .item-img {
     grid-area: 3/1/4/2;
   }
 }
@@ -8440,6 +8440,199 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     testimonial-3-css-end
+*/
+/* 
+    testimonial-4-css-start
+*/
+.gly-testimonial-4-area {
+  position: relative;
+  z-index: 1;
+}
+.gly-testimonial-4-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 63%;
+  height: 100%;
+  border-radius: 0 500px 500px 0;
+  overflow: hidden;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-4-bg-img {
+    width: 98%;
+    border-radius: 0 10px 10px 0;
+  }
+}
+.gly-testimonial-4-bg-img img {
+  transform: scale(1.2);
+}
+.gly-testimonial-4-scn-title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0 20px;
+}
+.gly-testimonial-4-scn-title .gly-section-title-3 {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .gly-testimonial-4-scn-title {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+}
+.gly-testimonial-4-slider-item {
+  max-width: 575px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+.gly-testimonial-4-slider-item .top {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  gap: 15px;
+  align-items: end;
+  padding: 18px 15px;
+  padding-bottom: 0;
+}
+@media (max-width: 767px) {
+  .gly-testimonial-4-slider-item .top {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .gly-testimonial-4-slider-item .top {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr;
+    align-items: end;
+  }
+}
+.gly-testimonial-4-slider-item .comment {
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+.gly-testimonial-4-slider-item .comment i {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  font-size: 280px;
+  z-index: -1;
+  color: var(--gly-pr-3);
+  opacity: 12%;
+  line-height: 1;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), xl, only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-testimonial-4-slider-item .comment i {
+    font-size: 140px;
+  }
+}
+.gly-testimonial-4-slider-item .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 25px 30px;
+  border-top: 1px solid rgba(3, 6, 23, 0.12);
+}
+.gly-testimonial-4-slider-item .author-name {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.gly-testimonial-4-slider-item .gly-para-3 {
+  font-size: 14px;
+  display: inline-block;
+  background: var(--gly-gd-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gly-testimonial-4-slider .swiper-container {
+  padding: 30px 0;
+}
+
+.gly-testimonial-5-slider-pagination {
+  text-align: right;
+}
+.gly-testimonial-5-slider-pagination .swiper-pagination-bullet {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: var(--montserrat);
+  color: #484655;
+  opacity: 30%;
+  line-height: 1;
+  padding: 0 10px;
+  background: transparent;
+  transition: 500ms var(--cube-1);
+  position: relative;
+  z-index: 1;
+}
+.gly-testimonial-5-slider-pagination .swiper-pagination-bullet::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #d9d9d9;
+  position: absolute;
+  top: 15px;
+  left: 43px;
+}
+@media (max-width: 767px) {
+  .gly-testimonial-5-slider-pagination .swiper-pagination-bullet::after {
+    left: 28px;
+  }
+}
+.gly-testimonial-5-slider-pagination .swiper-pagination-bullet::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--gly-gd-2);
+  position: absolute;
+  top: 15px;
+  left: 43px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .gly-testimonial-5-slider-pagination .swiper-pagination-bullet::before {
+    left: 28px;
+  }
+}
+.gly-testimonial-5-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active) {
+  opacity: 100%;
+  color: var(--gly-pr-3);
+  font-weight: 700;
+  background: transparent;
+  padding-right: 315px;
+}
+@media (max-width: 767px) {
+  .gly-testimonial-5-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active) {
+    padding-right: 130px;
+  }
+}
+.gly-testimonial-5-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active)::after {
+  width: 86%;
+}
+.gly-testimonial-5-slider-pagination .swiper-pagination-bullet:is(.swiper-pagination-bullet-active)::before {
+  width: 86%;
+  transition: 5s linear;
+}
+
+.gly-rating-1 {
+  font-size: 20px;
+  color: #FFC107;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+}
+
+/* 
+    testimonial-4-css-end
 */
 /* 
     portfolio-1-start
@@ -9799,6 +9992,144 @@ input:focus::placeholder, textarea:focus::placeholder {
     blog-3-css-end
 */
 /* 
+    blog-4-css-start
+*/
+.gly-blog-4-scn-title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0 300px;
+}
+.gly-blog-4-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.gly-blog-4-card .main-img {
+  height: 385px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.gly-blog-4-card .card-content-wrap {
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px 0 10px 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  z-index: 1;
+  margin-top: -160px;
+  max-width: 88%;
+  margin-left: auto;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .card-meta {
+  padding-left: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  padding-top: 10px;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .author-name {
+  font-size: 16px;
+  line-height: 22px;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .author-name i {
+  color: var(--gly-pr-3);
+  margin-right: 3px;
+}
+.gly-blog-4-card .meta-date {
+  font-size: 14px;
+  line-height: 22px;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .meta-date span {
+  color: var(--gly-heading-4);
+  font-weight: 600;
+}
+.gly-blog-4-card .post-date {
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 61px;
+  height: 61px;
+  background: var(--gly-gd-2);
+  border-radius: 0 0 200px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 700;
+  color: #fff;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .card-title {
+  font-size: 26px;
+  line-height: 1.38;
+  margin-bottom: 15px;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .card-disc {
+  margin-bottom: 18px;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .btn-overflow {
+  display: block;
+  text-align: right;
+  overflow: hidden;
+  margin-top: -40px;
+  opacity: 0;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .card-btn {
+  display: inline-block;
+  background: #fff;
+  font-weight: 600;
+  color: #6907A8;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 100px;
+  padding: 8px 24px;
+  transition: 400ms var(--cube-1);
+}
+.gly-blog-4-card .card-btn:hover {
+  background: var(--gly-pr-3);
+}
+.gly-blog-4-card:hover .btn-overflow {
+  margin-top: 0px;
+  opacity: 1;
+}
+.gly-blog-4-card:hover .card-content-wrap {
+  background: #6907A8;
+}
+.gly-blog-4-card:hover .card-title {
+  color: #fff;
+}
+.gly-blog-4-card:hover .card-title:hover {
+  color: var(--gly-pr-3);
+}
+.gly-blog-4-card:hover .card-disc {
+  color: #fff;
+}
+.gly-blog-4-card:hover .meta-date {
+  color: #fff;
+}
+.gly-blog-4-card:hover .meta-date span {
+  color: #fff;
+}
+.gly-blog-4-card:hover .author-name {
+  color: #fff;
+}
+
+/* 
+    blog-4-css-end
+*/
+/* 
     price-1-css-start
 */
 .section-bg-color {
@@ -10057,6 +10388,250 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     price-2-css-end
+*/
+/* 
+    price-4-css-start
+*/
+.gly-price-4-area {
+  background: #FFF6F1;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-area {
+    padding-bottom: 120px;
+  }
+}
+.gly-price-4-card-wrap {
+  padding-left: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 40px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .gly-price-4-card-wrap {
+    padding-left: 0px;
+    grid-template-columns: 1fr 1fr 0.7fr;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-price-4-card-wrap {
+    padding-left: 0px;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-price-4-card-wrap {
+    padding-left: 0px;
+    grid-template-columns: 1fr;
+    padding-top: 0px;
+  }
+}
+.gly-price-4-card {
+  border-radius: 12px;
+  background: #fff;
+  padding: 40px 40px;
+  transition: 400ms var(--cube-1);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-card {
+    padding: 40px 20px;
+  }
+}
+.gly-price-4-card .card-title {
+  font-size: 24px;
+  color: var(--gly-para-4);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-card .card-title {
+    font-size: 20px;
+  }
+}
+.gly-price-4-card .card-title span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--gly-gd-2);
+}
+.gly-price-4-card .card-img {
+  height: 145px;
+  overflow: hidden;
+  margin-bottom: 35px;
+  filter: grayscale(1);
+  transition: 400ms var(--cube-1);
+}
+.gly-price-4-card .card-price {
+  font-size: 50px;
+  line-height: 1;
+  background: var(--gly-gd-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid rgba(7, 9, 23, 0.15);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-card .card-price {
+    font-size: 34px;
+  }
+}
+.gly-price-4-card .card-price .dollor {
+  font-size: 30px;
+  font-weight: 500;
+  display: inline-block;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-card .card-price .dollor {
+    font-size: 25px;
+  }
+}
+.gly-price-4-card .card-price .month {
+  display: inline-block;
+  font-size: 20px;
+  -webkit-text-fill-color: #818398;
+  font-weight: 500;
+  align-self: end;
+  transform: translateY(-5px);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-card .card-price .month {
+    font-size: 16px;
+  }
+}
+.gly-price-4-card .card-list {
+  margin-bottom: 35px;
+}
+.gly-price-4-card .card-list li {
+  line-height: 28px;
+}
+.gly-price-4-card .card-list li:not(:last-child) {
+  margin-bottom: 14px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-card .card-list li {
+    font-size: 16px;
+  }
+}
+.gly-price-4-card .card-list li i {
+  background: var(--gly-gd-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.gly-price-4-card .card-btn {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: var(--montserrat);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  border: 1px solid var(--gly-pr-3);
+  border-radius: 100px;
+  padding: 20px;
+  color: var(--gly-pr-3);
+  background: transparent;
+  transition: 400ms var(--cube-1);
+  overflow: hidden;
+}
+.gly-price-4-card .card-btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gly-gd-2);
+  z-index: -1;
+  transition: 400ms var(--cube-1);
+  opacity: 0;
+}
+.gly-price-4-card .card-btn:hover {
+  color: #fff;
+  border-color: transparent;
+}
+.gly-price-4-card .card-btn:hover::after {
+  opacity: 1;
+}
+.gly-price-4-card:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+}
+.gly-price-4-card:hover .card-img {
+  filter: grayscale(0);
+}
+.gly-price-4-btn {
+  padding-top: 110px;
+  padding-left: 20px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-btn {
+    padding-top: 40px;
+  }
+}
+.gly-price-4-bg-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  z-index: -1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-bg-img {
+    display: none;
+  }
+}
+.gly-price-4-bg-shape {
+  display: block;
+  width: 480px;
+  height: 700px;
+  border-radius: 500px 500px 0 0;
+  background: var(--gly-gd-2);
+  position: absolute;
+  right: 80px;
+  bottom: -140px;
+  z-index: -2;
+  opacity: 20%;
+  transform: rotate(330deg);
+}
+.gly-price-4-bg-shape-2 {
+  display: block;
+  width: 84%;
+  height: 74%;
+  background: #FFEDE3;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+  border-radius: 50px 0 0 0;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .gly-price-4-bg-shape-2 {
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-price-4-bg-shape-2 {
+    width: 99%;
+  }
+}
+
+/* 
+    price-4-css-end
 */
 /* 
     digital-product-1-css-start
@@ -10967,6 +11542,120 @@ input:focus::placeholder, textarea:focus::placeholder {
     transform: translateY(-35px);
   }
 }
+/* 
+    process-4-css-start
+*/
+.gly-process-4-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gly-process-4-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .gly-process-4-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.gly-process-4-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gly-process-4-item .item-img {
+  max-width: 202px;
+  height: 202px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.gly-process-4-item .item-img img {
+  transition: 400ms var(--cube-1);
+}
+.gly-process-4-item .line {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #070917;
+  opacity: 15%;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-process-4-item .line {
+    opacity: 0;
+  }
+}
+.gly-process-4-item .number {
+  display: block;
+  font-size: 56px;
+  line-height: 1.17;
+  color: rgba(254, 117, 36, 0.15);
+  position: relative;
+  z-index: 1;
+  margin-right: 90px;
+  margin-bottom: 25px;
+  transition: 400ms var(--cube-1);
+}
+.gly-process-4-item .number::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  background: var(--gly-gd-2);
+}
+.gly-process-4-item .item-title {
+  font-size: 24px;
+  line-height: 1.41;
+  margin-bottom: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .gly-process-4-item .item-title {
+    font-size: 20px;
+  }
+}
+.gly-process-4-item .item-disc {
+  line-height: 26px;
+  text-align: center;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gly-process-4-item:nth-child(even) .item-title {
+  margin-bottom: 26px;
+}
+.gly-process-4-item:nth-child(even) .item-disc {
+  margin-bottom: 25px;
+}
+.gly-process-4-item:nth-child(even) .number {
+  margin-bottom: 0;
+}
+.gly-process-4-item:nth-child(even) .item-img {
+  margin-bottom: 0;
+}
+.gly-process-4-item:nth-child(even) .line {
+  margin-bottom: 20px;
+}
+.gly-process-4-item:hover .number {
+  color: var(--gly-pr-3);
+}
+.gly-process-4-item:hover .item-img img {
+  transform: scale(105%);
+}
+
+/* 
+    process-4-css-end
+*/
 .scroll-top {
   position: fixed;
   right: 20px;

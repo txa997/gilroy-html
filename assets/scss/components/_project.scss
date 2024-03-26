@@ -954,7 +954,7 @@
     }
 
 
-    &:is(.has-style-2) {
+    &:nth-child(even) {
         grid-template-columns: 1.8fr 1fr ;
 
         @media #{$lg,$md} {

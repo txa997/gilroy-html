@@ -275,9 +275,11 @@ gsap.utils.toArray('.has-stoke ').forEach((el, index) => {
       }); 
       tl.from(image, {
         yPercent: -30,
+		scale: 1.1,
         ease: "none",
       }).to(image, {
         yPercent: 30,
+		scale: 1.1,
         ease: "none",
       }); 
   });
@@ -837,7 +839,57 @@ if($('.gly-t4-active'.length)) {
 
 
 
+// testimonial-5-slider-active
+if($('.gly-t5-active'.length)) {
+  
+	var glyt5= new Swiper('.gly-t5-active', {
+	  speed: 1000,
+	  loop: true,
+	  spaceBetween: 30,
+	  slidesPerView: 4,
+	//   autoplay: {
+	// 	delay: 4000,
+	//   },
 
+	  pagination: {
+        el: ".gly-testimonial-5-slider-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+
+
+	  breakpoints: {
+		0: {
+		  slidesPerView: 1,
+		},
+		576: {
+		  slidesPerView: 1,
+		},
+		768: {
+		  slidesPerView: 2,
+		},
+		992: {
+		  slidesPerView: 2,
+		},
+		1200: {
+		  slidesPerView: 2,
+		},
+		1400: {
+		  slidesPerView: 3,
+		},
+		1600: {
+		  slidesPerView: 3,
+		},
+		1800: {
+		  slidesPerView: 4,
+		},
+	  },
+
+	  
+	});
+  }
 
 
 // gellary-marquee-active
