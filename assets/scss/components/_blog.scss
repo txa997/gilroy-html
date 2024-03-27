@@ -418,34 +418,59 @@
         grid-template-columns: 1fr auto;
         align-items: center;
         gap: 0 300px;
+
+        @media #{$md} {
+            gap: 0 70px;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+            margin-bottom: 40px;
+        }
     }
 
     &-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr; 
+        }
     }
 
     &-card {
+        padding-bottom: 120px;
+        position: relative;
+        z-index: 1;
+
         .main-img {
             height: 385px;
             overflow: hidden;
             border-radius: 10px;
         }
 
-
         .card-content-wrap {
             background: #fff;
-            box-shadow: 0 0 15px rgb(0 0 0 / 8%);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
             border-radius: 10px 0 10px 10px;
             padding-left: 30px;
             padding-right: 30px;
-            position: relative;
-            z-index: 1;
-            margin-top: -160px;
             max-width: 88%;
             margin-left: auto;
             transition: 400ms var(--cube-1);
+            position: absolute;
+            top: 210px;
+            right: 0;
+            z-index: 1;
+
+            @media #{$xs} {
+                max-width: 99%; 
+            }
+
+            @media #{$sm} {
+                max-width: 88%;
+            }
         }
 
         .card-meta {
@@ -506,12 +531,27 @@
             margin-bottom: 15px;
             transition: 400ms var(--cube-1);
 
+            @media #{$lg,$md,$xs} {
+                font-size: 22px;
+            }
+            
+            a {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
 
         }
 
         .card-disc {
             margin-bottom: 18px;
             transition: 400ms var(--cube-1);
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .btn-overflow {

@@ -1,0 +1,161 @@
+@use '../abstracts/variables' as *;
+/* 
+    newsletter-4-css-start
+*/
+
+.gly-newsletter-4 {
+    &-area {
+        padding-top: 110px;
+        position: relative;
+        z-index: 2;
+        @media #{$xl,$lg,$md,$xs} {
+            padding-top: 0px;
+        }
+    }
+    &-wrap {
+        border-radius: 30px;
+        padding: 95px 80px;
+        position: relative;
+        z-index: 1;
+
+        @media #{$xl,$lg} {
+            padding: 95px 20px;
+        }
+
+        @media #{$md,$xs} {
+            padding: 95px 20px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+
+        .content-wrap {
+            max-width: 680px;
+            margin-left: auto;
+
+            @media #{$lg} {
+                max-width: 530px;
+            }
+        }
+
+        .news5-img {
+            width: 45%;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            z-index: -1;
+
+            @media #{$xl} {
+                width: 38%;
+            }
+
+            @media #{$lg} {
+                width: 46%;
+            }
+            
+            @media #{$md} {
+                position: unset;
+                width: 50%;
+            }
+            
+            @media #{$xs} {
+                position: unset;
+                width: 100%;
+            }
+        }
+
+        .title {
+            font-size: 42px;
+            line-height: 1.23;
+            color: #fff;
+            margin-bottom: 20px;
+
+            @media #{$lg} {
+                font-size: 38px;
+            }
+
+            @media #{$md} {
+                font-size: 32px;
+            }
+
+            @media #{$xs} {
+                font-size: 28px;
+            }
+        }
+        
+        .disc {
+            color: #fff;
+            margin-bottom: 50px;
+        }
+        
+        
+        
+    }
+
+    &-form {
+        position: relative;
+        z-index: 1;
+
+        input {
+            width: 100%;
+            height: 68px;
+            border-radius: 100px;
+            border: none;
+            outline: none;
+            padding: 0 25px;
+            padding-right: 200px;
+            color: rgb(69 71 83 / 50%);
+            font-size: 18px;
+            box-shadow: inset 0 0 6px rgb(0 0 0 / 25%);
+
+            @media #{$xs} {
+                padding-right: 25px;
+            }
+
+            @media #{$sm} {
+                padding-right: 200px;
+            }
+        }
+
+        .form-btn {
+            font-family: var(--inter);
+            border: none;
+            outline: none;
+            text-transform: capitalize;
+            background: var(
+            --gly-gd-2);
+            color: #fff;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 15px 34px;
+            border-radius: 100px;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            transition: 600ms var(--cube-1);
+
+            @media #{$xs} {
+                position: unset;
+                margin-top: 10px;
+            }
+
+            @media #{$sm} {
+                position: absolute;
+                margin-top: 0px;
+            }
+
+            &:hover {
+                transform: scale(95%);
+                opacity: .8;
+            }
+        }
+    }
+}
+
+
+
+
+/* 
+    newsletter-4-css-end
+*/
